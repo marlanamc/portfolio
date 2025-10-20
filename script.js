@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
 
-                if (filterValue === 'all' || category === filterValue) {
+                if (filterValue === 'all' || category.includes(filterValue)) {
                     // Show card
                     card.classList.remove('filtering');
                     setTimeout(() => {
