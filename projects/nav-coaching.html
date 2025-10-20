@@ -139,15 +139,15 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/nav1.png" alt="NAV Coaching Homepage" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/nav1.png" alt="NAV Coaching Homepage" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/nav1.png', 'NAV Coaching Homepage')">
                         <p class="screenshot-caption">Homepage with neurodivergent-friendly design and clear navigation</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/nav2.png" alt="NAV Coaching Resources" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/nav2.png" alt="NAV Coaching Resources" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/nav2.png', 'NAV Coaching Resources')">
                         <p class="screenshot-caption">Resource library with organized content and accessibility features</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/nav3.png" alt="NAV Coaching Features" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/nav3.png" alt="NAV Coaching Features" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/nav3.png', 'NAV Coaching Features')">
                         <p class="screenshot-caption">Coaching features and booking interface</p>
                     </div>
                 </div>
@@ -243,6 +243,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

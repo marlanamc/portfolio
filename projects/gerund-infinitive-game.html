@@ -131,15 +131,15 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/gerund1.png" alt="Gerund or Infinitive Game Interface" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/gerund1.png" alt="Gerund or Infinitive Game Interface" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/gerund1.png', 'Gerund or Infinitive Game Interface')">
                         <p class="screenshot-caption">Main game interface for practicing gerunds vs infinitives</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/gerund2.png" alt="Gerund Game Feedback" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/gerund2.png" alt="Gerund Game Feedback" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/gerund2.png', 'Gerund Game Feedback')">
                         <p class="screenshot-caption">Interactive feedback showing correct grammar usage</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/gerund3.png" alt="Gerund Game Examples" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/gerund3.png" alt="Gerund Game Examples" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/gerund3.png', 'Gerund Game Examples')">
                         <p class="screenshot-caption">Examples and explanations helping students understand the rules</p>
                     </div>
                 </div>
@@ -254,6 +254,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

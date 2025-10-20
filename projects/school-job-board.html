@@ -141,19 +141,19 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/abb1.png" alt="Advisor Bulletin Board Homepage" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/abb1.png" alt="Advisor Bulletin Board Homepage" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/abb1.png', 'Advisor Bulletin Board Homepage')">
                         <p class="screenshot-caption">Main board homepage showing all current opportunities with category filters and search</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/abb2.png" alt="Advisor Bulletin Board Calendar View" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/abb2.png" alt="Advisor Bulletin Board Calendar View" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/abb2.png', 'Advisor Bulletin Board Calendar View')">
                         <p class="screenshot-caption">Calendar view displaying deadlines and important dates for scholarships and events</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/abb3.png" alt="Advisor Portal" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/abb3.png" alt="Advisor Portal" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/abb3.png', 'Advisor Portal')">
                         <p class="screenshot-caption">Advisor portal interface for managing posts and viewing analytics</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/abb4.png" alt="Manage Posts Interface" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/abb4.png" alt="Manage Posts Interface" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/abb4.png', 'Manage Posts Interface')">
                         <p class="screenshot-caption">Post management interface where advisors create, edit, and archive opportunities</p>
                     </div>
                 </div>
@@ -307,6 +307,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

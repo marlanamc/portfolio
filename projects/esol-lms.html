@@ -133,15 +133,15 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/lms1.png" alt="ESOL LMS Quiz Homepage" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/lms1.png" alt="ESOL LMS Quiz Homepage" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms1.png', 'ESOL LMS Quiz Homepage')">
                         <p class="screenshot-caption">Quiz homepage showing all available quizzes for students</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/lms2.png" alt="ESOL LMS Student Quiz Interface" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/lms2.png" alt="ESOL LMS Student Quiz Interface" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms2.png', 'ESOL LMS Student Quiz Interface')">
                         <p class="screenshot-caption">Student quiz interface with multi-field verb conjugation exercises</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/lms3.png" alt="ESOL LMS Auto-Grading" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/lms3.png" alt="ESOL LMS Auto-Grading" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms3.png', 'ESOL LMS Auto-Grading')">
                         <p class="screenshot-caption">Auto-grading in action with immediate scoring and feedback</p>
                     </div>
                     <div class="screenshot-item">
@@ -296,6 +296,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

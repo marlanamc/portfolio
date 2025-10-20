@@ -131,11 +131,11 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/lifedash.jpg" alt="ADHD Life Dashboard interface showing adaptive theming and task management" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/lifedash.jpg" alt="ADHD Life Dashboard interface showing adaptive theming and task management" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lifedash.jpg', 'ADHD Life Dashboard interface showing adaptive theming and task management')">
                         <p class="screenshot-caption">Dashboard with time-based adaptive theming, brain dump, and energy capacity visualizer</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/lifedash2.png" alt="ADHD Life Dashboard alternative view" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/lifedash2.png" alt="ADHD Life Dashboard alternative view" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lifedash2.png', 'ADHD Life Dashboard alternative view')">
                         <p class="screenshot-caption">Additional dashboard view showing interface details</p>
                     </div>
                     <div class="screenshot-item">
@@ -283,6 +283,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

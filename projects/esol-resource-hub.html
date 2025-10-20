@@ -137,11 +137,11 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/srh1.png" alt="ESOL Student Resource Hub Homepage" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/srh1.png" alt="ESOL Student Resource Hub Homepage" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/srh1.png', 'ESOL Student Resource Hub Homepage')">
                         <p class="screenshot-caption">Resource hub homepage with clear sections for learning games, practice sites, and class materials</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/srh2.png" alt="ESOL Helpful Links" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/srh2.png" alt="ESOL Helpful Links" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/srh2.png', 'ESOL Helpful Links')">
                         <p class="screenshot-caption">Helpful links section with community resources for housing, legal aid, and job search</p>
                     </div>
                     <div class="screenshot-item">
@@ -253,6 +253,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

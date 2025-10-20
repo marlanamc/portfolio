@@ -137,11 +137,11 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/adhdfak1.png" alt="ADHD First Aid Kit Main Interface" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/adhdfak1.png" alt="ADHD First Aid Kit Main Interface" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/adhdfak1.png', 'ADHD First Aid Kit Main Interface')">
                         <p class="screenshot-caption">Main toolkit interface with quick access to focus tools and calming exercises</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/adhdfak2.png" alt="ADHD First Aid Kit Feelings Picker" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/adhdfak2.png" alt="ADHD First Aid Kit Feelings Picker" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/adhdfak2.png', 'ADHD First Aid Kit Feelings Picker')">
                         <p class="screenshot-caption">Feelings picker tool helping users identify and process emotions</p>
                     </div>
                     <div class="screenshot-item">
@@ -296,6 +296,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

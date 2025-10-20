@@ -137,11 +137,11 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <img src="../screenshots/jobtracker1.png" alt="Job Tracker Dashboard" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/jobtracker1.png" alt="Job Tracker Dashboard" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/jobtracker1.png', 'Job Tracker Dashboard')">
                         <p class="screenshot-caption">Main dashboard showing all job applications with status indicators and filtering</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="../screenshots/jobtracker2.png" alt="Job Tracker Details" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="../screenshots/jobtracker2.png" alt="Job Tracker Details" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/jobtracker2.png', 'Job Tracker Details')">
                         <p class="screenshot-caption">Application details view with tracking and progress features</p>
                     </div>
                     <div class="screenshot-item">
@@ -300,6 +300,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>
