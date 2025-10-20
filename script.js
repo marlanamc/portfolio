@@ -218,6 +218,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Screenshot Modal Functions
+function openModal(imageSrc, imageAlt) {
+    const modal = document.getElementById('screenshot-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalCaption = document.getElementById('modal-caption');
+    
+    modalImage.src = imageSrc;
+    modalImage.alt = imageAlt;
+    modalCaption.textContent = imageAlt;
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    
+    // Add escape key listener
+    document.addEventListener('keydown', handleEscapeKey);
+}
+
+function closeModal() {
+    const modal = document.getElementById('screenshot-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+    
+    // Remove escape key listener
+    document.removeEventListener('keydown', handleEscapeKey);
+}
+
+function handleEscapeKey(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+}
+
 // Console message for potential employers viewing source code
 console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
 console.log('%cI see you\'re checking out the code. I like your style!', 'font-size: 14px; color: #475569;');
