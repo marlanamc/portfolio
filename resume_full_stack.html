@@ -1,0 +1,228 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marlana Creed - Full-Stack Resume</title>
+<style>
+  /* Same CSS as the updated resume */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #0f172a;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.32;
+  }
+  a { color: #2563eb; text-decoration: none; }
+  a:hover { color: #1d4ed8; text-decoration: underline; }
+  .container { max-width: 900px; margin: 24px auto; padding: 0 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  header { display: flex; flex-direction: column; align-items: center; text-align: center; border-bottom: 1px solid #e2e8f0; padding: 16px; margin-bottom: 16px; background: #f8fafc; border-radius: 4px; position: relative; }
+  header::after { content: ''; display: block; height: 1px; background: #e2e8f0; margin-top: 8px; width: 100%; }
+  .name { font-size: 24pt; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 2px; }
+  .title { font-size: 11pt; color: #475569; margin-top: 2px; }
+  .contact { font-size: 10pt; color: #475569; line-height: 1.4; font-style: normal; }
+  section { margin-bottom: 14px; }
+  h2 { font-size: 13pt; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 6px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
+  .muted { color: #374151; font-size: 10.5pt; }
+  ul { margin: 6px 0 0 18px; padding: 0; }
+  li { margin: 3px 0; }
+  .role { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-bottom: 6px; }
+  .role h3 { font-size: 11.5pt; margin: 0; }
+  .when { font-size: 10.5pt; color: #475569; white-space: nowrap; }
+  .project { margin-bottom: 12px; }
+  .proj-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .proj-head strong { font-size: 11pt; }
+  .links { font-size: 10pt; white-space: nowrap; }
+  .links a + a { margin-left: 8px; }
+  @media print {
+    @page { margin: 0.4in; }
+    body { font-size: 10pt; line-height: 1.25; }
+    .container { margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+    header { margin-bottom: 8px; padding-bottom: 8px; border-bottom: 0; }
+    h2 { margin: 8px 0 3px; }
+    ul { margin: 3px 0 0 16px; }
+    li { margin: 1px 0; }
+    .grid-2 { grid-template-columns: 1fr 2fr; gap: 10px; }
+    .project, .role { page-break-inside: avoid; }
+  }
+  @media (max-width: 600px) {
+    .container { padding: 0 12px; }
+    header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container" role="main">
+  <header>
+    <div>
+      <div class="name" aria-label="name">Marlana Creed</div>
+      <div class="title"><strong>Full-Stack Python Developer</strong></div>
+    </div>
+    <address class="contact">
+      Boston, MA &middot; <a href="mailto:marlana.creed@gmail.com" aria-label="Email Marlana Creed">marlana.creed@gmail.com</a> &middot; 770-378-9207<br />
+      <strong>GitHub:</strong> <a href="https://github.com/marlanamc" aria-label="Marlana Creed's GitHub profile">github.com/marlanamc</a> &middot;
+      <strong>Portfolio:</strong> <a href="https://marlanacreed.com/" aria-label="Marlana Creed's portfolio">marlanacreed.com</a> &middot;
+      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/marlanacreed" aria-label="Marlana Creed's LinkedIn profile">linkedin.com/in/marlanacreed</a>
+    </address>
+  </header>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <p class="muted">
+      Full-stack Python developer with 3+ years of experience building scalable web applications and REST APIs. Developed a Flask-based LMS with comprehensive REST APIs serving 350+ users and a React/Firebase advisor bulletin board.
+    </p>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <p class="muted">
+      Python, JavaScript, TypeScript, SQL, Flask, React, FastAPI, Express.js, PostgreSQL, SQLite, Firestore, MongoDB, Git/GitHub, REST APIs, CI/CD, Docker, Vercel, PythonAnywhere, pytest, Accessibility Features
+    </p>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Selected Projects</h2>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>Custom Learning Management System</strong>
+        <span class="links">
+          <a href="https://esolteachermc.pythonanywhere.com/" aria-label="Live demo of Custom LMS">Live</a>
+          <a href="https://github.com/marlanamc" aria-label="Source code for Custom LMS">Code</a>
+        </span>
+      </div>
+      <div class="muted">Python, Flask, SQLite</div>
+      <ul>
+        <li>Built comprehensive quiz platform with RESTful APIs, handling 350+ concurrent users via Flask and SQLite.</li>
+        <li>Implemented comprehensive pytest suite with automated testing pipeline for robust performance.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>Advisor Bulletin Board</strong>
+        <span class="links">
+          <a href="https://ebhcsjobboard.web.app/" aria-label="Live demo of Advisor Bulletin Board">Live</a>
+          <a href="https://github.com/marlanamc/jobapptracker" aria-label="Source code for Advisor Bulletin Board">Code</a>
+        </span>
+      </div>
+      <div class="muted">React, Firebase, JavaScript</div>
+      <ul>
+        <li>Developed advanced search and filter functionality with pagination for 350+ users.</li>
+        <li>Integrated Firebase for real-time updates, push notifications, and secure authentication.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>ADHD Accessibility Tools (Suite of 3)</strong>
+        <span class="links">
+          <a href="https://adhd-first-aid.vercel.app/" aria-label="Live demo of ADHD Tool 1">Live 1</a>
+          <a href="https://www.navcoaching.org/" aria-label="Live demo of ADHD Tool 2">Live 2</a>
+          <a href="https://adhddash.web.app/" aria-label="Live demo of ADHD Tool 3">Live 3</a>
+          <a href="https://github.com/marlanamc/adhd_first_aid" aria-label="Source code for ADHD Tools">Code</a>
+        </span>
+      </div>
+      <div class="muted">React, Firebase</div>
+      <ul>
+        <li>Built sensory-friendly tools with comprehensive accessibility features and inclusive design.</li>
+        <li>Used React with TypeScript and Firebase for scalable, real-time functionality.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Experience</h2>
+
+    <div>
+      <div class="role"><h3>Independent Python Developer</h3><div class="when">2023 to Present</div></div>
+      <ul>
+        <li>Built and deployed 10+ production web applications using Flask, React, and FastAPI, serving 350+ users with scalable architecture.</li>
+        <li>Integrated comprehensive CI/CD pipelines with GitHub Actions, automated testing, and Vercel for seamless deployments.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>Customer Data Support Analyst, Grand Circle Corporation</h3><div class="when">2021 to 2022</div></div>
+      <ul>
+        <li>Shipped interactive Tableau dashboards backed by optimized SQL views and stored procedures for reporting and analysis.</li>
+        <li>Wrote comprehensive QA checks in Python for data pipeline reliability with automated testing.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>Catastrophic Risk Analyst, Homesite Insurance</h3><div class="when">2020 to 2021</div></div>
+      <ul>
+        <li>Built Python automation for disaster monitoring and alerting with real-time data processing.</li>
+        <li>Prototyped machine learning loss models with scikit-learn for pricing strategies.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="additional-experience">
+    <h2 id="additional-experience">Additional Experience</h2>
+    <ul class="muted">
+      <li><strong>ESOL Instructor</strong>, East Boston Harborside Community School, 2023 to Present, developed comprehensive full-stack LMS and educational tools for 350+ students.</li>
+      <li><strong>Research Analyst</strong>, Harvard Kennedy School, 2015 to 2017, statistical analysis with STATA and R for policy research.</li>
+      <li><strong>Operations and Training Lead</strong>, Barcelona Restaurant Group, 2016 to 2021, training programs for 50+ staff members.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <ul class="muted">
+      <li><strong>Full-Stack Development Certificate</strong>, Coding Temple</li>
+      <li><strong>MS, Economics</strong>, Georgia Institute of Technology, thesis on tuition trends in higher education, focusing on for-profit institutions</li>
+      <li><strong>BS, Economics and International Affairs</strong>, Georgia Institute of Technology</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marlana Creed - EdTech Resume</title>
+<style>
+  /* Same CSS as the updated resume */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #0f172a;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.32;
+  }
+  a { color: #2563eb; text-decoration: none; }
+  a:hover { color: #1d4ed8; text-decoration: underline; }
+  .container { max-width: 900px; margin: 24px auto; padding: 0 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  header { display: flex; flex-direction: column; align-items: center; text-align: center; border-bottom: 2px solid #3b82f6; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%); border-radius: 4px; position: relative; }
+  header::after { content: ''; display: block; height: 1px; background: transparent; margin-top: 8px; width: 100%; }
+  .name { font-size: 26pt; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 3px; color: #1e293b; }
+  .title { font-size: 11.5pt; color: #3b82f6; margin-top: 2px; font-weight: 600; }
+  .contact { font-size: 10pt; color: #64748b; line-height: 1.5; font-style: normal; }
+  section { margin-bottom: 14px; }
+  h2 { font-size: 12.5pt; text-transform: uppercase; letter-spacing: 0.8px; margin: 14px 0 6px; border-bottom: 2px solid #3b82f6; padding-bottom: 4px; color: #1e293b; font-weight: 700; }
+  .muted { color: #334155; font-size: 10.5pt; line-height: 1.4; }
+  ul { margin: 6px 0 0 18px; padding: 0; }
+  li { margin: 3px 0; line-height: 1.4; }
+  .role { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-bottom: 6px; }
+  .role h3 { font-size: 11.5pt; margin: 0; font-weight: 600; color: #1e293b; }
+  .when { font-size: 10pt; color: #64748b; white-space: nowrap; font-style: italic; }
+  .project { margin-bottom: 12px; }
+  .proj-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .proj-head strong { font-size: 11pt; font-weight: 600; color: #1e293b; }
+  .links { font-size: 10pt; white-space: nowrap; }
+  .links a { color: #3b82f6; font-weight: 500; }
+  .links a + a { margin-left: 8px; }
+  @media print {
+    @page { margin: 0.38in; }
+    body { font-size: 9.5pt; line-height: 1.22; }
+    .container { margin: 0; padding: 0; box-shadow: none; }
+    a { color: #1e293b; text-decoration: none; }
+    header { margin-bottom: 5px; padding: 9px; padding-bottom: 7px; border-bottom: 2px solid #3b82f6; background: transparent; }
+    header::after { display: none; }
+    .name { font-size: 22pt; margin-bottom: 2px; color: #000; }
+    .title { font-size: 10.5pt; margin-top: 2px; color: #3b82f6; }
+    .contact { font-size: 9.5pt; line-height: 1.32; color: #334155; }
+    h2 { margin: 6px 0 2px; font-size: 11.5pt; padding-bottom: 3px; border-bottom: 2px solid #3b82f6; color: #000; }
+    section { margin-bottom: 9px; }
+    ul { margin: 2px 0 0 16px; }
+    li { margin: 0.8px 0; }
+    .muted { font-size: 9.5pt; color: #1e293b; }
+    .project { margin-bottom: 8px; }
+    .role { margin-bottom: 4px; }
+    .role h3 { color: #000; }
+    .proj-head strong { color: #000; }
+    .links a { color: #3b82f6; }
+    .when { color: #334155; }
+    .grid-2 { grid-template-columns: 1fr 2fr; gap: 10px; }
+    .project, .role { page-break-inside: avoid; }
+  }
+  @media (max-width: 600px) {
+    .container { padding: 0 12px; }
+    header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container" role="main">
+  <header>
+    <div>
+      <div class="name" aria-label="name">Marlana Creed</div>
+      <div class="title"><strong>Full-Stack Developer, EdTech Focus</strong></div>
+    </div>
+    <address class="contact">
+      Boston, MA &middot; <a href="mailto:marlana.creed@gmail.com" aria-label="Email Marlana Creed">marlana.creed@gmail.com</a> &middot; 770-378-9207<br />
+      <strong>GitHub:</strong> <a href="https://github.com/marlanamc" aria-label="Marlana Creed's GitHub profile">github.com/marlanamc</a> &middot;
+      <strong>Portfolio:</strong> <a href="https://marlanacreed.com/" aria-label="Marlana Creed's portfolio">marlanacreed.com</a> &middot;
+      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/marlanacreed" aria-label="Marlana Creed's LinkedIn profile">linkedin.com/in/marlanacreed</a>
+    </address>
+  </header>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <p class="muted">
+      Full-stack developer and ESOL instructor shipping classroom-tested tools, including a Flask LMS used weekly by 50 students and a Firebase advisor bulletin board with 350 total users.
+    </p>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <p class="muted">
+      Python, Flask, JavaScript, React, SQL, SQLite/PostgreSQL, Firebase, Supabase, pandas, NumPy, scikit-learn, Tableau, REST APIs, Git/GitHub, Vercel, PythonAnywhere, Google Classroom, Accessibility (WCAG 2.1)
+    </p>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Selected Projects</h2>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>Custom Learning Management System</strong>
+        <span class="links">
+          <a href="https://esolteachermc.pythonanywhere.com/" aria-label="Live demo of Custom LMS">Live</a>
+          <a href="https://github.com/marlanamc" aria-label="Source code for Custom LMS">Code</a>
+        </span>
+      </div>
+      <div class="muted">Python, Flask, SQLite, REST APIs</div>
+      <ul>
+        <li>Built auto-graded verb quiz platform with teacher dashboard for 50 students weekly over 18-week terms.</li>
+        <li>Implemented basic analytics showing learning progress and student performance.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>ESOL Educational Games Suite</strong>
+        <span class="links">
+          <a href="https://github.com/marlanamc" aria-label="Source code for ESOL Games">Code</a>
+        </span>
+      </div>
+      <div class="muted">JavaScript, HTML, CSS, PostgreSQL</div>
+      <ul>
+        <li>Interactive practice apps for verb tenses, numbers, gerunds vs infinitives, and sentence building, with drag and drop and instant feedback.</li>
+        <li>Used weekly in class to reinforce skills and track progress, keyboard accessible and mobile friendly.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>Advisor Bulletin Board</strong>
+        <span class="links">
+          <a href="https://ebhcsjobboard.web.app/" aria-label="Live demo of Advisor Bulletin Board">Live</a>
+          <a href="https://github.com/marlanamc/jobapptracker" aria-label="Source code for Advisor Bulletin Board">Code</a>
+        </span>
+      </div>
+      <div class="muted">Firebase, JavaScript</div>
+      <ul>
+        <li>Built search functionality with tag filters and advisor roles for 350 total users.</li>
+        <li>Implemented expired post management with calendar view following school data guidelines.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Experience</h2>
+
+    <div>
+      <div class="role"><h3>Independent Full-Stack Developer</h3><div class="when">2023 to Present</div></div>
+      <ul>
+        <li>Built 10+ web applications for education and accessibility, including an LMS and advisor bulletin board.</li>
+        <li>Used Python, Flask, React, and Firebase with a focus on accessibility features and user testing.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>ESOL Instructor, East Boston Harborside Community School</h3><div class="when">2023 to Present</div></div>
+      <ul>
+        <li>Teach adult ESOL learners and translate classroom needs into digital tools like an LMS.</li>
+        <li>Developed educational games suite with accessibility features based on instructor feedback.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="additional-experience">
+    <h2 id="additional-experience">Additional Experience</h2>
+    <ul class="muted">
+      <li><strong>Customer Data Support Analyst</strong>, Grand Circle, 2021 to 2022, shipped Tableau dashboards with SQL views.</li>
+      <li><strong>Catastrophic Risk Analyst</strong>, Homesite Insurance, 2020 to 2021, Python automation reduced response time about 40 percent.</li>
+      <li><strong>Operations and Training Lead</strong>, Barcelona, 2016 to 2021, training for 50+ staff.</li>
+      <li><strong>Research Analyst</strong>, Harvard Kennedy School, 2015 to 2017, statistical analysis with STATA and R.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <ul class="muted">
+      <li><strong>Full-Stack Development Certificate</strong>, Coding Temple</li>
+      <li><strong>MS, Economics</strong>, Georgia Institute of Technology
+        <ul style="margin-top: 2px;">
+          <li><strong>Thesis:</strong> For-Profit College Non-Completion, Fixed Effects Panel Study. Built school-by-year panel from NCES (2008–2013), used Hausman test to select fixed effects, estimated within-school relationships between institutional factors and non-completion.</li>
+        </ul>
+      </li>
+      <li><strong>BS, Economics and International Affairs</strong>, Georgia Institute of Technology</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+Marlana Creed
+	•	Boston, Massachusetts, United States   marlana.creed@gmail.com   770-378-9207   in/marlanacreed  
+EXPERIENCE
+Adult ESOL Teacher | East Boston Harborside Community School | Boston, MA  	         January 2023 - Present
+	•	Teach English to adult learners from diverse cultural and linguistic backgrounds. 
+	•	Design and adapt lesson plans to strengthen students’ reading, writing, listening, and speaking skills.
+	•	Assess student progress through formal and informal evaluations, and deliver targeted, supportive feedback.
+	•	Foster a welcoming, inclusive classroom environment that encourages participation and builds learner confidence.
+Server | B&G Oysters | Boston, MA  	         					              June 2023 – December 2024
+	•	Guided guests through a daily-changing raw bar menu and extensive wine list with emphasis on New England seafood pairings. 
+	•	Maintained a high-volume section while upholding fine dining standards and guest satisfaction.
+	•	Collaborated with the kitchen and bar to ensure timely, accurate orders and seamless guest experiences.
+	•	Demonstrated deep knowledge of oyster varieties, sourcing regions, and wine pairings. 
+Customer Data Support Analyst | Grand Circle Corporation | Boston, MA  		    October 2021 - May 2022
+	•	Developed Tableau reports and dashboards to support the marketing team by writing relational and multidimensional database queries.
+	•	Collaborated with Data Warehouse and Business Intelligence teams to transition data collection requests to production.
+	•	Responsible for the quality assurance and validation of data loads for the Marketing Analytics databases.
+Catastrophic Risk Analyst | Homesite Insurance | Boston, MA    		               August 2020 - October 2021
+	•	Created a real-time automation tool to monitor hailfall, matching nearby policyholders with the assigned manager, resulting in reduced response times by policy managers.
+	•	Utilized machine learning techniques to predict financial losses from future natural disasters across the United States by developing and implementing catastrophic risk models, resulting in the ability to adjust premiums and identify areas of desired growth for the enterprise.
+	•	Analyzed the impact of current natural disasters on business continuity and created mitigation plans for state managers.
+Front Server and Lead Trainer | Barcelona Restaurant Group | Boston, MA 	                          June 2016 - May 2021
+	•	Mastered a fluid menu of over eighty Spanish food items and guided guests through appropriate wine pairings; Managed a back server who assisted in the section's functionality.
+	•	Trained and certified a team of incoming servers with a four-day intensive training program. 
+	•	Led training of 50 waitstaff on wine and sherry production and food pairings.
+	•	Represented the organization by traveling to Spain in May 2019 for a wine industry trip sponsored by Olé & Obrigado. 
+Data Scientist | Coding Temple | Remote 						      January 2020 - May 2020
+	•	Designed and developed full-stack web applications with custom-built relational databases, user role management, and salted hashing password encryption for site security.
+	•	Worked with API’s to implement into FrontEnd/BackEnd apps using Python libraries and SQL to produce dashboards to monitor financial investments.
+Research Analyst | Harvard Kennedy School of Government | Cambridge, MA               September 2015 - August 2017
+	•	Assisted multiple Harvard University professors with data management and statistical analysis using STATA and R.
+	•	Conducted a regression analysis to determine the impact of students’ AP Scores on their university success. 
+	•	Administered a data lab project to conduct survey results and gather metrics for behavioral economics research. 
+EDUCATION
+Bachelor of Science in Economics | International Affairs | Georgia Institute of Technology | Atlanta, GA | 2013
+	•	Dean’s List for all 4 semesters in 2011 and 2012 
+Master of Science in Economics | Georgia Institute of Technology | Atlanta, GA | 2015
+	•	Coursework in Advanced Econometrics, Statistics, and Regression Analysis 
+ 

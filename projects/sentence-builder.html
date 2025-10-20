@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESOL Sentence Builder - Marlana Creed</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Gamified, mobile-first web app helping English language learners master grammar through interactive sentence construction.">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MC</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#resources">Resources</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
+                <div class="project-hero-content">
+                    <h1>ESOL Sentence Builder</h1>
+                    <p class="project-tagline">A gamified, mobile-first web app that helps English language learners master grammar through interactive sentence construction</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <strong>Role:</strong> Full-Stack Developer & ESOL Instructor
+                        </div>
+                        <div class="meta-item">
+                            <strong>Timeline:</strong> 2025
+                        </div>
+                        <div class="meta-item">
+                            <strong>Status:</strong> In Development - Student-Ready Beta
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-badge">Next.js 15</span>
+                        <span class="tech-badge">React 19</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Supabase</span>
+                        <span class="tech-badge">Tailwind CSS 4</span>
+                        <span class="tech-badge">Framer Motion</span>
+                    </div>
+                    <div class="project-cta">
+                        <a href="https://github.com/marlanamc/sentence-builder" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Problem</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">
+                        Traditional English grammar instruction relies heavily on textbook exercises and teacher-led correction, creating a disconnect between learning and real-time practice. ESOL students need immediate, accessible ways to practice sentence construction, but existing digital tools are often desktop-only, expensive, or lack pedagogically sound grammar validation.
+                    </p>
+                    <h3>Specific Pain Points</h3>
+                    <ul class="problem-list">
+                        <li><strong>Limited practice opportunities:</strong> Students only practice during class time, with no accessible homework alternatives</li>
+                        <li><strong>Delayed feedback loops:</strong> Written exercises require teacher review before students receive feedback, often 24-48 hours later</li>
+                        <li><strong>Mobile accessibility gap:</strong> Most grammar tools don't work well on smartphones, yet 70%+ of ESOL students primarily access content via mobile devices</li>
+                        <li><strong>One-size-fits-all content:</strong> Existing apps don't follow a progressive, pedagogically structured curriculum aligned with grammar teaching sequences</li>
+                        <li><strong>Lack of contextual validation:</strong> Simple "correct/incorrect" feedback doesn't teach why a sentence is wrong or how different tenses relate to time expressions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Solution</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">
+                        I built a progressive, mobile-first sentence builder that gamifies grammar practice through an interactive tile-based system. The app validates sentences using context-aware grammar rules and provides immediate, educational feedback. Students progress through 47 carefully sequenced levels spanning 9 grammar categories, from basic present tense to complex conditionals.
+                    </p>
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h4>Progressive Level System</h4>
+                            <p>47 levels organized into 9 grammar categories with adaptive difficulty, unlocking based on student mastery and achievement points</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Context-Aware Grammar Validation</h4>
+                            <p>Intelligent engine that validates not just grammar correctness, but contextual appropriateness—e.g., distinguishing between past simple and present perfect based on time expressions</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Touch-Optimized Word Tiles</h4>
+                            <p>Interactive tiles that cycle through verb conjugations (eat/eats/eating/ate) with haptic feedback, designed specifically for mobile learners</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Real-Time Progress Tracking</h4>
+                            <p>Supabase-powered backend tracks student progress, achievements, streaks, and completion rates with persistent data across devices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Screenshots & Walkthrough</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="screenshots-container">
+                    <div class="screenshot-item">
+                        <img src="../screenshots/sentence1.png" alt="ESOL Sentence Builder main interface" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <p class="screenshot-caption">Main game interface showing word tile system with sentence construction area</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="../screenshots/sentence2.png" alt="ESOL Sentence Builder level selection" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <p class="screenshot-caption">Level selection and progress tracking view</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Additional Screenshots</p>
+                            <span class="placeholder-note">Coming soon</span>
+                        </div>
+                        <p class="screenshot-caption">More detailed views coming as features are finalized</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Deep Dive -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Implementation</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <h3>Architecture Decisions</h3>
+                    <p>I chose Next.js 15 with server-side rendering to optimize initial load times for mobile learners on slower connections. Supabase provides a serverless backend with real-time capabilities for progress syncing without complex infrastructure. The grammar validation engine runs client-side to provide instant feedback without API latency, using a custom rules-based system rather than ML to ensure predictable, pedagogically accurate validation.</p>
+
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>Supabase PostgreSQL database for user authentication, progress tracking, and achievement storage</li>
+                        <li>Row-level security policies ensuring students can only access their own progress data</li>
+                        <li>Real-time subscriptions for live progress updates across devices</li>
+                        <li>Server actions for secure database mutations with TypeScript type safety</li>
+                        <li>Migration-based schema management for version-controlled database changes</li>
+                    </ul>
+
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>React Server Components for optimized initial page loads with reduced client-side JavaScript</li>
+                        <li>Custom grammar validation engine with 229+ verb database and context-aware tense rules</li>
+                        <li>Framer Motion animations for smooth word tile interactions and feedback states</li>
+                        <li>Responsive breakpoints with mobile-first design (375px to 1440px+)</li>
+                        <li>Radix UI primitives for accessible component foundations</li>
+                    </ul>
+
+                    <h3>Interesting Challenges</h3>
+                    <div class="challenge-box">
+                        <h4>Challenge: Time Expression Context Validation</h4>
+                        <p>Teaching the difference between past simple and present perfect is notoriously difficult for ESOL learners. The challenge was building a validation system that doesn't just check verb tense correctness, but also validates contextual appropriateness—e.g., "I have eaten lunch yesterday" is grammatically formed correctly but contextually wrong because "yesterday" signals finished time (requiring past simple).</p>
+                        <p><strong>Solution:</strong> I created a time expression system that categorizes time markers as "finished" (yesterday, last week) or "unfinished" (today, this week, recently). The grammar engine cross-references selected time expressions with verb tenses before validation, providing educational feedback like "Use past simple with 'yesterday' (finished time)" rather than just marking it wrong.</p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Challenge: Mobile Touch Target Optimization</h4>
+                        <p>Early testing revealed students struggled to tap small word tiles on mobile devices, especially when cycling through verb forms. Apple's Human Interface Guidelines recommend 44x44px minimum touch targets, but standard button sizing created layout issues with longer words.</p>
+                        <p><strong>Solution:</strong> Implemented dynamic tile sizing with a minimum 48px height, flexible width based on word length, and generous padding. Added visual press states with Framer Motion spring animations and optional haptic feedback (vibration) on supported devices, creating tactile confirmation of tile selection without requiring visual attention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process & Iteration -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Development Process</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <h3>What I Built First</h3>
+                    <p>I started with the core grammar validation engine and word tile system on a single level to validate the educational approach. I tested this MVP with 5 students in my ESOL class to ensure the sentence-building mechanic was intuitive and the feedback was helpful before investing in the full level progression system.</p>
+
+                    <h3>User Testing & Iteration</h3>
+                    <ul>
+                        <li><strong>Round 1:</strong> Students confused by simultaneous word selection + verb form toggling → Separated actions: tap to select word, tap again to cycle forms</li>
+                        <li><strong>Round 2:</strong> Mobile users accidentally triggered browser navigation by swiping word tiles → Added touch-action: none CSS and prevented default swipe behaviors</li>
+                        <li><strong>Round 3:</strong> Advanced students requested faster progression → Implemented achievement-based unlocking allowing students to skip ahead based on performance</li>
+                    </ul>
+
+                    <h3>What I'd Do Differently</h3>
+                    <p>I would implement comprehensive E2E testing from the start using Playwright. Currently, testing relies heavily on manual device testing, which is time-consuming for 47 levels. Automated tests for each level's grammar validation logic would catch regressions faster and give more confidence for deploying updates.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Results & Impact</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <div class="impact-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">47 Levels</div>
+                            <div class="stat-label">Progressive grammar curriculum from A1 to B2 proficiency</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">229+ Verbs</div>
+                            <div class="stat-label">Comprehensive verb database with all conjugation forms</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">100% Mobile Ready</div>
+                            <div class="stat-label">Touch-optimized interface tested on iOS and Android</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 2rem; text-align: center; font-style: italic; color: var(--text-secondary);">
+                        Note: The app is currently in student testing phase. Quantitative usage data and learning outcome metrics will be collected during the pilot program with ESOL classes in Spring 2025.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Lessons Learned</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <div class="lesson-box">
+                        <h4>Mobile-First Means Mobile-ONLY Testing First</h4>
+                        <p>I initially tested primarily on desktop with Chrome DevTools mobile emulation, which missed critical touch interaction issues. Real device testing revealed problems with touch target sizes, haptic feedback timing, and keyboard behavior that emulation didn't catch. Now I test every feature on actual mobile devices before considering it complete.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Grammar Validation Needs Pedagogical Depth, Not Just Correctness</h4>
+                        <p>My first grammar engine only checked if sentences were grammatically correct. Student feedback showed this wasn't helpful for learning—students needed to understand why their sentence was wrong and when to use different structures. Rebuilding the engine with context-aware rules and educational feedback messages transformed it from a grading tool into a teaching tool.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Progressive Unlocking Drives Engagement More Than Open Access</h4>
+                        <p>Initially, all levels were available immediately to avoid frustrating students. However, adding achievement-based unlocking with visible progress paths dramatically increased session length and return rates during early testing. Students treated it like a game to "beat" rather than a homework assignment to complete.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps / CTA -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Check It Out</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow" style="text-align: center;">
+                    <div class="project-cta">
+                        <a href="https://github.com/marlanamc/sentence-builder" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                    </div>
+                    <p style="margin-top: 2rem;"><a href="../index.html#projects" class="breadcrumb">← Back to All Projects</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

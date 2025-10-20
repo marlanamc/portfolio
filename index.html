@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlana Creed - Product-Minded Developer | EdTech & Accessibility</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Product-minded developer building accessible EdTech solutions. 6+ shipped applications. React, Firebase, Python, SQL.">
+    <meta property="og:title" content="Marlana Creed — Product Developer for EdTech & Accessibility">
+    <meta property="og:description" content="Building data-driven products that solve real problems in education and accessibility.">
+    <meta property="og:image" content="images/social-card.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico">
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Marlana Creed",
+      "jobTitle":"Product Developer",
+      "url":"https://marlanacreed.com",
+      "sameAs":[
+        "https://www.linkedin.com/in/marlanacreed",
+        "https://github.com/marlanamc"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">MC</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#resources">Resources</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag">Full-Stack Developer · Educator · MS Economics</span>
+                    <h1 class="hero-title">
+                        Building Tools That <span class="highlight">Actually Help People Learn</span>
+                    </h1>
+                    <p class="hero-description">
+                        I build full-stack web applications for education and accessibility using Python, Flask, and React.
+                        With a background in data analytics (ML, SQL, Tableau) and teaching, I create solutions informed
+                        by both data and deep user empathy. 10+ shipped applications serving 350+ real users.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">See My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Say Hello</a>
+                    </div>
+                    <div class="hero-cta-secondary">
+                        <a href="/docs/Marlana-Creed-Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Read My Résumé</a>
+                        <a href="https://www.linkedin.com/in/marlanacreed" class="btn btn-outline" target="_blank" rel="noopener">Connect on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-lead">
+                            I build products that help adults learn, and I care about making them simple and accessible.
+                        </p>
+                        <p>
+                            I came to software through data and teaching. I earned an <strong>MS in Economics from Georgia Tech</strong>, where my thesis used panel regression on NCES data to study institutional factors linked to non-completion at for-profit colleges and tuition trends in higher education. I then worked as a <strong>data analyst</strong> creating Tableau dashboards and running forecasting models. At <strong>Harvard Kennedy School</strong> I supported statistical research using R and STATA. This trained me to be precise with data and to ship work people can trust.
+                        </p>
+                        <p>
+                            As an <strong>Adult ESOL Teacher</strong>, I saw students struggle with tools that were not built for them. So I started building my own—<strong>10+ web applications</strong> using Python/Flask, React, and Firebase. From a complete learning management system to advisor bulletin boards to educational games, each project solves a real problem I've witnessed firsthand.
+                        </p>
+                        <p>
+                            I'm seeking roles in <strong>EdTech, accessibility-focused products, or mission-driven organizations</strong> where I can combine practical data skills with classroom empathy to build learner-first products. I care about clean code, accessible interfaces, and outcomes that make teachers' days easier and students' progress faster.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🐍</div>
+                                <div>
+                                    <h4>Python & Full-Stack</h4>
+                                    <p>Python/Flask, React, Firebase, SQL · 10+ shipped applications · 350+ users</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">📊</div>
+                                <div>
+                                    <h4>Data & Analytics</h4>
+                                    <p>Tableau, Statistical Analysis, Regression Modeling · Data-informed product decisions</p>
+                                    <p style="font-size: 0.9em; margin-top: 0.5rem; opacity: 0.9;"><strong>MS Thesis:</strong> Fixed effects panel regression on NCES data studying institutional factors linked to non-completion at for-profit colleges</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">♿</div>
+                                <div>
+                                    <h4>User-Centered Design</h4>
+                                    <p>Accessibility, ADHD-friendly UX, educational tools</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <div class="section-line"></div>
+                    <p class="section-subtitle">Educational games, accessibility tools, and full-stack applications solving real problems</p>
+                </div>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="education-management">Education Management</button>
+                    <button class="filter-btn" data-filter="learning-games">Learning Games</button>
+                    <button class="filter-btn" data-filter="adhd-accessibility">ADHD & Accessibility</button>
+                    <button class="filter-btn" data-filter="productivity">Productivity Tools</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 - Quiz Platform (NEW #1) -->
+                    <article class="project-card" data-category="education-management">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #a8d5f5 0%, #7c9bd9 100%);">
+                                <span>Learning Management System</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Full-Stack</span>
+                            </div>
+                            <h3>ESOL Quiz Platform (LMS)</h3>
+
+                            <div class="case-study">
+                                <div class="case-study-section">
+                                    <h4>Problem</h4>
+                                    <p>Google Forms limited verb conjugation assessments to multiple choice. Manual grading of 50+ student submissions with 6-8 fields each took 10+ hours weekly.</p>
+                                </div>
+
+                                <div class="case-study-section">
+                                    <h4>Solution</h4>
+                                    <p>Full-stack quiz platform with Python/Flask backend and SQLite database. Student interface features multi-field text input with instant auto-grading. Teacher dashboard provides real-time score tracking and progress monitoring.</p>
+                                </div>
+
+                                <div class="case-study-section">
+                                    <h4>Impact</h4>
+                                    <p>Saved ~1 hour of grading time per week while giving students instant feedback. Deployed across 18-week curriculum serving 50+ ESOL students with improved engagement and immediate error correction.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="projects/esol-lms.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 - School Job Board -->
+                    <article class="project-card" data-category="education-management">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #b8e6c9 0%, #a8d5f5 100%);">
+                                <span>School Portal</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Web App</span>
+                                <span class="tag">Full-Stack</span>
+                            </div>
+                            <h3>School Advisor Job Board</h3>
+
+                            <div class="case-study">
+                                <div class="case-study-section">
+                                    <h4>Problem</h4>
+                                    <p>Advisors shared jobs and resources across multiple Google Classrooms, creating duplicate work. Students struggled to find current items or sort by deadlines.</p>
+                                </div>
+
+                                <div class="case-study-section">
+                                    <h4>Solution</h4>
+                                    <p>Firebase app with search, category, and date filters. Advisor role management allows posting in one location. Calendar view and deadline sorting help students prioritize. Expired posts hidden by default with option to show archive.</p>
+                                </div>
+
+                                <div class="case-study-section">
+                                    <h4>Impact</h4>
+                                    <p>Advisors post in one place instead of 5+ Google Classrooms. Students scan by category and deadline in seconds. Serving 350+ users at East Boston Harborside Community School.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="projects/school-job-board.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 - Sentence Builder -->
+                    <article class="project-card" data-category="learning-games">
+                        <div class="project-image">
+                            <img src="screenshots/sentence1.png" alt="ESOL Sentence Builder" style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Supabase</span>
+                            </div>
+                            <h3>ESOL Sentence Builder</h3>
+                            <p>
+                                Mobile-first grammar learning platform with 47 progressive levels, context-aware validation, and touch-optimized word tiles. Gamified sentence construction with real-time progress tracking.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/sentence-builder.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 - Verb Form Challenge -->
+                    <article class="project-card" data-category="learning-games">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #b8a9f7 0%, #9b87f5 100%);">
+                                <span>Grammar Game</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">ESOL</span>
+                                <span class="tag">Game</span>
+                            </div>
+                            <h3>Verb Form Challenge Game</h3>
+                            <p>
+                                Interactive game teaching English verb conjugation across different tenses. Students
+                                practice present, past, and future forms with instant feedback and progress tracking.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/verb-form-challenge.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 - English Numbers Game -->
+                    <article class="project-card" data-category="learning-games">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #ffc4d6 0%, #ffabc5 100%);">
+                                <span>Numbers Game</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">ESOL</span>
+                                <span class="tag">Numbers</span>
+                            </div>
+                            <h3>English Numbers Game</h3>
+                            <p>
+                                Interactive number practice game helping English learners master number recognition
+                                and pronunciation. Features audio support and progressive difficulty levels.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/english-numbers-game.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 - Random Verb Conjugation -->
+                    <article class="project-card" data-category="learning-games">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #fde68a 0%, #ffd88a 100%);">
+                                <span>Verb Practice</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Grammar</span>
+                                <span class="tag">ESOL</span>
+                            </div>
+                            <h3>Random Verb Conjugation Game</h3>
+                            <p>
+                                Randomized verb conjugation practice with dice mechanics for engaging grammar learning.
+                                Covers irregular verbs and multiple tenses with immediate feedback.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/random-verb-conjugation.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 - Gerund or Infinitive Game -->
+                    <article class="project-card" data-category="learning-games">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #d4f1f4 0%, #a8d5f5 100%);">
+                                <span>Grammar Game</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">ESOL</span>
+                                <span class="tag">Advanced Grammar</span>
+                            </div>
+                            <h3>Gerund or Infinitive Game</h3>
+                            <p>
+                                Advanced grammar game teaching proper use of gerunds vs infinitives—one of the
+                                trickiest concepts for English learners. Includes examples and explanations.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/gerund-infinitive-game.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 - ADHD First Aid Kit -->
+                    <article class="project-card" data-category="adhd-accessibility">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #dac4f7 0%, #b8a9f7 100%);">
+                                <span>ADHD Tools</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Accessibility</span>
+                                <span class="tag">Web App</span>
+                            </div>
+                            <h3>ADHD First Aid Kit</h3>
+                            <p>
+                                Comprehensive toolkit with timers, focus tools, and sensory-friendly interfaces
+                                for ADHD management. Built with React and user-tested with neurodivergent individuals.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/adhd-first-aid.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7 - NAV Coaching Website -->
+                    <article class="project-card" data-category="adhd-accessibility">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #f5c4d8 0%, #ffa8c5 100%);">
+                                <span>Coaching Platform</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Web Design</span>
+                                <span class="tag">ADHD Resources</span>
+                                <span class="tag">UX/UI</span>
+                            </div>
+                            <h3>NAV ADHD Coaching Website</h3>
+                            <p>
+                                Full-featured ADHD coaching platform with resources, community features, and booking.
+                                Designed with neurodivergent-friendly UX principles and accessibility in mind.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/nav-coaching.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 8 - ADHD Dashboard (In Progress) -->
+                    <article class="project-card" data-category="adhd-accessibility">
+                        <div class="project-image">
+                            <img src="screenshots/lifedash.jpg" alt="ADHD Life Dashboard" style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Vite</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">In Development</span>
+                            </div>
+                            <h3>ADHD Dashboard</h3>
+                            <p>
+                                Neurodivergent-friendly life management tool with adaptive time-based theming, energy capacity visualizer, and frictionless brain dump. Progressive web app with offline-first architecture.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/adhd-dashboard.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 9 - Job Tracker -->
+                    <article class="project-card" data-category="productivity">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #f5c4d8 0%, #e9a6d4 100%);">
+                                <span>Job Tracker</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Full-Stack</span>
+                            </div>
+                            <h3>Job Application Tracker</h3>
+
+                            <div class="case-study">
+                                <div class="case-study-section">
+                                    <h4>Problem</h4>
+                                    <p>Managing 100+ job applications across multiple sources became overwhelming. Needed motivation during long job search with no existing tools combining tracking and accountability features.</p>
+                                </div>
+
+                                <div class="case-study-section">
+                                    <h4>Solution</h4>
+                                    <p>Full-stack tracker with Firebase Firestore backend. Built-in gamification features (focus timer, reward system) to maintain motivation. CSV bulk import/export, filtering by status/priority, and visual progress indicators.</p>
+                                </div>
+
+                                <div class="case-study-section">
+                                    <h4>Impact</h4>
+                                    <p>Personally managed 100+ applications with measurable improvement in organization. Reduced application follow-up time by 50% with automated reminders. Open-sourced for other job seekers.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="projects/job-tracker.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 10 - ESOL Resource Hub -->
+                    <article class="project-card" data-category="education-management">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #ffd88a 0%, #b8e6c9 100%);">
+                                <span>Student Resource Hub</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Canva</span>
+                                <span class="tag">ESOL</span>
+                                <span class="tag">Resource Hub</span>
+                            </div>
+                            <h3>ESOL Student Resource Hub</h3>
+                            <p>
+                                Centralized portal for adult ESOL learners with curated links to learning games, practice sites,
+                                Google Classroom, syllabus, and community resources (housing help, legal aid, job search).
+                                Used weekly by 26 students as their go-to resource center.
+                            </p>
+                            <div class="project-links">
+                                <a href="projects/esol-resource-hub.html" class="project-link">View Full Case Study →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="resources">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Free Resources</h2>
+                    <div class="section-line"></div>
+                    <p class="section-subtitle">Worksheets, tools, and activities I've created for students and the community</p>
+                </div>
+
+                <div class="resources-grid">
+                    <!-- ADHD & Mental Health -->
+                    <div class="resource-category">
+                        <div class="resource-header">
+                            <div class="resource-icon">🧠</div>
+                            <h3>ADHD & Mental Health</h3>
+                        </div>
+                        <p class="resource-description">Tools and resources for neurodivergent individuals and mental wellness</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="btn btn-secondary" style="cursor: not-allowed; opacity: 0.6;">Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- ESOL/English Learning -->
+                    <div class="resource-category">
+                        <div class="resource-header">
+                            <div class="resource-icon">📚</div>
+                            <h3>ESOL & English Learning</h3>
+                        </div>
+                        <p class="resource-description">Interactive games, worksheets, and exercises for English language learners</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="btn btn-secondary" style="cursor: not-allowed; opacity: 0.6;">Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- Professional Development -->
+                    <div class="resource-category">
+                        <div class="resource-header">
+                            <div class="resource-icon">💼</div>
+                            <h3>Professional Development</h3>
+                        </div>
+                        <p class="resource-description">Tools and templates for job seekers and career development</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="btn btn-secondary" style="cursor: not-allowed; opacity: 0.6;">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Data & Analytics</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">pandas</span>
+                            <span class="skill-item">NumPy</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">SQLite</span>
+                            <span class="skill-item">R</span>
+                            <span class="skill-item">STATA</span>
+                            <span class="skill-item">Tableau</span>
+                            <span class="skill-item">Statistical Analysis</span>
+                            <span class="skill-item">Regression Analysis</span>
+                            <span class="skill-item">Panel Data Analysis</span>
+                            <span class="skill-item">Data Visualization</span>
+                            <span class="skill-item">Forecasting</span>
+                            <span class="skill-item">Data Pipeline Automation</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Technical & Development</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">React</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">TypeScript</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">FastAPI</span>
+                            <span class="skill-item">Firebase</span>
+                            <span class="skill-item">Supabase</span>
+                            <span class="skill-item">HTML/CSS</span>
+                            <span class="skill-item">Database Design</span>
+                            <span class="skill-item">API Integration</span>
+                            <span class="skill-item">Full-Stack Development</span>
+                            <span class="skill-item">Git/GitHub</span>
+                            <span class="skill-item">Vercel/Deployment</span>
+                            <span class="skill-item">PythonAnywhere</span>
+                            <span class="skill-item">CI/CD</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">pytest</span>
+                            <span class="skill-item">Accessibility (WCAG 2.1)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Business & Domain Expertise</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">Risk Modeling</span>
+                            <span class="skill-item">Marketing Analytics</span>
+                            <span class="skill-item">Business Intelligence</span>
+                            <span class="skill-item">Data Quality Assurance</span>
+                            <span class="skill-item">Economics</span>
+                            <span class="skill-item">Education & Training</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Let's Connect</h2>
+                    <div class="section-line"></div>
+                    <p class="section-subtitle">
+                        I'm seeking product roles in EdTech, accessibility-focused companies, or mission-driven
+                        organizations where I can build solutions that actually help people.
+                    </p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a id="email-link"><span id="email-text" data-user="marlana.creed" data-domain="gmail.com"></span></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <span>770-378-9207</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/marlanacreed" target="_blank" rel="noopener">linkedin.com/in/marlanacreed</a>
+                                <div><a href="/docs/Marlana-Creed-Resume.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <p class="contact-message">
+                            I bring a rare mix, analytical rigor (MS Economics), hands-on development with 10+ shipped apps, and real teacher empathy. Let’s build something meaningful. ♥️
+                        </p>
+                        <a id="email-cta" class="btn btn-primary">Send Me a Message</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

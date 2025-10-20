@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlana Creed - Python Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .contact-info {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        h4 {
+            font-size: 1.05em;
+            color: #34495e;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .date {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .company {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Summary Section */
+        .summary {
+            background: #ecf0f1;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 25px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            gap: 10px;
+        }
+
+        .skill-item {
+            margin-bottom: 8px;
+        }
+
+        .skill-item strong {
+            color: #2c3e50;
+            display: inline-block;
+            min-width: 180px;
+        }
+
+        /* Projects Section */
+        .project {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+
+        .project-title {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.15em;
+            margin-bottom: 5px;
+        }
+
+        .tech-stack {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .project-section-title {
+            font-weight: bold;
+            color: #34495e;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .project-links {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .project-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Lists */
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .institution {
+            color: #555;
+        }
+
+        .education-details {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Value Proposition Section */
+        .value-props {
+            background: #ecf0f1;
+            padding: 20px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .value-props ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .value-props li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .value-props li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .open-to {
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        .open-to strong {
+            color: #2c3e50;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+
+            .project {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .skill-item strong {
+                display: block;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MARLANA CREED</h1>
+            <div class="contact-info">
+                Boston, MA | marlana.creed@gmail.com | 770-378-9207 |
+                <a href="https://linkedin.com/in/marlanacreed" target="_blank">linkedin.com/in/marlanacreed</a>
+            </div>
+            <div class="tagline">PYTHON DEVELOPER | 10 Deployed Applications | Available Immediately</div>
+        </header>
+
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>Python developer with proven track record of shipping production applications. Built 10 web applications including a full-stack learning management system serving 50+ users, using Python/Flask, React, and Firebase. Background in data analytics (MS Economics, Georgia Tech) with experience in machine learning, Tableau dashboards, and statistical analysis. Seeking full-time developer role to transition from independent projects to team-based development.</p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>Languages & Frameworks:</strong> Python, Flask, JavaScript, React, HTML5, CSS3, SQL, R, STATA
+                </div>
+                <div class="skill-item">
+                    <strong>Backend & Databases:</strong> Flask, Firebase (Firestore, Auth), SQLite, PostgreSQL, RESTful APIs
+                </div>
+                <div class="skill-item">
+                    <strong>Frontend:</strong> React, Responsive Design, Accessibility (WCAG 2.1), Jinja2 Templates
+                </div>
+                <div class="skill-item">
+                    <strong>Data & Analytics:</strong> Tableau, Python (pandas, scikit-learn, NumPy), Machine Learning, Statistical Analysis
+                </div>
+                <div class="skill-item">
+                    <strong>Tools & Platforms:</strong> Git/GitHub, PythonAnywhere, Vercel, Google Cloud Platform, VS Code
+                </div>
+                <div class="skill-item">
+                    <strong>Methodologies:</strong> Agile Development, User-Centered Design, Full Development Lifecycle
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Projects</h2>
+            <h3>Independent Developer | 2023 - Present</h3>
+            <p style="font-style: italic; margin-bottom: 20px;">Built and deployed 10 web applications for education and accessibility</p>
+
+            <div class="project">
+                <div class="project-title">Custom Learning Management System</div>
+                <div class="tech-stack">Python, Flask, SQL, HTML/CSS | PythonAnywhere</div>
+
+                <div class="project-section-title">Problem</div>
+                <p>Google Forms limited verb conjugation assessments to multiple choice. Manual grading of 50+ student submissions with 6-8 fields each took 10+ hours weekly. No centralized progress tracking or gradebook existed for 14-week curriculum.</p>
+
+                <div class="project-section-title">Solution</div>
+                <p>Full-stack quiz platform with Python/Flask backend and SQLite database. Student interface features multi-field text input for verb conjugations with instant auto-grading. Teacher dashboard provides real-time score tracking, progress monitoring, and grade management. Auto-grading algorithm with fuzzy matching validates conjugations across tenses.</p>
+
+                <div class="project-section-title">Technical Implementation:</div>
+                <ul>
+                    <li>User authentication and session management with Flask</li>
+                    <li>Relational database design for students, quizzes, and results</li>
+                    <li>RESTful API for quiz submission and score retrieval</li>
+                    <li>Dual user experiences optimized for student assessment and teacher analytics</li>
+                </ul>
+
+                <div class="project-section-title">Impact</div>
+                <ul>
+                    <li>Reduced grading time from 10+ hours to 0 hours per week</li>
+                    <li>Deployed across 14-week curriculum serving 50+ ESOL students</li>
+                    <li>Improved student engagement with instant feedback</li>
+                    <li>Enabled data-driven instruction with progress analytics</li>
+                </ul>
+
+                <div class="project-links">
+                    <strong>Live:</strong> <a href="https://esolteachermc.pythonanywhere.com/" target="_blank">esolteachermc.pythonanywhere.com</a>
+                    <strong>GitHub:</strong> <a href="https://github.com/marlanamc" target="_blank">github.com/marlanamc</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">School Job Board System</div>
+                <div class="tech-stack">Firebase, JavaScript, HTML/CSS</div>
+
+                <div class="project-section-title">Problem</div>
+                <p>Advisors shared jobs and resources across multiple Google Classrooms, creating duplicate work. Students struggled to find current items or sort by deadlines. No centralized system existed for 100+ users across the school.</p>
+
+                <div class="project-section-title">Solution</div>
+                <p>Firebase app with search, category, and date filters. Advisor role management allows posting in one location. Calendar view and deadline sorting help students prioritize. PDF and image uploads supported. Expired posts hidden by default with option to show archive.</p>
+
+                <div class="project-section-title">Impact</div>
+                <ul>
+                    <li>Advisors post in one place instead of 5+ Google Classrooms</li>
+                    <li>Students scan by category and deadline in seconds</li>
+                    <li>Admins manage expired items and export lists for newsletters</li>
+                    <li>Serving 100+ users at East Boston Harborside Community School</li>
+                </ul>
+
+                <div class="project-links">
+                    <strong>Live:</strong> <a href="https://ebhcsjobboard.web.app/" target="_blank">ebhcsjobboard.web.app</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Job Application Tracker</div>
+                <div class="tech-stack">React, Firebase | GitHub Pages</div>
+
+                <div class="project-section-title">Problem</div>
+                <p>Managing 100+ job applications across multiple sources became overwhelming. Needed motivation during long job search. No existing tools combined tracking with accountability features.</p>
+
+                <div class="project-section-title">Solution</div>
+                <p>Full-stack tracker with Firebase Firestore backend for data persistence and real-time updates. Built-in gamification features (focus timer, reward system) to maintain motivation. CSV bulk import/export for data portability. Filtering by status, priority, and custom tags. Visual progress indicators and application timeline.</p>
+
+                <div class="project-section-title">Impact</div>
+                <ul>
+                    <li>Personally managed 100+ applications with measurable improvement in organization</li>
+                    <li>Reduced application follow-up time by 50% with automated reminders</li>
+                    <li>Gamification features helped maintain motivation through extended job search</li>
+                    <li>Open-sourced for other job seekers to use</li>
+                </ul>
+
+                <div class="project-links">
+                    <strong>Live:</strong> <a href="https://marlanamc.github.io/jobapptracker/" target="_blank">marlanamc.github.io/jobapptracker</a>
+                    <strong>GitHub:</strong> <a href="https://github.com/marlanamc/jobapptracker" target="_blank">github.com/marlanamc/jobapptracker</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">ESOL Educational Games Suite (5 applications)</div>
+                <div class="tech-stack">JavaScript, HTML/CSS</div>
+
+                <div class="project-section-title">Problem</div>
+                <p>Adult English learners needed interactive practice for grammar concepts. Textbook exercises lacked immediate feedback. Students struggled with motivation for repetitive conjugation drills.</p>
+
+                <div class="project-section-title">Solution</div>
+                <p>Suite of 5 interactive games: Sentence Builder, Verb Conjugation, Number Recognition, Gerund/Infinitive practice, and vocabulary builders. Drag-and-drop mechanics, progressive difficulty levels, instant feedback, and mobile-responsive design. No login required for easy classroom deployment.</p>
+
+                <div class="project-section-title">Impact</div>
+                <ul>
+                    <li>Used weekly by 50+ adult English learners across multiple classes</li>
+                    <li>Improved student engagement with gamified practice</li>
+                    <li>Reduced prep time for instructors with ready-to-use activities</li>
+                    <li>Students can practice independently at home</li>
+                </ul>
+
+                <div class="project-links">
+                    <strong>Live Demos:</strong> <a href="https://marliesesolclass.my.canva.site/" target="_blank">marliesesolclass.my.canva.site</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">ADHD Accessibility Tools (3 applications)</div>
+                <div class="tech-stack">React, Firebase</div>
+
+                <div class="project-section-title">Problem</div>
+                <p>Neurodivergent individuals struggle with traditional productivity tools designed for neurotypical users. Executive function challenges require specialized interfaces. Limited accessible, sensory-friendly tools available.</p>
+
+                <div class="project-section-title">Solution</div>
+                <p>Three-app suite: ADHD First Aid Kit (focus timers, task organizers, sensory-friendly UI), NAV Coaching Platform (coaching resources, community, booking system), and ADHD Dashboard (habit tracking with Firebase backend). User-tested with neurodivergent individuals. Implements WCAG 2.1 accessibility standards and reduced-stimulation design patterns.</p>
+
+                <div class="project-section-title">Impact</div>
+                <ul>
+                    <li>User-tested with neurodivergent community for real-world validation</li>
+                    <li>Positive feedback on sensory-friendly interface design</li>
+                    <li>NAV Coaching Platform actively used for client engagement</li>
+                    <li>Open-sourced ADHD First Aid Kit for community benefit</li>
+                </ul>
+
+                <div class="project-links">
+                    <strong>Live Demos:</strong>
+                    <a href="https://adhd-first-aid.vercel.app/" target="_blank">adhd-first-aid.vercel.app</a> |
+                    <a href="https://www.navcoaching.org/" target="_blank">navcoaching.org</a> |
+                    <a href="https://adhddash.web.app/" target="_blank">adhddash.web.app</a><br>
+                    <strong>GitHub:</strong> <a href="https://github.com/marlanamc/adhd_first_aid" target="_blank">github.com/marlanamc/adhd_first_aid</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; font-weight: bold;">All projects available on GitHub: <a href="https://github.com/marlanamc" target="_blank">github.com/marlanamc</a></p>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Part-Time ESOL Instructor</div>
+                    <div class="date">January 2023 - Present</div>
+                </div>
+                <div class="company">East Boston Harborside Community School | Boston, MA (Evenings, 2x/week)</div>
+                <ul>
+                    <li>Teach adult English learners while developing supplementary educational technology</li>
+                    <li>Conduct user research and usability testing to inform product development decisions</li>
+                    <li>Available to transition for full-time opportunity</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Customer Data Support Analyst</div>
+                    <div class="date">October 2021 - May 2022</div>
+                </div>
+                <div class="company">Grand Circle Corporation | Boston, MA</div>
+                <ul>
+                    <li>Developed Tableau reports and dashboards for marketing team using complex SQL queries</li>
+                    <li>Collaborated with Data Warehouse and Business Intelligence teams on ETL pipeline development</li>
+                    <li>Performed quality assurance and validation for Marketing Analytics database loads</li>
+                    <li><strong>Technologies:</strong> Tableau, SQL (MySQL, PostgreSQL), Python, data validation, BI tools</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Catastrophic Risk Analyst</div>
+                    <div class="date">August 2020 - October 2021</div>
+                </div>
+                <div class="company">Homesite Insurance | Boston, MA</div>
+                <ul>
+                    <li>Built Python automation tool for real-time disaster monitoring, reducing policyholder response time 40%</li>
+                    <li>Developed machine learning models (scikit-learn) to predict financial losses from natural disasters</li>
+                    <li>Created risk models enabling data-driven premium adjustments and growth opportunity identification</li>
+                    <li><strong>Technologies:</strong> Python, scikit-learn, pandas, NumPy, data visualization, automation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Operations & Training Lead</div>
+                    <div class="date">June 2016 - May 2021</div>
+                </div>
+                <div class="company">Barcelona Restaurant Group | Boston, MA</div>
+                <ul>
+                    <li>Led training programs for 50+ staff members on complex systems and operational procedures</li>
+                    <li>Managed high-volume operations requiring quick decision-making and accuracy under pressure</li>
+                    <li>Developed process documentation and coordinated cross-functional teams</li>
+                    <li>Completed Full-Stack Development bootcamp at Coding Temple during this period (Jan-May 2020)</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Research Analyst</div>
+                    <div class="date">September 2015 - August 2017</div>
+                </div>
+                <div class="company">Harvard Kennedy School of Government | Cambridge, MA</div>
+                <ul>
+                    <li>Performed statistical analysis and data management for Harvard professors using STATA and R</li>
+                    <li>Conducted regression analysis on AP score impact for education policy research</li>
+                    <li>Administered behavioral economics research including survey design and experimental methodology</li>
+                    <li><strong>Technologies:</strong> STATA, R, statistical modeling, regression analysis, academic research</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <div class="degree">Master of Science in Economics</div>
+                <div class="institution">Georgia Institute of Technology | Atlanta, GA | 2015</div>
+                <div class="education-details">Advanced Econometrics, Statistics, Regression Analysis, Machine Learning</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Bachelor of Science in Economics & International Affairs</div>
+                <div class="institution">Georgia Institute of Technology | Atlanta, GA | 2013</div>
+                <div class="education-details">Dean's List: All 4 semesters (2011-2012)</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Full-Stack Development Certificate</div>
+                <div class="institution">Coding Temple | Remote | 2020</div>
+                <div class="education-details">Python, JavaScript, SQL, React, Flask, Database Design, RESTful APIs</div>
+            </div>
+        </section>
+
+        <section class="value-props">
+            <h2>What I Bring To Your Team</h2>
+            <ul>
+                <li><strong>Proven builder</strong> - 10 production applications with real users, including full-stack LMS</li>
+                <li><strong>Full development lifecycle</strong> - Designed, built, deployed, and maintained products independently</li>
+                <li><strong>User-centered approach</strong> - Teaching experience provides strong empathy for end users</li>
+                <li><strong>Data-informed decisions</strong> - Analytics background helps me build with metrics and impact in mind</li>
+                <li><strong>Python & full-stack expertise</strong> - Flask, React, Firebase, SQL, modern development practices</li>
+                <li><strong>Self-directed</strong> - Built everything from concept to deployment without supervision</li>
+            </ul>
+
+            <div class="open-to">
+                <div><strong>Open to:</strong> Python Developer, Full-Stack Developer, Backend Developer, EdTech roles, Contract/Contract-to-hire</div>
+                <div><strong>Work arrangement:</strong> Remote, hybrid, or onsite in Boston area</div>
+                <div><strong>Availability:</strong> Immediate (2-week notice for current part-time position)</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

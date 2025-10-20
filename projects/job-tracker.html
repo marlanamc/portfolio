@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker - Marlana Creed</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Full-stack job application tracker with Firebase backend, gamification features, and productivity tools.">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MC</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#resources">Resources</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
+                <div class="project-hero-content">
+                    <h1>Job Application Tracker</h1>
+                    <p class="project-tagline">Full-stack productivity app with gamification to stay motivated during job search</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <strong>Role:</strong> Full-Stack Developer
+                        </div>
+                        <div class="meta-item">
+                            <strong>Timeline:</strong> 2025
+                        </div>
+                        <div class="meta-item">
+                            <strong>Status:</strong> Open Source
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">Firestore</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">CSS</span>
+                    </div>
+                    <div class="project-cta">
+                        <a href="https://marlanamc.github.io/jobapptracker/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://github.com/marlanamc/jobapptracker" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Problem</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">
+                        Managing 100+ job applications across multiple sources became overwhelming. Needed motivation during long job search with no existing tools combining tracking and accountability features.
+                    </p>
+                    <h3>Specific Pain Points</h3>
+                    <ul class="problem-list">
+                        <li><strong>Application overload:</strong> Hard to track where I applied, when I applied, and what stage each application was in</li>
+                        <li><strong>Lost motivation:</strong> Job searching can be demoralizing—needed something to keep me engaged</li>
+                        <li><strong>No follow-up system:</strong> Forgot to follow up on applications because there was no reminder system</li>
+                        <li><strong>Scattered data:</strong> Applications tracked across spreadsheets, emails, and sticky notes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Solution</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">
+                        Full-stack tracker with Firebase Firestore backend. Built-in gamification features (focus timer, reward system) to maintain motivation. CSV bulk import/export, filtering by status/priority, and visual progress indicators.
+                    </p>
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h4>Application Management</h4>
+                            <p>Track job applications with status, priority, company info, and notes</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Focus Timer</h4>
+                            <p>Pomodoro-style timer to stay productive during application sessions</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Reward System</h4>
+                            <p>Gamification features to stay motivated—earn points for completing tasks</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>CSV Import/Export</h4>
+                            <p>Bulk import applications and export data for backup or analysis</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Smart Filtering</h4>
+                            <p>Filter by status (Applied, Interview, Rejected, etc.) and priority level</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Visual Progress</h4>
+                            <p>See your job search progress at a glance with stats and charts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Screenshots & Walkthrough</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="screenshots-container">
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Application Dashboard</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Main dashboard showing all job applications with status indicators</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Focus Timer</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Built-in Pomodoro timer to stay productive during application sessions</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Application Details</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Detailed view of individual application with notes and timeline</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Progress Statistics</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Visual progress indicators showing application stats and trends</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Deep Dive -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Implementation</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <h3>Architecture Decisions</h3>
+                    <p>I chose React for its component-based architecture and Firebase for real-time data sync. This allows the app to work seamlessly across devices without building a custom backend.</p>
+
+                    <h4>Frontend (React)</h4>
+                    <ul>
+                        <li>Component-based UI for reusable application cards and forms</li>
+                        <li>React Hooks for state management</li>
+                        <li>CSV parsing for bulk import/export functionality</li>
+                        <li>Responsive design for mobile and desktop use</li>
+                    </ul>
+
+                    <h4>Backend (Firebase)</h4>
+                    <ul>
+                        <li>Firestore for NoSQL database (real-time sync)</li>
+                        <li>Firebase Authentication for user accounts</li>
+                        <li>Security rules to ensure users only access their own data</li>
+                    </ul>
+
+                    <h3>Interesting Challenges</h3>
+                    <div class="challenge-box">
+                        <h4>Challenge: Maintaining Motivation</h4>
+                        <p>Job searching is mentally exhausting. I needed the app itself to be motivating, not just functional.</p>
+                        <p><strong>Solution:</strong> Added gamification features like a focus timer and reward points. Seeing progress visually (charts, stats) helped me stay motivated even when applications were rejected.</p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Challenge: Data Import/Export</h4>
+                        <p>Users might already have application data in spreadsheets. I needed an easy way to import existing data.</p>
+                        <p><strong>Solution:</strong> Built CSV parsing that maps spreadsheet columns to application fields. Also added export functionality for backup and analysis in other tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process & Iteration -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Development Process</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <h3>What I Built First</h3>
+                    <p>Started with basic CRUD (Create, Read, Update, Delete) for applications. Once the core tracking worked, I added the focus timer and gamification features based on what I personally needed to stay motivated.</p>
+
+                    <h3>User Testing & Iteration</h3>
+                    <ul>
+                        <li><strong>Round 1:</strong> Just used it myself—realized I needed bulk import since I already had 50+ applications in a spreadsheet</li>
+                        <li><strong>Round 2:</strong> Shared with job-seeking friends—they wanted filtering by status and priority</li>
+                        <li><strong>Round 3:</strong> Added visual stats because seeing progress helped combat job search fatigue</li>
+                    </ul>
+
+                    <h3>What I'd Do Differently</h3>
+                    <p>If I rebuilt this today, I'd add automated reminders for follow-ups (email/push notifications) and integrate with job boards via API to auto-populate application data. I'd also add a mobile app version using React Native.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Results & Impact</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <div class="impact-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Applications tracked</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">50%</div>
+                            <div class="stat-label">Faster follow-up time</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">Open</div>
+                            <div class="stat-label">Source for job seekers</div>
+                        </div>
+                    </div>
+
+                    <h3>Personal Impact</h3>
+                    <p>This tool turned a chaotic, stressful job search into an organized system. The gamification features genuinely helped me stay motivated during a difficult time. By tracking everything in one place, I could see patterns (which companies responded, which industries had better response rates) and adjust my strategy.</p>
+
+                    <h3>Open Source</h3>
+                    <p>I open-sourced this project so other job seekers could use and improve it. If even one person finds it helpful during their job search, it was worth building.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Lessons Learned</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <div class="lesson-box">
+                        <h4>Build for yourself first</h4>
+                        <p>This started as a tool I needed. Building something I personally used every day made it easier to know what features mattered and what didn't.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Motivation matters as much as functionality</h4>
+                        <p>The gamification features seemed silly at first, but they genuinely helped during a stressful time. UX isn't just about usability—it's about how the product makes people feel.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Firebase is great for solo projects</h4>
+                        <p>Firebase let me ship a full-stack app without managing servers or databases. For solo projects, this speed-to-market is invaluable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps / CTA -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Check It Out</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow" style="text-align: center;">
+                    <div class="project-cta">
+                        <a href="https://marlanamc.github.io/jobapptracker/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://github.com/marlanamc/jobapptracker" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                    </div>
+                    <p style="margin-top: 2rem;"><a href="../index.html#projects" class="breadcrumb">← Back to All Projects</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

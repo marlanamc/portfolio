@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marlana Creed - Resume</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #0f172a;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.32;
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 24px;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+
+  .name {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+  }
+
+  .title {
+    font-size: 11pt;
+    color: #475569;
+    margin-top: 2px;
+  }
+
+  .contact {
+    font-size: 10pt;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  section {
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 14px 0 6px;
+  }
+
+  .muted {
+    color: #475569;
+    font-size: 10.5pt;
+  }
+
+  ul {
+    margin: 6px 0 0 18px;
+    padding: 0;
+  }
+
+  li {
+    margin: 3px 0;
+  }
+
+  .role {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .role h3 {
+    font-size: 11.5pt;
+    margin: 0;
+  }
+
+  .when {
+    font-size: 10.5pt;
+    color: #475569;
+    white-space: nowrap;
+  }
+
+  .project {
+    margin-bottom: 12px;
+  }
+
+  .proj-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .proj-head strong {
+    font-size: 11pt;
+  }
+
+  .links {
+    font-size: 10pt;
+    white-space: nowrap;
+  }
+
+  .links a + a {
+    margin-left: 8px;
+  }
+
+  @media print {
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      border-bottom: 0;
+      margin-bottom: 8px;
+      padding-bottom: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container" role="document">
+  <header>
+    <div>
+      <div class="name" aria-label="name">Marlana Creed</div>
+      <div class="title">Python Developer, EdTech focus</div>
+    </div>
+    <div class="contact">
+      Boston, MA &middot; <a href="mailto:marlana.creed@gmail.com">marlana.creed@gmail.com</a> &middot; 770-378-9207<br />
+      GitHub: <a href="https://github.com/marlanamc">github.com/marlanamc</a> &middot;
+      Portfolio: <a href="https://adhddash.web.app/">adhddash.web.app</a> &middot;
+      LinkedIn: <a href="https://linkedin.com/in/marlanacreed">linkedin.com/in/marlanacreed</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <p class="muted">
+      Python developer and ESOL instructor who ships classroom-tested tools. Built a Flask LMS used weekly by 50+ adult learners and a Firebase job board for a Boston school. Targeting Python or full-stack roles building learner-facing products.
+    </p>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <p class="muted">
+      <strong>Languages:</strong> Python, JavaScript, SQL &bull;
+      <strong>Frameworks:</strong> Flask, React &bull;
+      <strong>Data:</strong> pandas, NumPy, scikit-learn, Tableau &bull;
+      <strong>Databases:</strong> PostgreSQL, SQLite, Firestore &bull;
+      <strong>Tools:</strong> Git/GitHub, REST APIs, Vercel, PythonAnywhere, Accessibility WCAG 2.1
+    </p>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Selected Projects</h2>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>Custom Learning Management System</strong>
+        <span class="links">
+          <a href="https://esolteachermc.pythonanywhere.com/">Live</a>
+          <a href="https://github.com/marlanamc">Code</a>
+        </span>
+      </div>
+      <div class="muted">Python, Flask, SQLite</div>
+      <ul>
+        <li>Auto-graded verb quiz platform with teacher dashboard for real-time scores.</li>
+        <li>Deployed 14 weeks for 50+ students, about 10 hours per week saved on grading.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>School Job Board System</strong>
+        <span class="links">
+          <a href="https://ebhcsjobboard.web.app/">Live</a>
+          <a href="https://github.com/marlanamc/jobapptracker">Code</a>
+        </span>
+      </div>
+      <div class="muted">Firebase, JavaScript</div>
+      <ul>
+        <li>Search, tag filters, deadlines, and advisor roles for 100+ users.</li>
+        <li>Expired posts hidden by default with calendar view for time-sensitive items.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <strong>ADHD Accessibility Tools, suite</strong>
+        <span class="links">
+          <a href="https://adhd-first-aid.vercel.app/">Live 1</a>
+          <a href="https://www.navcoaching.org/">Live 2</a>
+          <a href="https://adhddash.web.app/">Live 3</a>
+          <a href="https://github.com/marlanamc/adhd_first_aid">Code</a>
+        </span>
+      </div>
+      <div class="muted">React, Firebase</div>
+      <ul>
+        <li>Sensory-friendly tools with timers and organizers aligned to WCAG 2.1.</li>
+        <li>User tested with neurodivergent adults.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Experience</h2>
+
+    <div>
+      <div class="role"><h3>Independent Python Developer</h3><div class="when">2023 to Present</div></div>
+      <ul>
+        <li>Built and deployed 10 web apps for learning and accessibility. LMS and Job Board are in regular use.</li>
+        <li>Python, Flask, React, SQL, Firebase with a focus on testing, accessibility, and clear docs.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>ESOL Instructor, East Boston Harborside Community School</h3><div class="when">2023 to Present</div></div>
+      <ul>
+        <li>Teach adults and translate classroom needs into shipped tools, including the LMS and games suite.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>Customer Data Support Analyst, Grand Circle Corporation</h3><div class="when">2021 to 2022</div></div>
+      <ul>
+        <li>Shipped Tableau dashboards backed by SQL views and scheduled loads. Wrote QA checks for refreshes.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>Catastrophic Risk Analyst, Homesite Insurance</h3><div class="when">2020 to 2021</div></div>
+      <ul>
+        <li>Built Python automation for real-time disaster monitoring, reduced response time about 40 percent.</li>
+        <li>Prototyped loss models with scikit-learn to inform pricing and exposure.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>Operations and Training Lead, Barcelona Restaurant Group</h3><div class="when">2016 to 2021</div></div>
+      <ul>
+        <li>Led training for 50+ staff and produced process documentation while completing a full-stack program.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="role"><h3>Research Analyst, Harvard Kennedy School</h3><div class="when">2015 to 2017</div></div>
+      <ul>
+        <li>Statistical analysis with STATA and R for education policy research.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <ul class="muted">
+      <li>MS, Economics, Georgia Institute of Technology</li>
+      <li>BS, Economics and International Affairs, Georgia Institute of Technology</li>
+      <li>Full-Stack Development Certificate, Coding Temple</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>

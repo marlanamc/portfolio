@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Advisor Job Board - Marlana Creed</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Firebase-powered job and resource board serving 350+ students and advisors at East Boston Harborside Community School.">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MC</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#resources">Resources</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
+                <div class="project-hero-content">
+                    <h1>School Advisor Job Board</h1>
+                    <p class="project-tagline">Centralized bulletin board for jobs, resources, and opportunities</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <strong>Role:</strong> Full-Stack Developer
+                        </div>
+                        <div class="meta-item">
+                            <strong>Timeline:</strong> 2025
+                        </div>
+                        <div class="meta-item">
+                            <strong>Users:</strong> 350+ students and advisors
+                        </div>
+                        <div class="meta-item">
+                            <strong>Status:</strong> Active
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">Firestore</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">HTML/CSS</span>
+                        <span class="tech-badge">Authentication</span>
+                    </div>
+                    <div class="project-cta">
+                        <a href="https://ebhcsjobboard.web.app/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://github.com/marlanamc/jobapptracker" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Problem</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">
+                        Advisors shared jobs and resources across multiple Google Classrooms, creating duplicate work. Students struggled to find current items or sort by deadlines.
+                    </p>
+                    <h3>Specific Pain Points</h3>
+                    <ul class="problem-list">
+                        <li><strong>Duplicate posting:</strong> Advisors posted the same job/resource in 5+ different Google Classrooms</li>
+                        <li><strong>No centralized hub:</strong> Students had to check multiple places to find all opportunities</li>
+                        <li><strong>Hard to find current items:</strong> Old posts mixed with new ones, making it hard to see what was still relevant</li>
+                        <li><strong>No filtering or search:</strong> Students couldn't filter by deadline, category, or keyword</li>
+                        <li><strong>No role management:</strong> Anyone could post, leading to spam and irrelevant content</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Solution</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">
+                        Firebase app with search, category, and date filters. Advisor role management allows posting in one location. Calendar view and deadline sorting help students prioritize. Expired posts hidden by default with option to show archive.
+                    </p>
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h4>Centralized Posting</h4>
+                            <p>Advisors post once, visible to all students immediately</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Smart Filtering</h4>
+                            <p>Filter by category (jobs, housing, events, etc.) and deadline dates</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Search Functionality</h4>
+                            <p>Keyword search to quickly find specific opportunities</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Calendar View</h4>
+                            <p>Visual calendar showing deadlines and upcoming events</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Role Management</h4>
+                            <p>Advisor-only posting rights to maintain quality and reduce spam</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Auto-Archive</h4>
+                            <p>Expired posts automatically hidden but accessible if needed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Screenshots & Walkthrough</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="screenshots-container">
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Main Board View</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Students see all current jobs, housing, and resource opportunities</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Category Filters</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Filter by jobs, housing, scholarships, events, and more</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Calendar View</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Visual calendar showing deadlines and important dates</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-placeholder">
+                            <p>Advisor Dashboard</p>
+                            <span class="placeholder-note">Add screenshot here</span>
+                        </div>
+                        <p class="screenshot-caption">Advisors can create, edit, and manage posts from one interface</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Deep Dive -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Implementation</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <h3>Architecture Decisions</h3>
+                    <p>I chose Firebase for its real-time database capabilities and built-in authentication. This allows instant updates across all users and simple role-based access control.</p>
+
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>Vanilla JavaScript for filtering and search functionality</li>
+                        <li>Responsive CSS Grid for card-based layout</li>
+                        <li>Calendar library integration for deadline visualization</li>
+                        <li>Firebase Authentication for user login and role verification</li>
+                    </ul>
+
+                    <h4>Backend (Firebase)</h4>
+                    <ul>
+                        <li>Firestore database for storing posts with timestamps and categories</li>
+                        <li>Security rules ensuring only advisors can create/edit posts</li>
+                        <li>Cloud Functions for auto-archiving expired posts</li>
+                        <li>Real-time listeners for instant board updates</li>
+                    </ul>
+
+                    <h3>Interesting Challenges</h3>
+                    <div class="challenge-box">
+                        <h4>Challenge: Role-Based Access Control</h4>
+                        <p>How do you ensure only advisors can post while still allowing all students to view? Google Classroom doesn't have this granularity.</p>
+                        <p><strong>Solution:</strong> Firebase Authentication with custom claims. Advisors get a special "advisor" role in their user profile, which Firebase security rules check before allowing write access.</p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Challenge: Auto-Archiving Old Posts</h4>
+                        <p>Posts with past deadlines should be hidden automatically, but advisors might want to reference them later.</p>
+                        <p><strong>Solution:</strong> Cloud Function runs daily to mark posts as "archived" if their deadline has passed. Students see active posts by default, but can toggle to view archived content.</p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Challenge: Real-Time Updates</h4>
+                        <p>When an advisor posts a new job, all 350+ students should see it immediately without refreshing.</p>
+                        <p><strong>Solution:</strong> Firestore real-time listeners automatically push new posts to all connected clients. No polling or manual refresh needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process & Iteration -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Development Process</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <h3>What I Built First</h3>
+                    <p>Started with basic CRUD (create, read, update, delete) for posts. Once advisors could post and students could view, I added filtering and search based on their feedback.</p>
+
+                    <h3>User Testing & Iteration</h3>
+                    <ul>
+                        <li><strong>Round 1:</strong> Advisors wanted bulk posting → added CSV import for multiple opportunities</li>
+                        <li><strong>Round 2:</strong> Students missed deadlines → added calendar view and deadline sorting</li>
+                        <li><strong>Round 3:</strong> Too many old posts cluttering the board → implemented auto-archiving</li>
+                        <li><strong>Round 4:</strong> Students wanted to search by keyword → added full-text search</li>
+                    </ul>
+
+                    <h3>What I'd Do Differently</h3>
+                    <p>If I rebuilt this today, I'd add email/SMS notifications for new high-priority posts (like scholarship deadlines). I'd also implement tagging so students could subscribe to specific categories and get alerts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Results & Impact</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <div class="impact-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">350+</div>
+                            <div class="stat-label">Active users</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">1 place</div>
+                            <div class="stat-label">Instead of 5+ classrooms</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">Daily</div>
+                            <div class="stat-label">Student usage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Lessons Learned</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <div class="lesson-box">
+                        <h4>Solve real organizational problems</h4>
+                        <p>This wasn't a "cool tech project"—it solved a specific pain point advisors and students felt daily. Focusing on real needs led to high adoption.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Real-time updates matter</h4>
+                        <p>Firebase's real-time listeners mean students see new posts instantly. This simple feature dramatically improved the user experience.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Iterate based on usage patterns</h4>
+                        <p>The auto-archiving feature came from observing students struggle with old posts. Watching how people use your product reveals what to build next.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps / CTA -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Check It Out</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow" style="text-align: center;">
+                    <div class="project-cta">
+                        <a href="https://ebhcsjobboard.web.app/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://github.com/marlanamc/jobapptracker" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                    </div>
+                    <p style="margin-top: 2rem;"><a href="../index.html#projects" class="breadcrumb">← Back to All Projects</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
