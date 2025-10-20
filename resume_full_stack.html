@@ -61,34 +61,47 @@
   }
   a { color: #2563eb; text-decoration: none; }
   a:hover { color: #1d4ed8; text-decoration: underline; }
-  .container { max-width: 900px; margin: 24px auto; padding: 0 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-  header { display: flex; flex-direction: column; align-items: center; text-align: center; border-bottom: 1px solid #e2e8f0; padding: 16px; margin-bottom: 16px; background: #f8fafc; border-radius: 4px; position: relative; }
-  header::after { content: ''; display: block; height: 1px; background: #e2e8f0; margin-top: 8px; width: 100%; }
-  .name { font-size: 24pt; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 2px; }
-  .title { font-size: 11pt; color: #475569; margin-top: 2px; }
-  .contact { font-size: 10pt; color: #475569; line-height: 1.4; font-style: normal; }
+  .container { max-width: 900px; margin: 24px auto; padding: 0 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  header { display: flex; flex-direction: column; align-items: center; text-align: center; border-bottom: 2px solid #3b82f6; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%); border-radius: 4px; position: relative; }
+  header::after { content: ''; display: block; height: 1px; background: transparent; margin-top: 8px; width: 100%; }
+  .name { font-size: 26pt; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 3px; color: #1e293b; }
+  .title { font-size: 11.5pt; color: #3b82f6; margin-top: 2px; font-weight: 600; }
+  .contact { font-size: 10pt; color: #64748b; line-height: 1.5; font-style: normal; }
   section { margin-bottom: 14px; }
-  h2 { font-size: 13pt; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 6px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
-  .muted { color: #374151; font-size: 10.5pt; }
+  h2 { font-size: 12.5pt; text-transform: uppercase; letter-spacing: 0.8px; margin: 14px 0 6px; border-bottom: 2px solid #3b82f6; padding-bottom: 4px; color: #1e293b; font-weight: 700; }
+  .muted { color: #334155; font-size: 10.5pt; line-height: 1.4; }
   ul { margin: 6px 0 0 18px; padding: 0; }
-  li { margin: 3px 0; }
+  li { margin: 3px 0; line-height: 1.4; }
   .role { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-bottom: 6px; }
-  .role h3 { font-size: 11.5pt; margin: 0; }
-  .when { font-size: 10.5pt; color: #475569; white-space: nowrap; }
+  .role h3 { font-size: 11.5pt; margin: 0; font-weight: 600; color: #1e293b; }
+  .when { font-size: 10pt; color: #64748b; white-space: nowrap; font-style: italic; }
   .project { margin-bottom: 12px; }
   .proj-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
-  .proj-head strong { font-size: 11pt; }
+  .proj-head strong { font-size: 11pt; font-weight: 600; color: #1e293b; }
   .links { font-size: 10pt; white-space: nowrap; }
+  .links a { color: #3b82f6; font-weight: 500; }
   .links a + a { margin-left: 8px; }
   @media print {
-    @page { margin: 0.4in; }
-    body { font-size: 10pt; line-height: 1.25; }
-    .container { margin: 0; padding: 0; }
-    a { color: inherit; text-decoration: none; }
-    header { margin-bottom: 8px; padding-bottom: 8px; border-bottom: 0; }
-    h2 { margin: 8px 0 3px; }
-    ul { margin: 3px 0 0 16px; }
-    li { margin: 1px 0; }
+    @page { margin: 0.38in; }
+    body { font-size: 9.5pt; line-height: 1.22; }
+    .container { margin: 0; padding: 0; box-shadow: none; }
+    a { color: #1e293b; text-decoration: none; }
+    header { margin-bottom: 5px; padding: 9px; padding-bottom: 7px; border-bottom: 2px solid #3b82f6; background: transparent; }
+    header::after { display: none; }
+    .name { font-size: 22pt; margin-bottom: 2px; color: #000; }
+    .title { font-size: 10.5pt; margin-top: 2px; color: #3b82f6; }
+    .contact { font-size: 9.5pt; line-height: 1.32; color: #334155; }
+    h2 { margin: 6px 0 2px; font-size: 11.5pt; padding-bottom: 3px; border-bottom: 2px solid #3b82f6; color: #000; }
+    section { margin-bottom: 9px; }
+    ul { margin: 2px 0 0 16px; }
+    li { margin: 0.8px 0; }
+    .muted { font-size: 9.5pt; color: #1e293b; }
+    .project { margin-bottom: 8px; }
+    .role { margin-bottom: 4px; }
+    .role h3 { color: #000; }
+    .proj-head strong { color: #000; }
+    .links a { color: #3b82f6; }
+    .when { color: #334155; }
     .grid-2 { grid-template-columns: 1fr 2fr; gap: 10px; }
     .project, .role { page-break-inside: avoid; }
   }
@@ -116,14 +129,14 @@
   <section aria-labelledby="summary">
     <h2 id="summary">Summary</h2>
     <p class="muted">
-      Full-stack Python developer with 3+ years of experience building scalable web applications and REST APIs. Developed a Flask-based LMS with comprehensive REST APIs serving 350+ users and a React/Firebase advisor bulletin board.
+      Full-stack developer shipping production web applications with Python, React, and modern databases. Built a Flask LMS serving 350+ users and a Firebase bulletin board with real-time updates and advanced search.
     </p>
   </section>
 
   <section aria-labelledby="skills">
     <h2 id="skills">Skills</h2>
     <p class="muted">
-      Python, JavaScript, TypeScript, SQL, Flask, React, FastAPI, Express.js, PostgreSQL, SQLite, Firestore, MongoDB, Git/GitHub, REST APIs, CI/CD, Docker, Vercel, PythonAnywhere, pytest, Accessibility Features
+      Python, Flask, JavaScript, React, SQL, PostgreSQL, SQLite, Firebase, REST APIs, Git/GitHub, Vercel, PythonAnywhere, Supabase, pandas, NumPy, scikit-learn, Tableau, pytest, Accessibility (WCAG 2.1)
     </p>
   </section>
 
@@ -138,10 +151,10 @@
           <a href="https://github.com/marlanamc" aria-label="Source code for Custom LMS">Code</a>
         </span>
       </div>
-      <div class="muted">Python, Flask, SQLite</div>
+      <div class="muted">Python, Flask, SQLite, REST APIs</div>
       <ul>
-        <li>Built comprehensive quiz platform with RESTful APIs, handling 350+ concurrent users via Flask and SQLite.</li>
-        <li>Implemented comprehensive pytest suite with automated testing pipeline for robust performance.</li>
+        <li>Built quiz platform with RESTful APIs serving 350+ users with automated grading and progress tracking.</li>
+        <li>Designed optimized SQLite schema for efficient data storage and retrieval.</li>
       </ul>
     </div>
 
@@ -155,25 +168,23 @@
       </div>
       <div class="muted">React, Firebase, JavaScript</div>
       <ul>
-        <li>Developed advanced search and filter functionality with pagination for 350+ users.</li>
-        <li>Integrated Firebase for real-time updates, push notifications, and secure authentication.</li>
+        <li>Built search functionality with tag filters and role-based access for 350 users.</li>
+        <li>Integrated Firebase for real-time updates and secure authentication.</li>
       </ul>
     </div>
 
     <div class="project">
       <div class="proj-head">
-        <strong>ADHD Accessibility Tools (Suite of 3)</strong>
+        <strong>Accessibility Tools Suite</strong>
         <span class="links">
-          <a href="https://adhd-first-aid.vercel.app/" aria-label="Live demo of ADHD Tool 1">Live 1</a>
-          <a href="https://www.navcoaching.org/" aria-label="Live demo of ADHD Tool 2">Live 2</a>
-          <a href="https://adhddash.web.app/" aria-label="Live demo of ADHD Tool 3">Live 3</a>
-          <a href="https://github.com/marlanamc/adhd_first_aid" aria-label="Source code for ADHD Tools">Code</a>
+          <a href="https://adhd-first-aid.vercel.app/" aria-label="Live demo of accessibility tool">Live</a>
+          <a href="https://github.com/marlanamc/adhd_first_aid" aria-label="Source code for accessibility tools">Code</a>
         </span>
       </div>
-      <div class="muted">React, Firebase</div>
+      <div class="muted">React, Firebase, JavaScript</div>
       <ul>
-        <li>Built sensory-friendly tools with comprehensive accessibility features and inclusive design.</li>
-        <li>Used React with TypeScript and Firebase for scalable, real-time functionality.</li>
+        <li>Developed suite of productivity tools with focus on accessibility and inclusive design.</li>
+        <li>Implemented sensory-friendly features with keyboard navigation and screen reader support.</li>
       </ul>
     </div>
   </section>
@@ -182,26 +193,26 @@
     <h2 id="experience">Experience</h2>
 
     <div>
-      <div class="role"><h3>Independent Python Developer</h3><div class="when">2023 to Present</div></div>
+      <div class="role"><h3>Independent Full-Stack Developer</h3><div class="when">2023 to Present</div></div>
       <ul>
-        <li>Built and deployed 10+ production web applications using Flask, React, and FastAPI, serving 350+ users with scalable architecture.</li>
-        <li>Integrated comprehensive CI/CD pipelines with GitHub Actions, automated testing, and Vercel for seamless deployments.</li>
+        <li>Built 10+ web applications with Python, Flask, React, and Firebase serving 350+ users.</li>
+        <li>Deployed production apps to Vercel and PythonAnywhere with automated testing pipelines.</li>
       </ul>
     </div>
 
     <div>
       <div class="role"><h3>Customer Data Support Analyst, Grand Circle Corporation</h3><div class="when">2021 to 2022</div></div>
       <ul>
-        <li>Shipped interactive Tableau dashboards backed by optimized SQL views and stored procedures for reporting and analysis.</li>
-        <li>Wrote comprehensive QA checks in Python for data pipeline reliability with automated testing.</li>
+        <li>Shipped Tableau dashboards with optimized SQL views for reporting and analysis.</li>
+        <li>Wrote Python QA checks for data pipeline reliability and quality monitoring.</li>
       </ul>
     </div>
 
     <div>
       <div class="role"><h3>Catastrophic Risk Analyst, Homesite Insurance</h3><div class="when">2020 to 2021</div></div>
       <ul>
-        <li>Built Python automation for disaster monitoring and alerting with real-time data processing.</li>
-        <li>Prototyped machine learning loss models with scikit-learn for pricing strategies.</li>
+        <li>Built Python automation for real-time disaster monitoring and alerting systems.</li>
+        <li>Prototyped loss prediction models with scikit-learn for pricing strategies.</li>
       </ul>
     </div>
   </section>
@@ -209,9 +220,9 @@
   <section aria-labelledby="additional-experience">
     <h2 id="additional-experience">Additional Experience</h2>
     <ul class="muted">
-      <li><strong>ESOL Instructor</strong>, East Boston Harborside Community School, 2023 to Present, developed comprehensive full-stack LMS and educational tools for 350+ students.</li>
-      <li><strong>Research Analyst</strong>, Harvard Kennedy School, 2015 to 2017, statistical analysis with STATA and R for policy research.</li>
-      <li><strong>Operations and Training Lead</strong>, Barcelona Restaurant Group, 2016 to 2021, training programs for 50+ staff members.</li>
+      <li><strong>Research Analyst</strong>, Harvard Kennedy School, 2015 to 2017, statistical analysis with STATA and R.</li>
+      <li><strong>Operations and Training Lead</strong>, Barcelona, 2016 to 2021, training for 50+ staff.</li>
+      <li><strong>ESOL Instructor</strong>, East Boston Harborside Community School, 2023 to Present, developed LMS and educational tools.</li>
     </ul>
   </section>
 
