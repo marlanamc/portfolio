@@ -217,7 +217,7 @@
 /* Impact Stats */
 .impact-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin: 2rem 0 3rem;
 }
@@ -238,6 +238,8 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .stat-label {
@@ -311,7 +313,19 @@
     margin-bottom: 1rem;
 }
 
-/* Responsive */
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .impact-stats {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.75rem;
+    }
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .project-hero {
         padding: 5rem 0 3rem;
@@ -335,6 +349,15 @@
 
     .impact-stats {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stat-box {
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
     }
 
     .features-grid {
