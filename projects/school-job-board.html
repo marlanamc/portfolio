@@ -36,8 +36,8 @@
             <div class="container">
                 <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
                 <div class="project-hero-content">
-                    <h1>School Advisor Job Board</h1>
-                    <p class="project-tagline">Centralized bulletin board for jobs, resources, and opportunities</p>
+                    <h1>EBHCS Advisor Bulletin Board</h1>
+                    <p class="project-tagline">Centralized bulletin board serving 12 advisors and 350+ students across 4 programs</p>
                     <div class="project-meta">
                         <div class="meta-item">
                             <strong>Role:</strong> Full-Stack Developer
@@ -46,22 +46,22 @@
                             <strong>Timeline:</strong> 2025
                         </div>
                         <div class="meta-item">
-                            <strong>Users:</strong> 350+ students and advisors
+                            <strong>Stakeholders:</strong> ESOL/HSE Advising Team, Program Director, 350+ students
                         </div>
                         <div class="meta-item">
                             <strong>Status:</strong> Active
                         </div>
                     </div>
                     <div class="project-tech-stack">
-                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">Firebase Auth</span>
                         <span class="tech-badge">Firestore</span>
-                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Firebase Storage</span>
+                        <span class="tech-badge">Vanilla JS</span>
                         <span class="tech-badge">HTML/CSS</span>
-                        <span class="tech-badge">Authentication</span>
                     </div>
                     <div class="project-cta">
                         <a href="https://ebhcsjobboard.web.app/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
-                        <a href="https://github.com/marlanamc/jobapptracker" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                        <a href="https://github.com/marlanamc/advisor-bulletin" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
                     </div>
                 </div>
             </div>
@@ -76,15 +76,15 @@
                 </div>
                 <div class="content-narrow">
                     <p class="lead-text">
-                        Advisors shared jobs and resources across multiple Google Classrooms, creating duplicate work. Students struggled to find current items or sort by deadlines.
+                        Advisors were duplicating announcements across multiple Google Classrooms, fragmenting communication and increasing workload. Students lacked a single, reliable place to find up-to-date opportunities and announcements.
                     </p>
-                    <h3>Specific Pain Points</h3>
+                    <h3>Key Pain Points</h3>
                     <ul class="problem-list">
-                        <li><strong>Duplicate posting:</strong> Advisors posted the same job/resource in 5+ different Google Classrooms</li>
-                        <li><strong>No centralized hub:</strong> Students had to check multiple places to find all opportunities</li>
-                        <li><strong>Hard to find current items:</strong> Old posts mixed with new ones, making it hard to see what was still relevant</li>
-                        <li><strong>No filtering or search:</strong> Students couldn't filter by deadline, category, or keyword</li>
-                        <li><strong>No role management:</strong> Anyone could post, leading to spam and irrelevant content</li>
+                        <li><strong>Duplicate posting:</strong> Advisors posted the same announcement in 5+ different Google Classrooms</li>
+                        <li><strong>Fragmented communication:</strong> Students had to check multiple places to find all opportunities</li>
+                        <li><strong>Poor content discovery:</strong> No filtering by category, deadline, or keyword</li>
+                        <li><strong>Content lifecycle issues:</strong> Old posts mixed with new, making it hard to see what was still relevant</li>
+                        <li><strong>No access control:</strong> No role-based posting led to spam and off-topic content</li>
                     </ul>
                 </div>
             </div>
@@ -99,33 +99,44 @@
                 </div>
                 <div class="content-narrow">
                     <p class="lead-text">
-                        Firebase app with search, category, and date filters. Advisor role management allows posting in one location. Calendar view and deadline sorting help students prioritize. Expired posts hidden by default with option to show archive.
+                        A live, web-based bulletin with an Advisor Portal (post/manage) and a Student View (gallery and calendar), backed by Firebase for secure auth, real-time updates, and durable storage.
                     </p>
-                    <h3>Key Features</h3>
+
+                    <h3>Student View</h3>
+                    <ul>
+                        <li><strong>Gallery grid</strong> with category badges, images, links, contact, and deadline cues</li>
+                        <li><strong>Calendar view</strong> to visualize time-bound items with per-day modal lists</li>
+                        <li><strong>Multi-select filters:</strong> Category, Deadlines, Posted Date, Class Type, Posted By</li>
+                        <li><strong>Search functionality</strong> for keyword-based discovery</li>
+                        <li><strong>Expired logic:</strong> Automatic "EXPIRED" banners with toggle to include/hide archived posts</li>
+                    </ul>
+
+                    <h3>Advisor Portal</h3>
+                    <ul>
+                        <li><strong>Guided posting form</strong> with required/recommended sections and preview</li>
+                        <li><strong>PDF upload</strong> (up to 10MB) and image upload with size validation</li>
+                        <li><strong>Manage Posts tab:</strong> Search, sort (newest/oldest/category/deadline), filter (active/expired), edit/update</li>
+                        <li><strong>Authentication:</strong> @ebhcs.org email accounts with first-login password change flow</li>
+                        <li><strong>Role-based access:</strong> Advisors can edit only their own posts; admin/director can manage all</li>
+                    </ul>
+
+                    <h3>Notable Features</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <h4>Centralized Posting</h4>
-                            <p>Advisors post once, visible to all students immediately</p>
+                            <h4>Multi-Select Filtering</h4>
+                            <p>Color-coordinated filter chips for categories, deadlines, class types, and authors</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Smart Filtering</h4>
-                            <p>Filter by category (jobs, housing, events, etc.) and deadline dates</p>
+                            <h4>Immigration Category</h4>
+                            <p>Dedicated category with custom styling for DACA, citizenship, and legal resources</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Search Functionality</h4>
-                            <p>Keyword search to quickly find specific opportunities</p>
+                            <h4>Real-Time Updates</h4>
+                            <p>Firestore snapshot subscriptions for instant UI updates across all users</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Calendar View</h4>
-                            <p>Visual calendar showing deadlines and upcoming events</p>
-                        </div>
-                        <div class="feature-card">
-                            <h4>Role Management</h4>
-                            <p>Advisor-only posting rights to maintain quality and reduce spam</p>
-                        </div>
-                        <div class="feature-card">
-                            <h4>Auto-Archive</h4>
-                            <p>Expired posts automatically hidden but accessible if needed</p>
+                            <h4>Deep Linking</h4>
+                            <p>URL hash navigation allows direct sharing of specific bulletin posts</p>
                         </div>
                     </div>
                 </div>
@@ -168,42 +179,47 @@
                     <div class="section-line"></div>
                 </div>
                 <div class="content-narrow">
-                    <h3>Architecture Decisions</h3>
-                    <p>I chose Firebase for its real-time database capabilities and built-in authentication. This allows instant updates across all users and simple role-based access control.</p>
-
-                    <h4>Frontend</h4>
+                    <h3>Tech Stack</h3>
                     <ul>
-                        <li>Vanilla JavaScript for filtering and search functionality</li>
-                        <li>Responsive CSS Grid for card-based layout</li>
-                        <li>Calendar library integration for deadline visualization</li>
-                        <li>Firebase Authentication for user login and role verification</li>
+                        <li><strong>Frontend:</strong> Vanilla HTML/CSS/JS (responsive, static), deep-linking via URL hash</li>
+                        <li><strong>Backend:</strong> Firebase Auth (email/password restricted to @ebhcs.org), Firestore (real-time DB with validated schema), Firebase Storage (images/PDFs)</li>
+                        <li><strong>Security:</strong> Custom Firestore rules with ownership validation, role-based access control</li>
+                        <li><strong>Key files:</strong> index.html (student view), admin.html (advisor portal), firebase-config.js, firebase-admin.js, enhanced-auth.js, style.css</li>
                     </ul>
 
-                    <h4>Backend (Firebase)</h4>
-                    <ul>
-                        <li>Firestore database for storing posts with timestamps and categories</li>
-                        <li>Security rules ensuring only advisors can create/edit posts</li>
-                        <li>Cloud Functions for auto-archiving expired posts</li>
-                        <li>Real-time listeners for instant board updates</li>
-                    </ul>
+                    <h3>Architecture</h3>
+                    <p>Static frontend with Firebase backend enables real-time collaboration without server infrastructure. Firestore snapshot subscriptions push updates instantly to all connected clients. Security rules enforce @ebhcs.org email requirement, ownership validation (advisors edit only their own posts), and admin override capabilities.</p>
 
-                    <h3>Interesting Challenges</h3>
+                    <h3>Security & Governance</h3>
                     <div class="challenge-box">
-                        <h4>Challenge: Role-Based Access Control</h4>
-                        <p>How do you ensure only advisors can post while still allowing all students to view? Google Classroom doesn't have this granularity.</p>
-                        <p><strong>Solution:</strong> Firebase Authentication with custom claims. Advisors get a special "advisor" role in their user profile, which Firebase security rules check before allowing write access.</p>
+                        <h4>Implemented</h4>
+                        <ul>
+                            <li><strong>Firestore Rules:</strong> Public read for active bulletins; write restricted to authenticated @ebhcs.org advisors</li>
+                            <li><strong>Ownership enforcement:</strong> Advisors can edit/delete only their own posts; admin/director can manage all</li>
+                            <li><strong>Data validation:</strong> Required fields, category whitelist, size limits, immutable author/timestamp</li>
+                            <li><strong>First-login flow:</strong> Password change requirement + password reset support</li>
+                        </ul>
                     </div>
 
                     <div class="challenge-box">
-                        <h4>Challenge: Auto-Archiving Old Posts</h4>
-                        <p>Posts with past deadlines should be hidden automatically, but advisors might want to reference them later.</p>
-                        <p><strong>Solution:</strong> Cloud Function runs daily to mark posts as "archived" if their deadline has passed. Students see active posts by default, but can toggle to view archived content.</p>
+                        <h4>Recommended Hardening</h4>
+                        <p>HTML sanitization for XSS protection, CSP headers, rate limiting, file signature checks/virus scanning for uploads, and 2FA for privileged accounts. (See Security Analysis.md in repo)</p>
+                    </div>
+
+                    <h3>Key Challenges & Solutions</h3>
+                    <div class="challenge-box">
+                        <h4>Fragmented Channels → Single Source of Truth</h4>
+                        <p>Replaced 5+ Google Classrooms with one public bulletin + deep-linking for easy sharing per post.</p>
                     </div>
 
                     <div class="challenge-box">
-                        <h4>Challenge: Real-Time Updates</h4>
-                        <p>When an advisor posts a new job, all 350+ students should see it immediately without refreshing.</p>
-                        <p><strong>Solution:</strong> Firestore real-time listeners automatically push new posts to all connected clients. No polling or manual refresh needed.</p>
+                        <h4>Posting Friction → Guided Workflow</h4>
+                        <p>Simplified Advisor Portal with form preview, required/recommended guidance, and progress indicators.</p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Content Lifecycle → Deadline & Expiration Logic</h4>
+                        <p>Automatic "EXPIRED" banners with grayscale styling; toggle to show/hide archived posts prevents clutter while preserving visibility when needed.</p>
                     </div>
                 </div>
             </div>
@@ -217,19 +233,22 @@
                     <div class="section-line"></div>
                 </div>
                 <div class="content-narrow">
-                    <h3>What I Built First</h3>
-                    <p>Started with basic CRUD (create, read, update, delete) for posts. Once advisors could post and students could view, I added filtering and search based on their feedback.</p>
+                    <h3>Discovery & MVP</h3>
+                    <p>Advisors identified the pain of posting the same item to multiple Google Classrooms while students missed content across silos. I built an MVP with a public bulletin + simple Advisor Portal using local storage for quick iteration.</p>
 
-                    <h3>User Testing & Iteration</h3>
+                    <h3>Production & Iteration</h3>
                     <ul>
-                        <li><strong>Round 1:</strong> Advisors wanted bulk posting → added CSV import for multiple opportunities</li>
-                        <li><strong>Round 2:</strong> Students missed deadlines → added calendar view and deadline sorting</li>
-                        <li><strong>Round 3:</strong> Too many old posts cluttering the board → implemented auto-archiving</li>
-                        <li><strong>Round 4:</strong> Students wanted to search by keyword → added full-text search</li>
+                        <li><strong>Firebase migration:</strong> Integrated Auth/Firestore/Storage for secure multi-user posting and real-time updates</li>
+                        <li><strong>Advisor-requested features:</strong> PDF uploads, Immigration category, expired post system, multi-select filter overhaul, manage-posts redesign</li>
+                        <li><strong>Enablement:</strong> Created Advisor Guide (step-by-step posting, best practices, troubleshooting) and Director Handover Guide (maintenance, user management)</li>
                     </ul>
 
-                    <h3>Additional Features I'd Like to Add</h3>
-                    <p>I'd add email/SMS notifications for new high-priority posts (like scholarship deadlines) and implement tagging so students could subscribe to specific categories. I'd also add a calendar integration feature to sync deadlines with students' personal calendars.</p>
+                    <h3>What's Next</h3>
+                    <ul>
+                        <li><strong>Analytics:</strong> Lightweight metrics for adoption and content effectiveness (views per post, filter usage)</li>
+                        <li><strong>Advisor QoL:</strong> Drafts, scheduled posts, bulk edit/archiving, optional notifications</li>
+                        <li><strong>Student UX:</strong> Saved filters, multilingual labels, accessibility refinements</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -245,17 +264,25 @@
                     <div class="impact-stats">
                         <div class="stat-box">
                             <div class="stat-number">350+</div>
-                            <div class="stat-label">Active users</div>
+                            <div class="stat-label">Students across 4 programs</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">1 place</div>
-                            <div class="stat-label">Instead of 5+ classrooms</div>
+                            <div class="stat-number">1 hub</div>
+                            <div class="stat-label">Replaced 5+ Google Classrooms</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">Daily</div>
-                            <div class="stat-label">Student usage</div>
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Advisors actively posting</div>
                         </div>
                     </div>
+
+                    <h3>Impact</h3>
+                    <ul>
+                        <li><strong>Single source of truth</strong> for all students across programs and classes</li>
+                        <li><strong>Reduced duplication</strong> and advisor workload by posting once centrally</li>
+                        <li><strong>Better discovery</strong> via filters and calendar; easy mobile sharing per post</li>
+                        <li><strong>Cleaner lifecycle management:</strong> Deadlines, expiration, and manage-posts tooling reduce stale content</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -269,16 +296,16 @@
                 </div>
                 <div class="content-narrow">
                     <div class="lesson-box">
-                        <h4>Solve real organizational problems</h4>
-                        <p>This wasn't a "cool tech project"—it solved a specific pain point advisors and students felt daily. Focusing on real needs led to high adoption.</p>
+                        <h4>User-driven features drive adoption</h4>
+                        <p>The Immigration category, PDF uploads, and manage-posts redesign all came directly from advisor requests. Building what users need (not what's "cool") led to high adoption and daily usage.</p>
                     </div>
                     <div class="lesson-box">
-                        <h4>Real-time updates matter</h4>
-                        <p>Firebase's real-time listeners mean students see new posts instantly. This simple feature dramatically improved the user experience.</p>
+                        <h4>Firebase enabled rapid iteration</h4>
+                        <p>Real-time updates, built-in auth, and no server infrastructure meant I could ship features quickly and respond to feedback within days.</p>
                     </div>
                     <div class="lesson-box">
-                        <h4>Iterate based on usage patterns</h4>
-                        <p>The auto-archiving feature came from observing students struggle with old posts. Watching how people use your product reveals what to build next.</p>
+                        <h4>Security is a feature, not an afterthought</h4>
+                        <p>Firestore rules with ownership validation and role-based access prevented spam and maintained content quality. Good security design builds trust with stakeholders.</p>
                     </div>
                 </div>
             </div>
@@ -294,7 +321,7 @@
                 <div class="content-narrow" style="text-align: center;">
                     <div class="project-cta">
                         <a href="https://ebhcsjobboard.web.app/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
-                        <a href="https://github.com/marlanamc/jobapptracker" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                        <a href="https://github.com/marlanamc/advisor-bulletin" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
                     </div>
                     <p style="margin-top: 2rem;"><a href="../index.html#projects" class="breadcrumb">← Back to All Projects</a></p>
                 </div>
