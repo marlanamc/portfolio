@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verb Form Challenge Game - Marlana Creed</title>
+    <title>All Verb Form Master - Marlana Creed</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="project-detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Interactive game teaching English verb conjugation across different tenses with instant feedback.">
+    <meta name="description" content="Practice V1, V1‑3rd, V1‑ing, V2, and V3 with adaptive blanks and instant feedback.">
 </head>
 <body>
     <nav class="navbar">
@@ -36,27 +36,28 @@
             <div class="container">
                 <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
                 <div class="project-hero-content">
-                    <h1>Verb Form Challenge Game</h1>
-                    <p class="project-tagline">Interactive verb conjugation practice across multiple tenses</p>
+                    <h1>All Verb Form Master</h1>
+                    <p class="project-tagline">Practice V1, V1‑3rd, V1‑ing, V2, and V3 with adaptive blanks and instant feedback</p>
                     <div class="project-meta">
                         <div class="meta-item">
-                            <strong>Role:</strong> Developer & ESOL Instructor
+                            <strong>Role:</strong> Designer & Frontend Developer
                         </div>
                         <div class="meta-item">
-                            <strong>Timeline:</strong> 2024
+                            <strong>Timeline:</strong> 2024-2025
                         </div>
                         <div class="meta-item">
-                            <strong>Users:</strong> 26 weekly students
+                            <strong>Users:</strong> ESOL learners and teachers
                         </div>
                         <div class="meta-item">
                             <strong>Status:</strong> Active
                         </div>
                     </div>
                     <div class="project-tech-stack">
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">HTML</span>
-                        <span class="tech-badge">CSS</span>
-                        <span class="tech-badge">Drag & Drop API</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Vite</span>
+                        <span class="tech-badge">React Router</span>
+                        <span class="tech-badge">Google Sheets</span>
+                        <span class="tech-badge">CSS3</span>
                     </div>
                     <div class="project-cta">
                         <a href="https://marliesesolclass.my.canva.site/" target="_blank" class="btn btn-primary" rel="noopener">Play the Game →</a>
@@ -75,14 +76,15 @@
                 </div>
                 <div class="content-narrow">
                     <p class="lead-text">
-                        Adult ESOL students needed an engaging way to practice verb conjugation across different tenses. Traditional drill exercises were boring and didn't provide immediate feedback.
+                        ESOL learners struggle to master the five core English verb forms (V1, V1‑3rd, V1‑ing, V2, V3), especially distinguishing V1 vs. V1‑3rd and memorizing irregular V2/V3. Worksheets provide delayed feedback and low engagement. Teachers need a quick way to target weak forms without heavy prep.
                     </p>
-                    <h3>Specific Pain Points</h3>
+                    <h3>Key Pain Points</h3>
                     <ul class="problem-list">
-                        <li><strong>Passive learning:</strong> Worksheets don't provide immediate feedback or interactivity</li>
-                        <li><strong>Confidence issues:</strong> Students feared making mistakes in front of classmates</li>
-                        <li><strong>Limited practice time:</strong> Needed a tool students could use independently at home</li>
-                        <li><strong>Accessibility:</strong> Needed to work on any device (phone, tablet, computer)</li>
+                        <li><strong>Confusion between near forms:</strong> V1 vs. V1‑3rd distinctions are difficult to master</li>
+                        <li><strong>Irregular V2/V3 memorization:</strong> Learners struggle without contextual practice</li>
+                        <li><strong>No instant feedback:</strong> Worksheets provide delayed corrections, slowing learning</li>
+                        <li><strong>One-size-fits-all drills:</strong> No targeted practice for specific weak forms</li>
+                        <li><strong>Fragmented experiences:</strong> No keyboard flow or input focus for rapid practice</li>
                     </ul>
                 </div>
             </div>
@@ -97,25 +99,33 @@
                 </div>
                 <div class="content-narrow">
                     <p class="lead-text">
-                        Interactive drag-and-drop game where students arrange words to build grammatically correct sentences. Instant feedback helps reinforce learning, and the game-like format reduces anxiety about making mistakes.
+                        A browser-based game that presents a verb and adaptive blanks for its forms. Learners fill missing forms, receive immediate correctness feedback with labeled form references (V1, V2, V3), and progress via keyboard. Difficulty scales from one to four blanks, or focuses on a single form (e.g., Only V3).
                     </p>
                     <h3>Key Features</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <h4>Drag & Drop Interface</h4>
-                            <p>Intuitive word tiles that students drag to build sentences</p>
+                            <h4>📚 Adaptive Blanks</h4>
+                            <p>Difficulty levels (Easy/Medium/Hard) control how many forms are blank—scales cognitive load and retention</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Instant Feedback</h4>
-                            <p>Immediate validation of sentence structure with clear error messages</p>
+                            <h4>🎯 Single-Form Focus</h4>
+                            <p>Practice only V1, V1‑3rd, V1‑ing, V2, or V3 for targeted remediation</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Mobile-Friendly</h4>
-                            <p>Works seamlessly on phones, tablets, and desktops</p>
+                            <h4>💡 Instant Feedback</h4>
+                            <p>Shows which forms were incorrect and the correct forms labeled with V1/V2/V3 tags</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Self-Paced Learning</h4>
-                            <p>Students practice independently without teacher supervision</p>
+                            <h4>⌨️ Keyboard-First Flow</h4>
+                            <p>Autofocus and Enter/ArrowRight navigation for rapid practice without mouse dependency</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>📊 Google Sheets Source</h4>
+                            <p>Update the verb bank without redeploying the app—content managed by teachers in spreadsheets</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>🏫 Pedagogical Alignment</h4>
+                            <p>Form-based pedagogy aligned with classroom notation (V1, V2, V3) used in ESOL instruction</p>
                         </div>
                     </div>
                 </div>
@@ -131,25 +141,16 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <div class="screenshot-placeholder">
-                            <p>Game Interface</p>
-                            <span class="placeholder-note">Add screenshot here</span>
-                        </div>
-                        <p class="screenshot-caption">Students drag word tiles to build correct sentences</p>
+                        <img src="../screenshots/form1.png" alt="Start screen for All Verb Form Master" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/form1.png', 'Select difficulty or single-form mode and begin')">
+                        <p class="screenshot-caption">Start screen: Select difficulty or single-form mode and begin</p>
                     </div>
                     <div class="screenshot-item">
-                        <div class="screenshot-placeholder">
-                            <p>Correct Answer Feedback</p>
-                            <span class="placeholder-note">Add screenshot here</span>
-                        </div>
-                        <p class="screenshot-caption">Positive reinforcement when students build correct sentences</p>
+                        <img src="../screenshots/form2.png" alt="Verb form grid with adaptive blanks" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/form2.png', 'A 5-card grid for V1, V1‑3rd, V1‑ing, V2, V3 with adaptive blanks')">
+                        <p class="screenshot-caption">Verb form grid: A 5-card grid for V1, V1‑3rd, V1‑ing, V2, V3 with adaptive blanks</p>
                     </div>
                     <div class="screenshot-item">
-                        <div class="screenshot-placeholder">
-                            <p>Error Guidance</p>
-                            <span class="placeholder-note">Add screenshot here</span>
-                        </div>
-                        <p class="screenshot-caption">Clear feedback helps students understand grammar mistakes</p>
+                        <img src="../screenshots/form3.png" alt="Feedback panel with instant corrections" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/form3.png', 'Instant feedback with correct answers labeled by form')">
+                        <p class="screenshot-caption">Feedback panel: Instant feedback with correct answers labeled by form</p>
                     </div>
                 </div>
             </div>
@@ -163,28 +164,35 @@
                     <div class="section-line"></div>
                 </div>
                 <div class="content-narrow">
-                    <h3>Architecture Decisions</h3>
-                    <p>I used vanilla JavaScript and the native Drag and Drop API to keep the app lightweight and fast. No frameworks meant faster load times and better performance on older devices.</p>
+                    <h3>Architecture</h3>
+                    <p>Client-only SPA with React state orchestrating question generation, input tracking, and feedback. The game fetches a public CSV once, parses to an in-memory verb list, and uses fixed field order (V1, V1‑3rd, V1‑ing, V2, V3) for rendering and validation. Difficulty determines which fields render as static vs. blanks.</p>
 
-                    <h4>Core Features</h4>
+                    <h4>Tech Stack</h4>
                     <ul>
-                        <li>HTML5 Drag and Drop API for word tile interaction</li>
-                        <li>JavaScript validation logic to check sentence correctness</li>
-                        <li>CSS animations for smooth drag interactions and feedback</li>
-                        <li>Responsive design with mobile touch support</li>
+                        <li><strong>Frontend:</strong> React, React Router, Vite</li>
+                        <li><strong>Backend:</strong> None (fully client-side)</li>
+                        <li><strong>Database:</strong> Google Sheets (published CSV)</li>
+                        <li><strong>Icons:</strong> lucide-react</li>
+                        <li><strong>Deployment:</strong> Static SPA</li>
                     </ul>
 
-                    <h3>Interesting Challenges</h3>
+                    <h3>Key Challenges & Solutions</h3>
                     <div class="challenge-box">
-                        <h4>Challenge: Mobile Touch Support</h4>
-                        <p>The HTML5 Drag and Drop API doesn't work well on mobile touch devices. Many students use phones.</p>
-                        <p><strong>Solution:</strong> Added touch event handlers to detect drag gestures on mobile. The game now works seamlessly on both desktop and mobile.</p>
+                        <h4>Challenge: Reliable Content Updates Without Deploys</h4>
+                        <p>Teachers need to add/curate verbs easily without developer involvement.</p>
+                        <p><strong>Solution:</strong> Use a published Google Sheet (CSV). Parse client-side and tolerate missing columns gracefully. Teachers update content in spreadsheets, not code.</p>
                     </div>
 
                     <div class="challenge-box">
-                        <h4>Challenge: Grammar Validation</h4>
-                        <p>How do you programmatically check if a sentence is grammatically correct?</p>
-                        <p><strong>Solution:</strong> Pre-defined correct answers with flexible matching. Students might arrange words in slightly different valid orders, so I check against multiple acceptable patterns.</p>
+                        <h4>Challenge: Multi-Field Validation and UX Order</h4>
+                        <p>Checking multiple blanks in a consistent UI order, then reporting precise corrections.</p>
+                        <p><strong>Solution:</strong> Define a fixed field order (V1, V1‑3rd, V1‑ing, V2, V3) for both rendering and validation; label feedback with V1/V2/V3 tags.</p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Challenge: Reducing Input Friction</h4>
+                        <p>Switching between inputs slows practice and breaks flow, reducing engagement.</p>
+                        <p><strong>Solution:</strong> Autofocus first blank field on each question; support Enter to submit and ArrowRight to advance. Keyboard-first flow for rapid practice.</p>
                     </div>
                 </div>
             </div>
@@ -200,18 +208,25 @@
                 <div class="content-narrow">
                     <div class="impact-stats">
                         <div class="stat-box">
-                            <div class="stat-number">26</div>
-                            <div class="stat-label">Students using weekly</div>
+                            <div class="stat-number">5 forms</div>
+                            <div class="stat-label">V1, V1‑3rd, V1‑ing, V2, V3</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Mobile compatible</div>
+                            <div class="stat-number">Instant</div>
+                            <div class="stat-label">Form-labeled feedback</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">Free</div>
-                            <div class="stat-label">Open to all learners</div>
+                            <div class="stat-number">Keyboard</div>
+                            <div class="stat-label">First flow design</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">Google Sheets</div>
+                            <div class="stat-label">Teacher-editable content</div>
                         </div>
                     </div>
+                    <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.6;">
+                        Faster recognition of form labels (V1/V2/V3) through immediate, tagged feedback. Improved engagement via adaptive blanks and keyboard-first flow. Reduced teacher overhead—verb list managed in Google Sheets without code changes. Clear alignment with tense formulas across the broader site resources.
+                    </p>
                 </div>
             </div>
         </section>
@@ -225,16 +240,20 @@
                 </div>
                 <div class="content-narrow">
                     <div class="lesson-box">
-                        <h4>Keep it simple</h4>
-                        <p>I initially wanted to add complex features like scoring and leaderboards. Students just wanted to practice sentences. Simple won.</p>
+                        <h4>Align UI Language with Pedagogy</h4>
+                        <p>Using V1/V2/V3 labels in UI and feedback increases transfer from class to app. Learners recognize classroom notation immediately, reducing cognitive load.</p>
                     </div>
                     <div class="lesson-box">
-                        <h4>Mobile-first matters</h4>
-                        <p>Most of my students access learning tools on their phones. Designing for mobile first ensured the widest reach.</p>
+                        <h4>Input Flow Matters</h4>
+                        <p>Autofocus and keyboard controls significantly improve practice cadence. Removing mouse dependency enables rapid drills and sustained focus.</p>
                     </div>
                     <div class="lesson-box">
-                        <h4>Immediate feedback accelerates learning</h4>
-                        <p>The instant feedback from the game helps students learn faster than traditional worksheets where they might not know they made a mistake until days later.</p>
+                        <h4>Keep Content Editable</h4>
+                        <p>A teacher-friendly content pipeline (Google Sheets) sustains the tool long-term. Non-technical users can update verb lists without developer involvement.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Specific Feedback Wins</h4>
+                        <p>Form-specific corrections (e.g., "V2 incorrect: should be 'went'") accelerate learning more than generic right/wrong. Learners know exactly what to fix.</p>
                     </div>
                 </div>
             </div>
@@ -263,6 +282,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>

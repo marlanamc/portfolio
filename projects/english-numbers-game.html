@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESOL Sentence Builder - Marlana Creed</title>
+    <title>Numbers to English Words - Marlana Creed</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="project-detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Interactive drag-and-drop game for English language learners to practice sentence structure.">
+    <meta name="description" content="Convert digits to natural English across ranges, ordinals, and years with instant feedback.">
 </head>
 <body>
     <nav class="navbar">
@@ -36,31 +36,32 @@
             <div class="container">
                 <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
                 <div class="project-hero-content">
-                    <h1>ESOL Sentence Builder</h1>
-                    <p class="project-tagline">Interactive drag-and-drop game for English language learners</p>
+                    <h1>Numbers to English Words</h1>
+                    <p class="project-tagline">Convert digits to natural English across ranges, ordinals, and years with instant feedback</p>
                     <div class="project-meta">
                         <div class="meta-item">
-                            <strong>Role:</strong> Developer & ESOL Instructor
+                            <strong>Role:</strong> Designer & Frontend Developer
                         </div>
                         <div class="meta-item">
-                            <strong>Timeline:</strong> 2024
+                            <strong>Timeline:</strong> 2024-2025
                         </div>
                         <div class="meta-item">
-                            <strong>Users:</strong> 26 weekly students
+                            <strong>Users:</strong> ESOL learners and teachers
                         </div>
                         <div class="meta-item">
                             <strong>Status:</strong> Active
                         </div>
                     </div>
                     <div class="project-tech-stack">
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">HTML</span>
-                        <span class="tech-badge">CSS</span>
-                        <span class="tech-badge">Drag & Drop API</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Vite</span>
+                        <span class="tech-badge">React Router</span>
+                        <span class="tech-badge">Client-side algorithms</span>
+                        <span class="tech-badge">CSS3</span>
                     </div>
                     <div class="project-cta">
-                        <a href="https://sentence-builder-ten.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener">Play the Game →</a>
-                        <a href="https://github.com/marlanamc/sentence-builder" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                        <a href="https://marliesesolclass.my.canva.site/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://github.com/marlanamc/english-numbers-game" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
                     </div>
                 </div>
             </div>
@@ -75,14 +76,15 @@
                 </div>
                 <div class="content-narrow">
                     <p class="lead-text">
-                        Adult ESOL students needed an interactive way to practice sentence structure. Traditional worksheets weren't engaging, and students needed immediate feedback to reinforce correct grammar patterns.
+                        Many ESOL learners recognize digits but struggle to produce correct written forms, especially hyphenated tens (e.g., twenty-one), large-number groupings (thousands/millions), and special cases like years and ordinals. Teachers need targeted practice by number range and type with immediate feedback and low setup time.
                     </p>
-                    <h3>Specific Pain Points</h3>
+                    <h3>Key Pain Points</h3>
                     <ul class="problem-list">
-                        <li><strong>Passive learning:</strong> Worksheets don't provide immediate feedback or interactivity</li>
-                        <li><strong>Confidence issues:</strong> Students feared making mistakes in front of classmates</li>
-                        <li><strong>Limited practice time:</strong> Needed a tool students could use independently at home</li>
-                        <li><strong>Accessibility:</strong> Needed to work on any device (phone, tablet, computer)</li>
+                        <li><strong>Hyphenation rules:</strong> Compound tens confuse learners who struggle with hyphen placement</li>
+                        <li><strong>Large-number composition:</strong> Thousand/million/billion/trillion groupings are complex</li>
+                        <li><strong>Year reading flexibility:</strong> Multiple valid formats (e.g., "twenty nineteen" vs "two thousand nineteen")</li>
+                        <li><strong>No targeted practice:</strong> Existing tools don't scaffold by range (0–99 vs. 100–999 vs. millions)</li>
+                        <li><strong>Limited feedback:</strong> No keyboard-first flow or clear progress tracking</li>
                     </ul>
                 </div>
             </div>
@@ -97,25 +99,33 @@
                 </div>
                 <div class="content-narrow">
                     <p class="lead-text">
-                        Interactive drag-and-drop game where students arrange words to build grammatically correct sentences. Instant feedback helps reinforce learning, and the game-like format reduces anxiety about making mistakes.
+                        A browser-based game that displays a number (with commas for readability) and asks learners to type the written form. It supports multiple categories (0–99, hundreds, thousands, millions, ordinals, years) and accepts normalized answers. Special handling for years includes multiple valid phrasings.
                     </p>
                     <h3>Key Features</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <h4>Drag & Drop Interface</h4>
-                            <p>Intuitive word tiles that students drag to build sentences</p>
+                            <h4>📚 Range Scaffolding</h4>
+                            <p>Drill 0–99, hundreds, thousands, or up to trillions—target specific ranges</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Instant Feedback</h4>
-                            <p>Immediate validation of sentence structure with clear error messages</p>
+                            <h4>📅 Year Flexibility</h4>
+                            <p>Accepts multiple valid forms for 2010+ (e.g., "twenty nineteen" or "two thousand nineteen")</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Mobile-Friendly</h4>
-                            <p>Works seamlessly on phones, tablets, and desktops</p>
+                            <h4>✨ Normalization & Hyphenation</h4>
+                            <p>Strips commas/extra spaces; auto-formats hyphenated tens for display</p>
                         </div>
                         <div class="feature-card">
-                            <h4>Self-Paced Learning</h4>
-                            <p>Students practice independently without teacher supervision</p>
+                            <h4>📊 Progress Stats</h4>
+                            <p>Tracks Correct, Incorrect, Success Rate, and Streak</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>⌨️ Keyboard-First Flow</h4>
+                            <p>Enter to submit, ArrowRight to advance—rapid practice without mouse dependency</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>🎯 Category Practice</h4>
+                            <p>Cardinals by range, round numbers, ordinals, and years (1100–2099)</p>
                         </div>
                     </div>
                 </div>
@@ -131,25 +141,12 @@
                 </div>
                 <div class="screenshots-container">
                     <div class="screenshot-item">
-                        <div class="screenshot-placeholder">
-                            <p>Game Interface</p>
-                            <span class="placeholder-note">Add screenshot here</span>
-                        </div>
-                        <p class="screenshot-caption">Students drag word tiles to build correct sentences</p>
+                        <img src="../screenshots/num1.png" alt="Start screen for Numbers to English Words" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/num1.png', 'Choose a practice category (ranges, ordinals, years)')">
+                        <p class="screenshot-caption">Start screen: Choose a practice category (ranges, ordinals, years)</p>
                     </div>
                     <div class="screenshot-item">
-                        <div class="screenshot-placeholder">
-                            <p>Correct Answer Feedback</p>
-                            <span class="placeholder-note">Add screenshot here</span>
-                        </div>
-                        <p class="screenshot-caption">Positive reinforcement when students build correct sentences</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <div class="screenshot-placeholder">
-                            <p>Error Guidance</p>
-                            <span class="placeholder-note">Add screenshot here</span>
-                        </div>
-                        <p class="screenshot-caption">Clear feedback helps students understand grammar mistakes</p>
+                        <img src="../screenshots/num2.png" alt="Question view with number display and input field" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/num2.png', 'Number with commas, input field, and category label')">
+                        <p class="screenshot-caption">Question view: Number with commas, input field, and category label</p>
                     </div>
                 </div>
             </div>
@@ -163,28 +160,35 @@
                     <div class="section-line"></div>
                 </div>
                 <div class="content-narrow">
-                    <h3>Architecture Decisions</h3>
-                    <p>I used vanilla JavaScript and the native Drag and Drop API to keep the app lightweight and fast. No frameworks meant faster load times and better performance on older devices.</p>
+                    <h3>Architecture</h3>
+                    <p>A client-only SPA route presents the Numbers game. Category selection drives the number generator; algorithms compute expected string outputs. Input is normalized by removing commas/dashes and collapsing spaces; correctness compares normalized forms. Special logic allows multiple valid year readings from 2010 onward.</p>
 
-                    <h4>Core Features</h4>
+                    <h4>Tech Stack</h4>
                     <ul>
-                        <li>HTML5 Drag and Drop API for word tile interaction</li>
-                        <li>JavaScript validation logic to check sentence correctness</li>
-                        <li>CSS animations for smooth drag interactions and feedback</li>
-                        <li>Responsive design with mobile touch support</li>
+                        <li><strong>Frontend:</strong> React, React Router, Vite</li>
+                        <li><strong>Backend:</strong> None (fully client-side)</li>
+                        <li><strong>Algorithms:</strong> Client-side number-to-words logic</li>
+                        <li><strong>Icons:</strong> lucide-react</li>
+                        <li><strong>Deployment:</strong> Static SPA</li>
                     </ul>
 
-                    <h3>Interesting Challenges</h3>
+                    <h3>Key Challenges & Solutions</h3>
                     <div class="challenge-box">
-                        <h4>Challenge: Mobile Touch Support</h4>
-                        <p>The HTML5 Drag and Drop API doesn't work well on mobile touch devices. Many students use phones.</p>
-                        <p><strong>Solution:</strong> Added touch event handlers to detect drag gestures on mobile. The game now works seamlessly on both desktop and mobile.</p>
+                        <h4>Challenge: Hyphenation and Normalization</h4>
+                        <p>Learners may omit hyphens or add commas inconsistently, creating frustration with "close enough" answers.</p>
+                        <p><strong>Solution:</strong> Normalize input by stripping commas/dashes and collapsing spaces; format display with correct hyphenation. Accept reasonable variations while maintaining accuracy.</p>
                     </div>
 
                     <div class="challenge-box">
-                        <h4>Challenge: Grammar Validation</h4>
-                        <p>How do you programmatically check if a sentence is grammatically correct?</p>
-                        <p><strong>Solution:</strong> Pre-defined correct answers with flexible matching. Students might arrange words in slightly different valid orders, so I check against multiple acceptable patterns.</p>
+                        <h4>Challenge: Multiple Valid Year Forms</h4>
+                        <p>Years can be read differently (e.g., 2019 as "twenty nineteen" or "two thousand nineteen").</p>
+                        <p><strong>Solution:</strong> yearToWords returns acceptable variants and validates against all of them for 2010+. Learners see accepted alternatives in feedback.</p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Challenge: Large-Number Composition</h4>
+                        <p>Correctly building "thousand/million/billion/trillion" phrases requires complex recursive logic.</p>
+                        <p><strong>Solution:</strong> Recursive compositional numberToWords with clean remainder handling up to trillions. Handles edge cases like round numbers.</p>
                     </div>
                 </div>
             </div>
@@ -200,18 +204,25 @@
                 <div class="content-narrow">
                     <div class="impact-stats">
                         <div class="stat-box">
-                            <div class="stat-number">26</div>
-                            <div class="stat-label">Students using weekly</div>
+                            <div class="stat-number">Instant</div>
+                            <div class="stat-label">Feedback system</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Mobile compatible</div>
+                            <div class="stat-number">Keyboard</div>
+                            <div class="stat-label">First flow</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">Free</div>
-                            <div class="stat-label">Open to all learners</div>
+                            <div class="stat-number">Trillions</div>
+                            <div class="stat-label">Number range</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">Multiple</div>
+                            <div class="stat-label">Year formats</div>
                         </div>
                     </div>
+                    <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.6;">
+                        Higher accuracy on hyphenated tens through normalization + feedback. Faster practice sessions via keyboard shortcuts and autofocus. Teachers can quickly target specific ranges or year reading practice. Clear progress signals (success rate and streak) motivate learners.
+                    </p>
                 </div>
             </div>
         </section>
@@ -225,16 +236,20 @@
                 </div>
                 <div class="content-narrow">
                     <div class="lesson-box">
-                        <h4>Keep it simple</h4>
-                        <p>I initially wanted to add complex features like scoring and leaderboards. Students just wanted to practice sentences. Simple won.</p>
+                        <h4>Normalize to Reduce Friction</h4>
+                        <p>Accepting reasonable variations keeps focus on language, not punctuation. Learners shouldn't struggle with exact spacing when the words are correct.</p>
                     </div>
                     <div class="lesson-box">
-                        <h4>Mobile-first matters</h4>
-                        <p>Most of my students access learning tools on their phones. Designing for mobile first ensured the widest reach.</p>
+                        <h4>Make Alternatives Explicit</h4>
+                        <p>Showing accepted year variants increases learner confidence. They see what else would have worked, reinforcing flexibility in language.</p>
                     </div>
                     <div class="lesson-box">
-                        <h4>Immediate feedback accelerates learning</h4>
-                        <p>The instant feedback from the game helps students learn faster than traditional worksheets where they might not know they made a mistake until days later.</p>
+                        <h4>Scaffold by Ranges</h4>
+                        <p>Layered categories map cleanly to classroom objectives. Teachers can target specific weak areas without creating custom exercises.</p>
+                    </div>
+                    <div class="lesson-box">
+                        <h4>Clear Feedback Drives Retention</h4>
+                        <p>Immediate, specific corrections improve recall and accuracy. Learners know exactly what to practice next.</p>
                     </div>
                 </div>
             </div>
@@ -249,8 +264,8 @@
                 </div>
                 <div class="content-narrow" style="text-align: center;">
                     <div class="project-cta">
-                        <a href="https://sentence-builder-ten.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener">Play the Game →</a>
-                        <a href="https://github.com/marlanamc/sentence-builder" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                        <a href="https://marliesesolclass.my.canva.site/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://github.com/marlanamc/english-numbers-game" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
                     </div>
                     <p style="margin-top: 2rem;"><a href="../index.html#projects" class="breadcrumb">← Back to All Projects</a></p>
                 </div>
@@ -263,6 +278,15 @@
             <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>
