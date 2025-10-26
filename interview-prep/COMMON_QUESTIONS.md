@@ -6,6 +6,7 @@
 
 **Your Strength:** Python, full-stack development, understanding user needs deeply
 
+
 **Your Unique Angle:** Teacher who codes = understand users + can build the tools they need
 
 ---

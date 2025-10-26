@@ -2,13 +2,13 @@
 
 **Boston, MA** | marlana.creed@gmail.com | 770-378-9207 | [linkedin.com/in/marlanacreed](https://linkedin.com/in/marlanacreed)
 
-**PYTHON DEVELOPER** | 10 Deployed Applications | Available Immediately
+**SOFTWARE DEVELOPER** | 10 Deployed Applications | Education + Accessibility + Social Justice
 
 ---
 
 ## SUMMARY
 
-Python developer with proven track record of shipping production applications. Built 10 web applications including a full-stack learning management system serving 50+ users, using Python/Flask, React, and Firebase. Background in data analytics (MS Economics, Georgia Tech) with experience in machine learning, Tableau dashboards, and statistical analysis. Seeking full-time developer role to transition from independent projects to team-based development.
+Software developer building products at the intersection of education, accessibility, and social justice. I combine technical skills (Python/Flask, React, Firebase) with lived experience: teaching adult English learners, developing ADHD coaching frameworks, creating accessibility tools, and doing policy research at Harvard Kennedy School. With an MS in Economics (Georgia Tech) and background in data analytics, I build data-informed solutions that address real problems facing underserved communities. Seeking roles in EdTech, civic technology, accessibility-focused products, or mission-driven organizations where this unique combination creates impact.
 
 ---
 
@@ -18,6 +18,7 @@ Python developer with proven track record of shipping production applications. B
 **Backend & Databases:** Flask, Firebase (Firestore, Auth), SQLite, PostgreSQL, RESTful APIs
 **Frontend:** React, Responsive Design, Accessibility (WCAG 2.1), Jinja2 Templates
 **Data & Analytics:** Tableau, Python (pandas, scikit-learn, NumPy), Machine Learning, Statistical Analysis
+**Third-Party Integrations:** Stripe (payments), Resend (email automation), iCal (calendar), Notion API
 **Tools & Platforms:** Git/GitHub, PythonAnywhere, Vercel, Google Cloud Platform, VS Code
 **Methodologies:** Agile Development, User-Centered Design, Full Development Lifecycle
 
@@ -108,19 +109,27 @@ Suite of 5 interactive games: Sentence Builder, Verb Conjugation, Number Recogni
 
 ---
 
-### **ADHD Accessibility Tools** (3 applications) | React, Firebase
+### **ADHD Coaching Framework & Systems** | Framework Design, Notion Systems, React
 
-**Problem**
-Neurodivergent individuals struggle with traditional productivity tools designed for neurotypical users. Executive function challenges require specialized interfaces. Limited accessible, sensory-friendly tools available.
+**Context**
+As an ADHD coach, I developed a systematic approach to executive function support because traditional productivity coaching fails neurodivergent clients. The ADHD brain needs frameworks that account for dopamine response, time blindness, and executive function challenges.
 
 **Solution**
-Three-app suite: ADHD First Aid Kit (focus timers, task organizers, sensory-friendly UI), NAV Coaching Platform (coaching resources, community, booking system), and ADHD Dashboard (habit tracking with Firebase backend). User-tested with neurodivergent individuals. Implements WCAG 2.1 accessibility standards and reduced-stimulation design patterns.
+Built comprehensive coaching framework with evidence-based interventions across five levels of support. Created custom Notion dashboards and organizational systems for clients, designed around ADHD brain wiring rather than neurotypical productivity models. Also developed three web applications: ADHD First Aid Kit (focus timers, task organizers), NAV Coaching Platform (resources, community, booking), and ADHD Dashboard (habit tracking with adaptive theming).
+
+**Technical Implementation:**
+• Five-level coaching framework addressing executive function from basic awareness to advanced systems
+• Custom Notion templates and dashboards for client accountability and progress tracking
+• Systems designed with ADHD-friendly features: reduced visual clutter, clear next actions, dopamine-driven feedback loops
+• Integrated Stripe payment processing and Resend email service for booking automation
+• Set up iCal calendar integration for appointment scheduling
+• Web applications with WCAG 2.1 accessibility and reduced-stimulation design patterns
 
 **Impact**
-- User-tested with neurodivergent community for real-world validation
-- Positive feedback on sensory-friendly interface design
-- NAV Coaching Platform actively used for client engagement
-- Open-sourced ADHD First Aid Kit for community benefit
+- Developed systematic approach combining coaching methodology with technical tools
+- Built custom organizational systems that actually work for ADHD brains
+- Creates scalable framework for supporting neurodivergent individuals
+- Demonstrates integration of understanding ADHD from lived experience, coaching practice, AND systems design
 
 **Live Demos:** https://adhd-first-aid.vercel.app/ | https://www.navcoaching.org/ | https://adhddash.web.app/
 **GitHub:** https://github.com/marlanamc/adhd_first_aid
@@ -137,7 +146,15 @@ Three-app suite: ADHD First Aid Kit (focus timers, task organizers, sensory-frie
 **January 2023 - Present** (Evenings, 2x/week)
 - Teach adult English learners while developing supplementary educational technology
 - Conduct user research and usability testing to inform product development decisions
+- Support immigrant community with educational resources and connecting to legal aid and housing assistance
 - Available to transition for full-time opportunity
+
+### ADHD Coach & Systems Designer | Independent Practice | Boston, MA
+**2023 - Present** (Part-time)
+- Developed evidence-based coaching framework for ADHD support, addressing executive function challenges through systematic intervention
+- Built custom Notion dashboards and organizational systems for neurodivergent clients struggling with traditional productivity tools
+- Created resource library and community platform (NAV Coaching) for ADHD self-advocacy and peer support
+- Designed personalized accountability systems aligned with ADHD brain wiring, not neurotypical productivity models
 
 ### Customer Data Support Analyst | Grand Circle Corporation | Boston, MA
 **October 2021 - May 2022**
@@ -165,6 +182,7 @@ Three-app suite: ADHD First Aid Kit (focus timers, task organizers, sensory-frie
 - Performed statistical analysis and data management for Harvard professors using STATA and R
 - Conducted regression analysis on AP score impact for education policy research
 - Administered behavioral economics research including survey design and experimental methodology
+- Supported research on education equity and access, working with data to identify systemic barriers
 - **Technologies:** STATA, R, statistical modeling, regression analysis, academic research
 
 ---
@@ -185,12 +203,14 @@ Three-app suite: ADHD First Aid Kit (focus timers, task organizers, sensory-frie
 ## WHAT I BRING TO YOUR TEAM
 
 ✅ **Proven builder** - 10 production applications with real users, including full-stack LMS
-✅ **Full development lifecycle** - Designed, built, deployed, and maintained products independently
+✅ **Lived experience** - Teach underserved adult learners, ADHD coach who builds frameworks and systems for neurodivergent clients
+✅ **Policy + Data + Tech** - Economics training + HKS research + software development = unique perspective
+✅ **Systems thinking** - Built evidence-based ADHD coaching framework and custom organizational systems
 ✅ **User-centered approach** - Teaching experience provides strong empathy for end users
-✅ **Data-informed decisions** - Analytics background helps me build with metrics and impact in mind
+✅ **Social justice lens** - Build products that address systemic barriers and expand access
 ✅ **Python & full-stack expertise** - Flask, React, Firebase, SQL, modern development practices
 ✅ **Self-directed** - Built everything from concept to deployment without supervision
 
-**Open to:** Python Developer, Full-Stack Developer, Backend Developer, EdTech roles, Contract/Contract-to-hire
+**Open to:** Software Developer, Full-Stack Developer, EdTech, Civic Technology, Public Interest Tech, Accessibility roles, Contract/Contract-to-hire
 **Work arrangement:** Remote, hybrid, or onsite in Boston area
 **Availability:** Immediate (2-week notice for current part-time position)
