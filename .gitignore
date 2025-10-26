@@ -1,0 +1,34 @@
+# Personal planning documents (keep private)
+ADHD_FRAMEWORK_CASE_STUDY.md
+ADHD_FRAMEWORK_PORTFOLIO.md
+ALTERNATIVE_ROLES.md
+COACHING_BUSINESS_ASSESSMENT.md
+GUMROAD_LISTING_COPY.md
+GUMROAD_SETUP_GUIDE.md
+JOB_SEARCH_STRATEGY.md
+NICHE_ROLES_UNIQUE_INTERSECTION.md
+PASSIVE_INCOME_PLAN.md
+RESUME_UPDATES_SUMMARY.md
+EMERGENCY_INCOME_PLAN.md
+EMERGENCY_JOB_SEARCH_PLAN.md
+5_DAY_EMERGENCY_PLAN.md
+JOB_SEARCH_SURVIVAL_GUIDE.md
+
+# Sensitive documents
+levels/
+levels_merged.pdf
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+
+# Personal notes
+journal_notes.txt
+private_notes.md
+
