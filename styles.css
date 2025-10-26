@@ -410,6 +410,28 @@ a:hover {
     color: var(--text-primary);
 }
 
+.journal-content ul {
+    margin: 1rem 0 1.5rem 1.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.journal-content li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.journal-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 600;
+}
+
 .journal-tags {
     display: flex;
     flex-wrap: wrap;
