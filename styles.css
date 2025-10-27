@@ -484,7 +484,11 @@ a:hover {
     }
     
     .journal-entry::before {
-        left: -12px;
+        left: -10px;
+        top: 1.5rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        background-size: 1.25rem;
     }
     
     .journal-content h3 {
