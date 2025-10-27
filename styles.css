@@ -1750,7 +1750,7 @@ body.is-scrolling .sparkle {
     
     .achievement-badge {
         font-size: 0.6875rem;
-        padding: 0.5rem 0.875rem;
+        padding: 0.625rem 1rem;
         line-height: 1.2;
         white-space: nowrap;
     }
@@ -1769,7 +1769,7 @@ body.is-scrolling .sparkle {
 @media (max-width: 480px) {
     .achievement-badge {
         font-size: 0.625rem;
-        padding: 0.5rem 0.625rem;
+        padding: 0.625rem 0.875rem;
         flex: 0 1 auto;
         min-width: auto;
     }
@@ -1788,7 +1788,7 @@ body.is-scrolling .sparkle {
 @media (max-width: 360px) {
     .achievement-badge {
         font-size: 0.5625rem;
-        padding: 0.4375rem 0.5rem;
+        padding: 0.5625rem 0.75rem;
     }
     
     .achievement-badge i {
