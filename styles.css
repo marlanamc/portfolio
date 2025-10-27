@@ -1739,13 +1739,32 @@ body.is-scrolling .sparkle {
     }
     
     .achievement-badge {
-        font-size: 0.75rem;
-        padding: 0.375rem 0.75rem;
+        font-size: 0.6875rem;
+        padding: 0.5rem 0.875rem;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+    
+    .achievement-badge i {
+        width: 0.875rem;
+        height: 0.875rem;
     }
     
     /* Remove particles on mobile for better performance */
     .hero-particles {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-badge {
+        font-size: 0.625rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .achievement-badge i {
+        width: 0.75rem;
+        height: 0.75rem;
     }
 }
 
