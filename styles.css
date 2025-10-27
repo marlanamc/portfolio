@@ -175,6 +175,7 @@ a:hover {
     background: linear-gradient(135deg, #a8d5f520 0%, #f5c4d825 50%, #fde68a20 100%);
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .hero-content {
@@ -1734,8 +1735,17 @@ body.is-scrolling .sparkle {
 
 /* Responsive sparkle adjustments */
 @media (max-width: 768px) {
+    .hero {
+        overflow-x: visible;
+    }
+    
     .hero-title {
         text-shadow: 0 0 20px rgba(124, 155, 217, 0.15);
+    }
+    
+    .hero-content {
+        overflow-x: visible;
+        padding: 0 1rem;
     }
     
     .achievement-badge {
@@ -1759,12 +1769,31 @@ body.is-scrolling .sparkle {
 @media (max-width: 480px) {
     .achievement-badge {
         font-size: 0.625rem;
-        padding: 0.5rem 0.75rem;
+        padding: 0.5rem 0.625rem;
+        flex: 0 1 auto;
+        min-width: auto;
     }
     
     .achievement-badge i {
         width: 0.75rem;
         height: 0.75rem;
+    }
+    
+    /* Allow badges to stack more naturally on very small screens */
+    .hero-content > div:last-child {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .achievement-badge {
+        font-size: 0.5625rem;
+        padding: 0.4375rem 0.5rem;
+    }
+    
+    .achievement-badge i {
+        width: 0.625rem;
+        height: 0.625rem;
     }
 }
 
