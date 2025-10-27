@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <meta name="description" content="Full-stack developer building accessible EdTech solutions. 10+ shipped applications. Python, Flask, React, Firebase.">
     <meta property="og:title" content="Marlana Creed - Full-Stack Developer | EdTech & Accessibility">
     <meta property="og:description" content="Building tools that actually help people learn. 10+ web applications serving 350+ users across multiple projects.">
@@ -29,6 +30,9 @@
     </script>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">MC</a>
@@ -51,6 +55,12 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
+            <div class="hero-particles">
+                <div class="particle" style="left: 20%; animation-duration: 20s;"></div>
+                <div class="particle" style="left: 40%; animation-duration: 25s;"></div>
+                <div class="particle" style="left: 60%; animation-duration: 18s;"></div>
+                <div class="particle" style="left: 80%; animation-duration: 22s;"></div>
+            </div>
             <div class="container">
                 <div class="hero-content">
                     <span class="hero-tag">Full-Stack Developer · Educator · MS Economics</span>
@@ -60,15 +70,20 @@
                         <p class="hero-description">
                         I build full-stack web applications for education and accessibility using Python, Flask, and React.
                         With a background in data analytics (SQL, Tableau) and teaching, I create solutions informed
-                        by both data and deep user empathy. 10+ shipped applications serving 350+ users across my projects.
+                        by both data and deep user empathy. <span class="stat-number">10+</span> shipped applications serving <span class="stat-number">350+</span> users across my projects.
                     </p>
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">See My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Say Hello</a>
+                        <a href="#projects" class="btn btn-primary magic-hover">See My Work ✨</a>
+                        <a href="#contact" class="btn btn-secondary magic-hover">Say Hello</a>
                     </div>
                     <div class="hero-cta-secondary">
                         <a href="/resume_full_stack_2025.html" class="btn btn-outline" target="_blank" rel="noopener">Read My Résumé</a>
                         <a href="https://www.linkedin.com/in/marlanacreed" class="btn btn-outline" target="_blank" rel="noopener">Connect on LinkedIn</a>
+                    </div>
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <span class="achievement-badge"><i data-lucide="heart" class="sparkle"></i> Empathy First</span>
+                        <span class="achievement-badge"><i data-lucide="bar-chart-3" class="sparkle"></i> Data-Driven</span>
+                        <span class="achievement-badge"><i data-lucide="target" class="sparkle"></i> Trauma Aware</span>
                     </div>
                 </div>
             </div>
@@ -87,7 +102,7 @@
                             I build products that help adults learn, and I care about making them simple and accessible.
                         </p>
                         <p>
-                            I came to software through data and teaching. I earned an <strong>MS in Economics from Georgia Tech</strong>, where my thesis used panel regression on NCES data to study institutional factors linked to non-completion at for-profit colleges and tuition trends in higher education. I then worked as a <strong>data analyst</strong> creating Tableau dashboards and running forecasting models. As a <strong>Research Analyst at Harvard Kennedy School</strong>, I supported statistical research using R and STATA. This trained me to be precise with data and to ship work people can trust.
+                            I came to software through data and teaching. I earned an <strong>MS in Economics from Georgia Tech</strong>, where my thesis used panel regression on NCES data to study institutional factors linked to non-completion at for-profit colleges and tuition trends in higher education. Right after graduating, I worked as a <strong>Research Analyst at Harvard Kennedy School</strong>, supporting statistical research using R and STATA. I then completed a <strong>Python bootcamp</strong> to sharpen my technical skills before working as a <strong>data analyst</strong> creating Tableau dashboards and running forecasting models. This trained me to be precise with data and to ship work people can trust.
                         </p>
                         <p>
                             As an <strong>Adult ESOL Teacher</strong>, I saw students struggle with tools that were not built for them. So I started building my own: <strong>10+ web applications</strong> using Python/Flask, React, and Firebase. From a complete learning management system to advisor bulletin boards to educational games, each project solves a real problem I've witnessed firsthand.
@@ -96,22 +111,22 @@
                             I'm seeking roles in <strong>EdTech, accessibility-focused products, or mission-driven organizations</strong> where I can combine practical data skills with classroom empathy to build learner-first products. I care about clean code, accessible interfaces, and outcomes that make teachers' days easier and students' progress faster.
                         </p>
                         <div class="about-highlights">
-                            <div class="highlight-item">
-                                <div class="highlight-icon">🐍</div>
+                            <div class="highlight-item magic-hover">
+                                <div class="highlight-icon"><i data-lucide="code"></i></div>
                                 <div>
                                     <h4>Python & Full-Stack</h4>
-                                    <p>Python/Flask, React, Firebase, SQL · 10+ shipped applications · 350+ users across projects</p>
+                                    <p>Python/Flask, React, Firebase, SQL · <span class="stat-number">10+</span> shipped applications · <span class="stat-number">350+</span> users across projects</p>
                                 </div>
                             </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon">📊</div>
+                            <div class="highlight-item magic-hover">
+                                <div class="highlight-icon"><i data-lucide="database"></i></div>
                                 <div>
                                     <h4>Data & Analytics</h4>
                                     <p>Tableau, Statistical Analysis, Regression Modeling · Data-informed product decisions</p>
                                 </div>
                             </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon">♿</div>
+                            <div class="highlight-item magic-hover">
+                                <div class="highlight-icon"><i data-lucide="users"></i></div>
                                 <div>
                                     <h4>User-Centered Design</h4>
                                     <p>Accessibility, ADHD-friendly UX, educational tools</p>
@@ -300,7 +315,7 @@
                     <!-- ADHD Coaching Framework -->
                     <article class="project-card" data-category="adhd-accessibility">
                         <div class="project-image">
-                            <img src="screenshots/nav1.png" alt="ADHD Coaching Framework" class="project-screenshot" style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;" onclick="openModal('screenshots/nav1.png', 'ADHD Coaching Framework')">
+                            <img src="screenshots/sample_dash.png" alt="ADHD Coaching Framework - Notion Dashboard" class="project-screenshot" style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;" onclick="openModal('screenshots/sample_dash.png', 'ADHD Coaching Framework - Notion Dashboard')">
                         </div>
                         <div class="project-content">
                             <div class="project-tags">
@@ -445,7 +460,7 @@
                     <!-- ADHD & Mental Health -->
                     <div class="resource-category">
                         <div class="resource-header">
-                            <div class="resource-icon">🧠</div>
+                            <div class="resource-icon"><i data-lucide="brain"></i></div>
                             <h3>ADHD & Mental Health</h3>
                         </div>
                         <p class="resource-description">Tools and resources for neurodivergent individuals and mental wellness</p>
@@ -457,7 +472,7 @@
                     <!-- ESOL/English Learning -->
                     <div class="resource-category">
                         <div class="resource-header">
-                            <div class="resource-icon">📚</div>
+                            <div class="resource-icon"><i data-lucide="book-open"></i></div>
                             <h3>ESOL & English Learning</h3>
                         </div>
                         <p class="resource-description">Interactive games, worksheets, and exercises for English language learners</p>
@@ -469,7 +484,7 @@
                     <!-- Professional Development -->
                     <div class="resource-category">
                         <div class="resource-header">
-                            <div class="resource-icon">💼</div>
+                            <div class="resource-icon"><i data-lucide="briefcase"></i></div>
                             <h3>Professional Development</h3>
                         </div>
                         <p class="resource-description">Tools and templates for job seekers and career development</p>
@@ -539,7 +554,7 @@
                             <span class="skill-item">Education & Training</span>
                         </div>
                         <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
-                            <a href="Writing Sample 1.pdf" class="btn btn-secondary" target="_blank" rel="noopener">📝 Download Academic Writing Sample</a>
+                            <a href="Writing Sample 1.pdf" class="btn btn-secondary" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem;"><i data-lucide="download"></i> Download Academic Writing Sample</a>
                         </div>
                     </div>
                 </div>
@@ -560,21 +575,21 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <div class="contact-item">
-                            <div class="contact-icon">📧</div>
+                            <div class="contact-icon"><i data-lucide="mail"></i></div>
                             <div>
                                 <h4>Email</h4>
                                 <a id="email-link"><span id="email-text" data-user="marlana.creed" data-domain="gmail.com"></span></a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">📱</div>
+                            <div class="contact-icon"><i data-lucide="phone"></i></div>
                             <div>
                                 <h4>Phone</h4>
                                 <span>770-378-9207</span>
                             </div>
                         </div>
                             <div class="contact-item">
-                            <div class="contact-icon">💼</div>
+                            <div class="contact-icon"><i data-lucide="linkedin"></i></div>
                             <div>
                                 <h4>LinkedIn</h4>
                                 <a href="https://linkedin.com/in/marlanacreed" target="_blank" rel="noopener">linkedin.com/in/marlanacreed</a>
@@ -584,7 +599,7 @@
                     </div>
                     <div class="contact-cta">
                         <p class="contact-message">
-                            I bring analytical rigor (MS Economics), hands-on development with 10+ shipped apps, and real teacher empathy. Let's build something meaningful. ♥️
+                            I bring analytical rigor (MS Economics), hands-on development with 10+ shipped apps, and real teacher empathy. Let's build something meaningful.
                         </p>
                         <a id="email-cta" class="btn btn-primary">Send Me an Email</a>
                     </div>

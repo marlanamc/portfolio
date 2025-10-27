@@ -133,6 +133,11 @@ function typeWriter(element, text, speed = 50) {
 // }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
     const emailSpan = document.getElementById('email-text');
     const emailLink = document.getElementById('email-link');
     const emailCta = document.getElementById('email-cta');
@@ -254,3 +259,107 @@ function handleEscapeKey(event) {
 console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
 console.log('%cI see you\'re checking out the code. I like your style!', 'font-size: 14px; color: #475569;');
 console.log('%cFeel free to reach out if you\'d like to chat about opportunities.', 'font-size: 14px; color: #475569;');
+
+// ===== Sparkle Features =====
+
+// Scroll progress bar
+const scrollProgress = document.getElementById('scroll-progress');
+if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+        const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercentage = (window.scrollY / scrollTotal) * 100;
+        scrollProgress.style.width = scrollPercentage + '%';
+    });
+}
+
+// Section visibility detection for animations
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(section => {
+    sectionObserver.observe(section);
+});
+
+
+// Number counter animation
+function animateNumber(element, target, duration = 2000) {
+    if (!element) return;
+    
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = Math.floor(target) + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + '+';
+        }
+    }, 16);
+}
+
+// Trigger number animations when in view
+const numberObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+            const numbers = entry.target.querySelectorAll('.stat-number');
+            numbers.forEach(num => {
+                if (num.dataset.animated) return;
+                
+                // Store original text first
+                const originalText = num.textContent;
+                const targetNum = parseInt(originalText);
+                
+                if (!isNaN(targetNum)) {
+                    num.dataset.animated = 'true';
+                    // Reset for animation
+                    num.textContent = '0+';
+                    setTimeout(() => {
+                        animateNumber(num, targetNum);
+                    }, 100);
+                }
+            });
+            entry.target.dataset.animated = 'true';
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.hero-content, .about-content').forEach(el => {
+    numberObserver.observe(el);
+});
+
+// Enhance particle positioning
+document.addEventListener('DOMContentLoaded', () => {
+    const particles = document.querySelectorAll('.particle');
+    particles.forEach((particle, index) => {
+        // Randomize animation duration
+        const duration = 15 + Math.random() * 15;
+        particle.style.animationDuration = duration + 's';
+        
+        // Randomize starting position
+        const startTop = Math.random() * 100;
+        particle.style.top = startTop + '%';
+        
+        // Add slight delays for staggered effect
+        particle.style.animationDelay = (index * 2) + 's';
+    });
+});
+
+// Magic hover effect for buttons
+document.querySelectorAll('.magic-hover').forEach(element => {
+    element.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.02)';
+    });
+    
+    element.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+});
+
