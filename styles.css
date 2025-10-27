@@ -1511,7 +1511,7 @@ a:focus, button:focus, .btn:focus, .project-link:focus, .nav-links a:focus {
 
 /* ===== Sparkle Enhancements ===== */
 
-/* Animated gradient background */
+/* Animated gradient background - Optimized */
 @keyframes gradientShift {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -1531,12 +1531,13 @@ a:focus, button:focus, .btn:focus, .project-link:focus, .nav-links a:focus {
         rgba(184, 169, 247, 0.15) 75%,
         rgba(168, 213, 245, 0.1) 100%);
     background-size: 200% 200%;
-    animation: gradientShift 15s ease infinite;
+    animation: gradientShift 25s ease infinite;
     pointer-events: none;
     z-index: -1;
+    will-change: background-position;
 }
 
-/* Floating particles */
+/* Floating particles - Simplified for performance */
 .hero-particles {
     position: absolute;
     top: 0;
@@ -1546,6 +1547,7 @@ a:focus, button:focus, .btn:focus, .project-link:focus, .nav-links a:focus {
     overflow: hidden;
     pointer-events: none;
     z-index: 0;
+    will-change: contents;
 }
 
 .particle {
@@ -1554,55 +1556,40 @@ a:focus, button:focus, .btn:focus, .project-link:focus, .nav-links a:focus {
     height: 4px;
     background: var(--primary);
     border-radius: 50%;
-    opacity: 0.3;
-    animation: float 20s infinite ease-in-out;
+    opacity: 0.2;
+    animation: float 25s infinite ease-in-out;
+    will-change: transform, opacity;
 }
 
 .particle:nth-child(2) {
-    animation-delay: -5s;
+    animation-delay: -8s;
     background: var(--secondary);
 }
 
 .particle:nth-child(3) {
-    animation-delay: -10s;
+    animation-delay: -16s;
     background: var(--accent);
 }
 
 .particle:nth-child(4) {
-    animation-delay: -15s;
+    animation-delay: -24s;
     background: var(--purple-soft);
 }
 
 @keyframes float {
     0%, 100% {
-        transform: translateY(0) translateX(0);
+        transform: translate3d(0, 0, 0);
         opacity: 0;
     }
-    10% {
-        opacity: 0.3;
-    }
-    90% {
-        opacity: 0.3;
-    }
     50% {
-        transform: translateY(-100px) translateX(50px);
-        opacity: 0.5;
+        transform: translate3d(30px, -80px, 0);
+        opacity: 0.25;
     }
 }
 
-/* Glow effect on hero title */
+/* Glow effect on hero title - Removed animation for stability */
 .hero-title {
     text-shadow: 0 0 30px rgba(124, 155, 217, 0.2);
-    animation: gentlePulse 4s ease-in-out infinite;
-}
-
-@keyframes gentlePulse {
-    0%, 100% { 
-        text-shadow: 0 0 30px rgba(124, 155, 217, 0.2);
-    }
-    50% { 
-        text-shadow: 0 0 40px rgba(124, 155, 217, 0.3);
-    }
 }
 
 /* Achievement badges */
@@ -1618,7 +1605,6 @@ a:focus, button:focus, .btn:focus, .project-link:focus, .nav-links a:focus {
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(124, 155, 217, 0.3);
     transition: var(--transition);
-    animation: badgeFloat 3s ease-in-out infinite;
 }
 
 .achievement-badge i {
@@ -1638,11 +1624,6 @@ a:focus, button:focus, .btn:focus, .project-link:focus, .nav-links a:focus {
 .achievement-badge:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 20px rgba(124, 155, 217, 0.4);
-}
-
-@keyframes badgeFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
 }
 
 /* Scroll progress indicator */
@@ -1680,15 +1661,15 @@ a:focus, button:focus, .btn:focus, .project-link:focus, .nav-links a:focus {
     box-shadow: 0 4px 8px rgba(124, 155, 217, 0.2);
 }
 
-/* Sparkle icon animation */
+/* Sparkle icon animation - Simplified */
 @keyframes sparkle {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
 }
 
 .sparkle {
     display: inline-block;
-    animation: sparkle 2s ease-in-out infinite;
+    animation: sparkle 3s ease-in-out infinite;
 }
 
 .sparkle i {
@@ -1744,6 +1725,13 @@ section.in-view::after {
 }
 
 
+/* Pause animations during scroll for performance */
+body.is-scrolling .particle,
+body.is-scrolling .achievement-badge,
+body.is-scrolling .sparkle {
+    animation-play-state: paused;
+}
+
 /* Responsive sparkle adjustments */
 @media (max-width: 768px) {
     .hero-title {
@@ -1753,6 +1741,11 @@ section.in-view::after {
     .achievement-badge {
         font-size: 0.75rem;
         padding: 0.375rem 0.75rem;
+    }
+    
+    /* Remove particles on mobile for better performance */
+    .hero-particles {
+        display: none;
     }
 }
 
