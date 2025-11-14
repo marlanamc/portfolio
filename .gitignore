@@ -32,3 +32,14 @@ levels_merged.pdf
 journal_notes.txt
 private_notes.md
 
+# Resumes and job applications (keep private)
+job_applications/
+docs/*.pdf
+docs/*.docx
+*.pdf
+*.docx
+*resume*.html
+*Resume*.html
+*resume*.pdf
+*Resume*.pdf
+
