@@ -175,17 +175,7 @@ function debounce(func, wait = 10) {
 // Apply debounce to scroll handler
 window.addEventListener('scroll', debounce(highlightNavLink, 10));
 
-// Add parallax effect to hero section (subtle) - Optimized for performance
-const hero = document.querySelector('.hero');
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-if (hero && !prefersReduced) {
-    window.addEventListener('scroll', debounce(() => {
-        const scrolled = window.pageYOffset;
-        const parallaxSpeed = 0.3; // Reduced speed for smoother scrolling
-        hero.style.transform = `translate3d(0, ${scrolled * parallaxSpeed}px, 0)`;
-    }, 10));
-}
+// Parallax effect removed for stability
 
 // Pause animations during scrolling for better performance
 let isScrolling = false;
