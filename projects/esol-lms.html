@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESOL Quiz Platform (LMS) - Marlana Creed</title>
+    <title>ESOL Learning Hub (LMS) - Marlana Creed</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="project-detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Full-stack quiz platform built with Python/Flask for ESOL students. Auto-graded verb conjugation assessments serving 50+ students.">
+    <meta name="description" content="A custom-built Learning Management System serving interactive grammar guides and quizzes to adult learners. Built with AI-assisted rapid prototyping.">
 </head>
 <body>
     <nav class="navbar">
@@ -36,61 +36,50 @@
             <div class="container">
                 <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
                 <div class="project-hero-content">
-                    <h1>ESOL Quiz Platform (LMS)</h1>
-                    <p class="project-tagline">Full-stack learning management system with auto-graded verb conjugation quizzes</p>
+                    <h1>ESOL Learning Hub (LMS)</h1>
+                    <p class="project-tagline">A full-stack Learning Management System serving interactive grammar guides and quizzes to adult learners.</p>
                     <div class="project-meta">
                         <div class="meta-item">
-                            <strong>Role:</strong> Full-Stack Developer
+                            <strong>Role:</strong> Lead Developer & Creator
                         </div>
                         <div class="meta-item">
-                            <strong>Timeline:</strong> 2025
+                            <strong>Status:</strong> Live Product
                         </div>
                         <div class="meta-item">
                             <strong>Users:</strong> 50+ ESOL students
                         </div>
-                        <div class="meta-item">
-                            <strong>Status:</strong> Active
-                        </div>
                     </div>
                     <div class="project-tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Flask</span>
-                        <span class="tech-badge">Jinja2</span>
-                        <span class="tech-badge">JSON/CSV</span>
-                        <span class="tech-badge">HTML/CSS</span>
-                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Next.js 16</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Prisma</span>
+                        <span class="tech-badge">Tailwind CSS</span>
                     </div>
                     <div class="project-cta">
-                        <a href="https://esolteachermc.pythonanywhere.com/student/login" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://myesolclass.com/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
                         <a href="https://github.com/marlanamc/ESOL_LMS" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Problem Statement -->
+        <!-- The Challenge -->
         <section class="project-section bg-white">
             <div class="container">
                 <div class="section-header">
-                    <h2>The Problem</h2>
+                    <h2>The Challenge</h2>
                     <div class="section-line"></div>
                 </div>
                 <div class="content-narrow">
                     <p class="lead-text">
-                        Google Forms could handle verb conjugation assessments but was time-consuming and frustrating to create, lacking the specific features needed for effective ESOL instruction. Manual grading of 50+ student submissions with 6-8 fields each took significant time weekly.
+                        Adult ESOL (English for Speakers of Other Languages) learners often struggle with static textbooks that disconnect explanation from practice. I needed a solution that would keep students in the "learning flow"—reading a concept and immediately testing it without losing context.
                     </p>
-                    <h3>Specific Pain Points</h3>
-                    <ul class="problem-list">
-                        <li><strong>Complex form creation:</strong> Google Forms was time-consuming and frustrating to set up for multi-field verb conjugation assessments</li>
-                        <li><strong>Time-consuming grading:</strong> Manually grading dozens of submissions took significant time weekly</li>
-                        <li><strong>Delayed feedback:</strong> Students waited days to see their results, reducing learning effectiveness</li>
-                        <li><strong>No progress tracking:</strong> Hard to identify which students needed extra support</li>
-                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Solution Overview -->
+        <!-- The Solution -->
         <section class="project-section bg-light">
             <div class="container">
                 <div class="section-header">
@@ -98,177 +87,67 @@
                     <div class="section-line"></div>
                 </div>
                 <div class="content-narrow">
-                    <p class="lead-text">
-                        Full-stack quiz platform with Python/Flask backend using JSON for quiz content and CSV for results storage. 14-week progressive curriculum with 5 irregular verbs per week. Student interface features 5-field text input (base form, 3rd person, -ing form, past simple, past participle) with instant auto-grading. Teacher dashboard provides score tracking and class analytics.
+                    <p>
+                        I built a custom Learning Management System (LMS) centered around "Interactive Grammar Guides." Unlike standard blog posts, these guides are state-aware applications that adapt as the student reads.
                     </p>
-                    <h3>Key Features</h3>
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <h4>Auto-Graded Quizzes</h4>
-                            <p>Multi-field text input for verb conjugations with instant feedback and scoring</p>
-                        </div>
-                        <div class="feature-card">
-                            <h4>Teacher Dashboard</h4>
-                            <p>Real-time view of student progress, scores, and completion rates</p>
-                        </div>
-                        <div class="feature-card">
-                            <h4>Student Portal</h4>
-                            <p>Clean interface for taking quizzes and viewing past results</p>
-                        </div>
-                        <div class="feature-card">
-                            <h4>Progress Analytics</h4>
-                            <p>Track learning trends and identify students who need support</p>
-                        </div>
+
+                    <h3>1. The "Unlock" Mechanics (Interactive State)</h3>
+                    <p>I designed the guides to prevent cognitive overload. Exercises at the bottom of each section are initially locked or hidden. They only reveal themselves when the student actively engages with the section, creating a rewarding "micro-loop" of learning.</p>
+                    
+                     <div class="screenshot-item" style="margin: 2rem 0;">
+                        <img src="../screenshots/lms2.png" alt="Interactive Exercises Unlocked" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms2.png', 'Interactive Exercises Unlocked')">
+                        <p class="screenshot-caption">Figure 1: The 'Quick Check' exercises appear dynamically, allowing students to apply concepts immediately next to the explanation.</p>
+                    </div>
+
+                    <h3>2. Deep Assessment (Mini Quizzes)</h3>
+                    <p>To ensure long-term retention, every comprehensive guide ends with a multi-part "Mini Quiz." This isn't just a simple form; it's a multi-step component that handles various question types (multiple choice, sentence reordering) and provides immediate validation.</p>
+                    
+                    <div class="screenshot-item" style="margin: 2rem 0;">
+                        <img src="../screenshots/lms3.png" alt="End-of-Module Mini Quiz" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms3.png', 'End-of-Module Mini Quiz')">
+                        <p class="screenshot-caption">Figure 2: The final assessment module, aggregating scores to track student mastery.</p>
+                    </div>
+
+                    <h3>3. Scalable Architecture</h3>
+                    <p>What started as a single tool has grown into a library of over 50+ interactive activities. The proactive architecture allows for rapid content expansion without rewriting the core engagement logic.</p>
+
+                    <div class="screenshot-item" style="margin: 2rem 0;">
+                        <img src="../screenshots/all_guides_list.png" alt="Content Library Scale" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/all_guides_list.png', 'Content Library Scale')">
+                        <p class="screenshot-caption">Figure 3: The Dashboard view showing the breadth of accessible content—Grammar, Vocabulary, and Quizzes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Screenshots -->
+        <!-- Methodology -->
         <section class="project-section bg-white">
             <div class="container">
                 <div class="section-header">
-                    <h2>Screenshots & Walkthrough</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="screenshots-container">
-                    <div class="screenshot-item">
-                        <img src="../screenshots/lms1.png" alt="ESOL LMS Quiz Homepage" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms1.png', 'ESOL LMS Quiz Homepage')">
-                        <p class="screenshot-caption">Quiz homepage showing all available quizzes for students</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="../screenshots/lms2.png" alt="ESOL LMS Student Quiz Interface" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms2.png', 'ESOL LMS Student Quiz Interface')">
-                        <p class="screenshot-caption">Student quiz interface with multi-field verb conjugation exercises</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="../screenshots/lms3.png" alt="ESOL LMS Auto-Grading" class="project-screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lms3.png', 'ESOL LMS Auto-Grading')">
-                        <p class="screenshot-caption">Auto-grading in action with immediate scoring and feedback</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <div class="screenshot-placeholder">
-                            <p>Teacher Dashboard</p>
-                            <span class="placeholder-note">Coming soon</span>
-                        </div>
-                        <p class="screenshot-caption">Teacher dashboard with student progress tracking (screenshot pending data anonymization)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Deep Dive -->
-        <section class="project-section bg-light">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Technical Implementation</h2>
+                    <h2>Methodology: The "Modern Builder" Approach</h2>
                     <div class="section-line"></div>
                 </div>
                 <div class="content-narrow">
-                    <h3>Architecture Decisions</h3>
-                    <p>I chose Flask for its simplicity and Python's string processing capabilities, which are essential for comparing student answers to correct verb conjugations.</p>
-
-                    <h4>Backend (Python/Flask)</h4>
-                    <ul>
-                        <li>JSON-based quiz content storage for easy modification and version control</li>
-                        <li>CSV results tracking with automatic file creation</li>
-                        <li>Custom grading logic that handles conjugation variations</li>
-                        <li>Password-protected teacher dashboard with environment variable security</li>
-                        <li>Class statistics and week-by-week analytics with CSV export</li>
+                    <p class="lead-text">This project demonstrates High-Agency Technical Implementation.</p>
+                    
+                    <div class="feature-card" style="margin-bottom: 1.5rem;">
+                        <h4>Rapid Prototyping</h4>
+                        <p>I utilized AI-assisted development workflows to move from "Idea" to "Deployed Feature" in hours, not weeks.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="margin-bottom: 1.5rem;">
+                        <h4>Product-First Code</h4>
+                        <p>My focus was on user outcomes (student retention) rather than infrastructure optimization, allowing me to build a complex state engine without a large team.</p>
+                    </div>
+                     <div class="feature-card" style="margin-bottom: 1.5rem;">
+                        <h4>Full Ownership</h4>
+                        <p>From database schema design to CSS animations, I orchestrated the entire stack to serve the pedagogical goals.</p>
+                    </div>
+                    
+                    <h3>Technical Highlights</h3>
+                    <ul class="problem-list">
+                         <li><strong>State Management:</strong> Complex handling of user progress through multi-section guides.</li>
+                         <li><strong>SPA Architecture:</strong> Zero-latency transitions between study and quiz modes.</li>
+                         <li><strong>Accessibility:</strong> High-contrast design and clear focus states for diverse learner needs.</li>
                     </ul>
-
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li>Jinja2 templating for dynamic quiz generation</li>
-                        <li>Vanilla JavaScript for form handling and instant feedback</li>
-                        <li>Responsive CSS with Google Fonts (Poppins)</li>
-                        <li>Clean, accessible interface for adult learners</li>
-                    </ul>
-
-                    <h3>Interesting Challenges</h3>
-                    <div class="challenge-box">
-                        <h4>Challenge: Flexible Answer Matching</h4>
-                        <p>Student answers might have extra spaces, capitalization differences, or minor typos. I needed grading logic that was strict enough to be accurate but forgiving enough to handle common input variations.</p>
-                        <p><strong>Solution:</strong> Built a normalization system that strips whitespace, converts to lowercase, and compares against multiple acceptable answer formats.</p>
-                    </div>
-
-                    <div class="challenge-box">
-                        <h4>Challenge: Data Storage Without a Database</h4>
-                        <p>I needed persistent storage for student results but wanted to avoid database overhead on PythonAnywhere's free tier. The solution had to be simple to deploy and easy to back up.</p>
-                        <p><strong>Solution:</strong> Used JSON for quiz content (easy to edit and version control) and CSV for student results (automatic creation, simple export for record-keeping, and readable in Excel for teachers).</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process & Iteration -->
-        <section class="project-section bg-white">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Development Process</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="content-narrow">
-                    <h3>What I Built First</h3>
-                    <p>Started with a basic quiz form and manual grading to validate the concept with students. Once I confirmed they understood the interface, I built the auto-grading logic.</p>
-
-                    <h3>User Testing & Iteration</h3>
-                    <ul>
-                        <li><strong>Round 1:</strong> Students confused by multi-page forms → simplified to single-page layout</li>
-                        <li><strong>Round 2:</strong> Unclear error messages → added specific feedback (e.g., "Check your spelling of 'running'")</li>
-                        <li><strong>Round 3:</strong> Students wanted to review past quizzes → added results history page</li>
-                    </ul>
-
-                    <h3>Additional Features I'd Like to Add</h3>
-                    <p>I'd enhance the platform with spaced repetition algorithms to help students practice verbs they struggle with, plus add progress analytics showing which verb forms need more practice. I'd also implement batch quiz creation tools to reduce teacher setup time.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Results & Impact -->
-        <section class="project-section bg-light">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Results & Impact</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="content-narrow">
-                    <div class="impact-stats">
-                        <div class="stat-box">
-                            <div class="stat-number">~1 hour</div>
-                            <div class="stat-label">Grading time saved per week</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Students using weekly</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-number">18 weeks</div>
-                            <div class="stat-label">Curriculum deployment</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Lessons Learned -->
-        <section class="project-section bg-white">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Lessons Learned</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="content-narrow">
-                    <div class="lesson-box">
-                        <h4>Build for your users, not for yourself</h4>
-                        <p>I initially built complex features that I thought were cool, but my students just wanted a simple quiz that worked. Simplicity won.</p>
-                    </div>
-                    <div class="lesson-box">
-                        <h4>Test early and often</h4>
-                        <p>Every time I assumed I knew what students wanted, I was wrong. Watching them use the app in real time revealed issues I never anticipated.</p>
-                    </div>
-                    <div class="lesson-box">
-                        <h4>Perfect is the enemy of done</h4>
-                        <p>I shipped version 1 with basic features and iterated based on feedback. If I'd waited for "perfect," students would still be using Google Forms.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -282,7 +161,7 @@
                 </div>
                 <div class="content-narrow" style="text-align: center;">
                     <div class="project-cta">
-                        <a href="https://esolteachermc.pythonanywhere.com/student/login" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://myesolclass.com/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
                         <a href="https://github.com/marlanamc/ESOL_LMS" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
                     </div>
                     <p style="margin-top: 2rem;"><a href="../index.html#projects" class="breadcrumb">← Back to All Projects</a></p>

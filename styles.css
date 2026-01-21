@@ -2610,13 +2610,18 @@ body.is-scrolling .sparkle {
 }
 
 .project-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    transition: transform 0.3s ease;
     cursor: pointer;
-    transition: var(--transition);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15); /* Product shot shadow */
+    border-radius: 8px; /* Product shot rounded corners */
 }
 
-.project-screenshot:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-lg);
+.project-card:hover .project-screenshot {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 @keyframes fadeIn {

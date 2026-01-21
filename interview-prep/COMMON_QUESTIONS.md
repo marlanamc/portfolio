@@ -2,10 +2,9 @@
 
 ## 📋 Quick Reference Guide
 
-**Your Core Story:** Python developer with MS Economics background, data analyst experience, and passion for EdTech. Built production apps solving real problems for real users.
+**Your Core Story:** Technical Support & Implementation Specialist with a modern full-stack toolkit (Next.js, TypeScript, SQL). MS Economics background, data analyst experience, and a passion for EdTech. Built production apps solving real problems for real users.
 
-**Your Strength:** Python, full-stack development, understanding user needs deeply
-
+**Your Strength:** Bridging the gap between code and users, full-stack implementation, understanding complex systems deeply
 
 **Your Unique Angle:** Teacher who codes = understand users + can build the tools they need
 
@@ -17,13 +16,14 @@
 
 **Your Answer:**
 
-"I'm a Python developer with a Master's in Economics from Georgia Tech. I started my career as a data analyst, working at places like Homesite Insurance where I built machine learning models to predict disaster losses, and Grand Circle Corporation where I developed Tableau dashboards for marketing teams.
+"I'm a Technical Support & Implementation Specialist with a Master's in Economics from Georgia Tech. I started my career as a data analyst, working at places like Homesite Insurance where I built risk tracking systems, and Grand Circle Corporation where I developed SQL-based reporting and Tableau dashboards.
 
-While teaching adult ESOL part-time, I discovered a gap between what educators needed and what existing tools provided. So I started building—I've now shipped 10 web applications, including a full-stack learning management system that 50+ students use weekly.
+While teaching adult ESOL part-time, I discovered a gap between what educators needed and what existing tools provided. So I started building—I've now shipped 10 web applications, including a full-stack learning management system built with Next.js and TypeScript that 50+ students use weekly.
 
-My background gives me a unique combination: the analytical thinking from economics and data work, the technical skills from building production apps, and deep user empathy from teaching. I'm looking for a full-time developer role where I can apply this combination, ideally in EdTech or mission-driven organizations."
+My background gives me a unique combination: the analytical thinking from economics, the technical skills from building production-grade full-stack apps, and the deep user empathy from teaching. I'm looking for a technical support or implementation role where I can application this combination to help users succeed with complex tools."
 
 **Why this works:**
+
 - ✅ Shows progression (data analyst → developer)
 - ✅ Mentions credentials (MS, Georgia Tech, real companies)
 - ✅ Highlights unique value (teacher + coder)
@@ -35,13 +35,14 @@ My background gives me a unique combination: the analytical thinking from econom
 
 **Your Answer:**
 
-"I haven't left teaching—I teach two evenings a week and love it. But I realized my real passion is building tools that scale impact beyond just my classroom.
+"I haven't left teaching—I teach two evenings a week and also serve as a **Developer** for the school, building custom tools to support my students. I realized my real passion is building technology that scales impact beyond just my classroom.
 
 When I built my quiz platform and saw it save me 10+ hours a week while improving student outcomes, I realized: this is what I want to do full-time. Build technology that makes education better.
 
-Teaching part-time has been perfect because it keeps me connected to real users—I get immediate feedback on what works and what doesn't—but I'm ready to focus full-time on development."
+My role as a developer within the school has been perfect because it keeps me connected to real users—I get immediate feedback on what works and what doesn't—but I'm ready to focus full-time on technical implementation and support."
 
 **Why this works:**
+
 - ✅ Reframes teaching as an asset, not something you're "leaving"
 - ✅ Shows motivation (impact at scale)
 - ✅ Explains the gap logically
@@ -57,51 +58,44 @@ Teaching part-time has been perfect because it keeps me connected to real users�
 
 **Your Answer: THE QUIZ PLATFORM (Always lead with this)**
 
-"I built a complete learning management system for my ESOL students because Google Forms couldn't handle what we needed.
+"I built a complete learning management system for my ESOL students because static tools couldn't handle the interactive practice we needed.
 
-**The Problem:** I was teaching irregular verbs and needed students to complete 5 different verb forms per word—base form, third person, present participle, past simple, past participle. Google Forms made this clunky with multiple questions, had no auto-grading for text inputs, and I couldn't track 50+ students' progress over 14 weeks.
+**The Problem:** I needed a way to track 50+ students' progress across complex verb conjugations. Initially, I built a prototype in Python, but I recently re-architected it into a modern full-stack application to support better scaling and gamification.
 
-**The Solution:** I built it in Python with Flask. Here's the architecture:
+**The Solution:** I built the current version using **Next.js 16, TypeScript, and PostgreSQL**.
 
-*Backend:*
-- Flask API handling quiz logic and auto-grading
-- SQLite database with three main tables: students, quizzes, and results
-- User authentication with session management
-- Auto-grading algorithm that validates verb conjugations
+_Architecture:_
 
-*Student Interface:*
-- Clean form with 5 input fields per verb
-- Immediate feedback on submission
-- Progress tracking across 14 weeks
-
-*Teacher Dashboard:*
-- Real-time view of all student scores
-- Completion tracking
-- Grade analytics
+- **Frontend/Backend:** Next.js App Router for server-side rendering and API routes.
+- **Database:** PostgreSQL managed via Prisma ORM for type-safe data access.
+- **Authentication:** NextAuth.js for secure role-based access control (Teacher vs. Student).
+- **Gamification:** A points and achievement system to drive student engagement.
 
 **The Technical Challenges:**
 
-1. **Auto-grading text:** I couldn't just check exact string matches because students might type 'bitting' instead of 'biting'. I implemented fuzzy matching with a tolerance for common typos.
+1. **Type Safety and Scaling:** Moving from a simple Python script to a TypeScript/Prisma architecture allowed me to manage complex relationships between students, classes, and assignment progress without data integrity issues.
 
-2. **Database design:** Had to think through relationships—students take multiple quizzes, each quiz has multiple verbs, each verb has 5 forms. Designed it so I could easily add new quizzes without changing the schema.
+2. **User Experience & Performance:** I used Tailwind CSS and Framer Motion to create a responsive, mobile-first UI that works smoothly even on low-bandwidth connections, which is critical for my students.
 
-3. **Two user experiences:** Students needed simple and clear. Teachers needed comprehensive data. Built separate views with different permissions.
+3. **Gamification Logic:** Implementing a points ledger and streak system required careful database design to ensure real-time updates without performance lag.
 
 **The Impact:**
-- 50+ students using it weekly
-- Two full semesters deployed
-- Saves me 10+ hours a week on grading
-- Student engagement is noticeably higher than with Google Forms
+
+- 50+ students using it weekly.
+- 70% reduction in my administrative overhead compared to manual grading.
+- Student engagement increased significantly due to the immediate feedback and gamification features.
 
 **What I Learned:**
-- Deploying Python apps to production (PythonAnywhere)
-- Building for two different user types
-- Balancing simplicity with functionality
-- Iterating based on real user feedback every week
 
-It's live at esolteachermc.pythonanywhere.com if you want to see it."
+- Mastered the Next.js ecosystem (App Router, Server Components).
+- Implementing secure Authentication and RBAC.
+- Designing schema for complex, relational data with Prisma.
+- Iterating based on real user feedback every week.
+
+It's live at **myesolclass.com** if you want to see it."
 
 **Why this works:**
+
 - ✅ Shows technical depth (database, backend, frontend, deployment)
 - ✅ Shows problem-solving (auto-grading challenge)
 - ✅ Shows user thinking (two interfaces)
@@ -123,6 +117,7 @@ It's live at esolteachermc.pythonanywhere.com if you want to see it."
 **Three: Self-directed learning.** I taught myself Python, built 10 production apps, and figured out deployment, databases, and frontend frameworks on my own. When I need to learn something new for a project, I just do it. That means I can contribute quickly even in areas where I don't have deep expertise yet."
 
 **Why this works:**
+
 - ✅ Three specific, evidence-backed strengths
 - ✅ Shows initiative
 - ✅ Demonstrates value to the company
@@ -142,6 +137,7 @@ It's live at esolteachermc.pythonanywhere.com if you want to see it."
 The good news is I learn really fast when I need to. When I needed auto-grading for my quiz platform, I researched string matching algorithms and implemented one in a weekend. Give me a problem and I'll figure it out."
 
 **Why this works:**
+
 - ✅ Honest but not disqualifying
 - ✅ Shows self-awareness
 - ✅ Ends on a strength (fast learner)
@@ -161,6 +157,7 @@ The good news is I learn really fast when I need to. When I needed auto-grading 
 "Full-stack LMS with Python/Flask backend, auto-grading, teacher dashboard, and 50+ real users."
 
 **Technical deep-dive (if they ask):**
+
 - **Database schema:** Students table, Quizzes table, Results table with foreign keys
 - **Auto-grading logic:** String normalization + fuzzy matching for common typos
 - **Authentication:** Session-based with Flask-Login
@@ -171,6 +168,7 @@ The good news is I learn really fast when I need to. When I needed auto-grading 
 "The trickiest part was auto-grading. Students would type 'runing' instead of 'running', and I didn't want to mark them wrong for typos. I implemented a Levenshtein distance check with a threshold—if they're within 2 characters, I flag it for review instead of auto-failing."
 
 **Impact metrics:**
+
 - 50 students per semester
 - 14 weeks of curriculum
 - 10+ hours/week saved on grading
@@ -184,6 +182,7 @@ The good news is I learn really fast when I need to. When I needed auto-grading 
 "React + Firebase tracker with gamification features. Built it while job searching to stay organized."
 
 **Technical deep-dive:**
+
 - **Frontend:** React with hooks (useState, useEffect)
 - **Backend:** Firebase Firestore for data, Firebase Auth for Google login
 - **Features:** CRUD operations, CSV import/export, filtering, timer, reward system
@@ -193,6 +192,7 @@ The good news is I learn really fast when I need to. When I needed auto-grading 
 "I added gamification because job searching is demoralizing. The timer tracks how long you spend applying, and there's a reward system—after 10 applications, you 'earn' a coffee. It's silly but it helped me stay motivated through 150+ applications."
 
 **Impact:**
+
 - Used personally for 100+ applications
 - Helped me stay organized and motivated
 - CSV import saved hours of manual entry
@@ -205,6 +205,7 @@ The good news is I learn really fast when I need to. When I needed auto-grading 
 "React app with accessibility-first design for people with ADHD. Focus timers, task organizers, sensory-friendly UI."
 
 **Technical deep-dive:**
+
 - **React** with component-based architecture
 - **Accessibility:** WCAG 2.1 compliance, reduced motion support, high contrast
 - **UX research:** User-tested with neurodivergent individuals
@@ -317,11 +318,13 @@ I'd add a `deadline` field to the Quiz model, then create a script that runs dai
 For email, I'd use Flask-Mail or a service like SendGrid. Store email templates so I can customize them.
 
 **Then improve it:**
+
 - Add a 'notification preferences' field so students can opt in/out
 - Add a second reminder at 1 week before
 - Log all sent emails so we don't double-send
 
 **Edge cases to handle:**
+
 - What if the student completed it right before the script runs?
 - What if email delivery fails?
 - Timezone issues—students in different zones
@@ -361,23 +364,27 @@ Does that approach make sense?"
 ## 💬 QUESTIONS TO ASK THEM (Always have 3 ready)
 
 ### About the Role:
+
 - "What would my first project be?"
 - "What does success look like in this role after 3 months? 6 months?"
 - "What's the team structure? Who would I work with most closely?"
 - "What's your tech stack and why did you choose it?"
 
 ### About the Team:
+
 - "What do you like about working here?"
 - "How does the team handle code review?"
 - "What's the onboarding process for new developers?"
 - "How much collaboration vs independent work is this role?"
 
 ### About the Company:
+
 - "What are the biggest technical challenges right now?"
 - "How do you balance new features with technical debt?"
 - "What's the company culture around learning and growth?"
 
 ### About Them:
+
 - "What brought you to this company?"
 - "What's been your favorite project here?"
 
@@ -459,6 +466,7 @@ Marlana Creed
 5. **Accept or walk:** If they won't budge and it's too low, it's okay to decline
 
 **Minimum acceptable:**
+
 - Salary: $60K (lower only if amazing learning opportunity)
 - Contract: $40/hr
 
