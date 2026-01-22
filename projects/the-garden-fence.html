@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garden Fence - ADHD Time Orientation Tool - Marlana Creed</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="The Garden Fence: A visual time-orientation tool designed for neurodivergent users to reduce time blindness and planning overwhelm.">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MC</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects" class="active">Projects</a>
+                <a href="../index.html#resources">Resources</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="breadcrumb">← Back to Projects</a>
+                <div class="project-hero-content">
+                    <h1>The Garden Fence</h1>
+                    <p class="project-tagline">A visual time-orientation tool designed to reduce time blindness and planning overwhelm for neurodivergent users.</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <strong>Role:</strong> Creator & Full-Stack Developer
+                        </div>
+                        <div class="meta-item">
+                            <strong>Status:</strong> Live Product (Production-Ready)
+                        </div>
+                        <div class="meta-item">
+                            <strong>North Star:</strong> Zero cognitive overhead
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Vite</span>
+                        <span class="tech-badge">Supabase (PostgreSQL)</span>
+                        <span class="tech-badge">IndexedDB</span>
+                        <span class="tech-badge">PWA</span>
+                        <span class="tech-badge">WCAG 2.1 AA</span>
+                    </div>
+                    <div class="project-cta">
+                        <a href="https://time-map-seven.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener">View Live Site →</a>
+                        <a href="https://github.com/marlanamc/time-map" target="_blank" class="btn btn-secondary" rel="noopener">View Code on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Challenge -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Challenge</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">
+                        Traditional productivity tools assume consistent attention and linear planning. For people with ADHD, this creates a cycle of optimistic planning followed by overwhelm when time perception stretches or compresses.
+                    </p>
+                    <div class="challenge-box">
+                        <h4>The Cycle of System Collapse</h4>
+                        <p>Most planners fail when users forget long-term goals during daily chaos or feel guilty when systems require high maintenance. I set out to build a tool that makes time visible and keeps long-term visions present without the pressure of rigid productivity tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Solution</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p>I built a visual time-orientation tool centered around three core pillars designed specifically for neurodivergent brains.</p>
+
+                    <h3>1. Multi-Scale Time Visualization</h3>
+                    <p>Instead of just a calendar, The Garden Fence provides smooth zooming between Year, Month, Week, and Day views. A persistent <strong>"You Are Here"</strong> panel shows immediate context—time remaining today, weeks left in the year, and progress visualized as a blooming flower.</p>
+                    
+                    <div class="screenshot-item" style="margin: 2rem 0;">
+                        <img src="../screenshots/lifedash2.png" alt="Year View with You Are Here Panel" class="project-screenshot" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); cursor: pointer;" onclick="openModal('../screenshots/lifedash2.png', 'Year View with You Are Here Panel')">
+                        <p class="screenshot-caption">Figure 1: The main dashboard making time visible at scale, reducing the maintenance burden while keeping long-term goals present.</p>
+                    </div>
+
+                    <h3>2. ADHD-Specific Support</h3>
+                    <p>The interface includes dedicated tools for executive function support: a <strong>Brain Dump</strong> for intrusive thoughts, a <strong>Body Double Timer</strong> for accountability, and a <strong>"Surprise Me"</strong> button to combat decision paralysis.</p>
+
+                    <div class="features-grid" style="margin: 2rem 0;">
+                        <div class="feature-card">
+                            <h4>Focus Mode</h4>
+                            <p>Reduces visual noise and hides everything but the current task to prevent distraction.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Quick Wins</h4>
+                            <p>Dopamine-friendly task suggestions for days when motivation is low.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>No-Pressure Design</h4>
+                            <p>No streak tracking or productivity scores—focused purely on orientation and intention.</p>
+                        </div>
+                    </div>
+
+                    <h3>3. Hierarchical Goal System</h3>
+                    <p>Goals are organized into a four-level hierarchy: <strong>Vision → Milestone → Focus → Intention</strong>. This allows users to see exactly how their daily actions connect to their yearly dreams without feeling overwhelmed by the distance between them.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Builder Perspective -->
+        <section class="project-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Modern Builder Perspective</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow">
+                    <p class="lead-text">Demonstrating High-Agency Execution and Technical Orchestration.</p>
+                    
+                    <div class="lesson-box">
+                        <h4>Speed to Market</h4>
+                        <p>Built as a solo project using Vite for instant HMR and TypeScript for early error detection. This modular architecture allowed me to move from concept to a production-ready PWA in a fraction of traditional development time.</p>
+                    </div>
+
+                    <h3>Technical Highlights</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h4>Complex State Management</h4>
+                            <p>Built a custom event-driven state system with IndexedDB for offline-first persistence and optimistic UI updates.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Supabase & RLS</h4>
+                            <p>Implemented secure multi-device sync with complex Row Level Security (RLS) policies across 6+ interconnected tables.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>WCAG 2.1 AA Compliance</h4>
+                            <p>Engineered for inclusivity with full keyboard navigation, screen reader support, and dyslexia-friendly typography (Lexend).</p>
+                        </div>
+                    </div>
+
+                    <div class="impact-stats" style="margin-top: 3rem;">
+                        <div class="stat-box">
+                            <div class="stat-number">100/100</div>
+                            <div class="stat-label">Lighthouse Accessibility Score</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">&lt; 1.5s</div>
+                            <div class="stat-label">Full Build Time (Vite)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Accessibility Violations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experience the Garden</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="content-narrow" style="text-align: center;">
+                    <div class="project-cta" style="justify-content: center;">
+                        <a href="https://time-map-seven.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener">Launch App →</a>
+                        <a href="https://github.com/marlanamc/time-map" target="_blank" class="btn btn-secondary" rel="noopener">Contribute on GitHub</a>
+                    </div>
+                    <p style="margin-top: 2rem;"><a href="../index.html#projects" class="breadcrumb">← Explore More Projects</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Marlana Creed. Built with intention and care.</p>
+        </div>
+    </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
