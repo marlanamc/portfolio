@@ -1,9 +1,51 @@
 /* Project Detail Page Styles */
 
+/* ===== Nebula Oni Dark Theme Override ===== */
+:root {
+    /* Glacial Blue backgrounds */
+    --bg-primary: #091A2B;
+    --bg-secondary: #0A1D2E;
+    --bg-editor: #0B2134;
+    --bg-elevated: #0E2941;
+    --bg-accent: #10314F;
+    --bg-dark: #091A2B;
+
+    /* Sakura pink accents */
+    --primary: #FF99E5;
+    --primary-light: #FFADEF;
+    --primary-dark: #FF8CE2;
+    --secondary: #BB99FF;
+    --accent: #2EE6D6;
+
+    /* Supporting colors */
+    --accent-violet: #BB99FF;
+    --accent-cyan: #2EE6D6;
+    --accent-mint: #22DECD;
+    --accent-green: #55F26F;
+
+    /* Text colors - improved for WCAG AA contrast */
+    --text-primary: #E4E6E6;
+    --text-secondary: #C0C8D0;
+    --text-light: #A0ACB8;
+    --text-accent: #FF99E5;
+
+    /* Borders */
+    --border: #0E2941;
+    --border-light: #1a3a55;
+
+    /* Shadows */
+    --shadow-glow: 0 0 20px rgba(255, 153, 229, 0.15);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
 /* Hero Section */
 .project-hero {
     padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, #a8d5f520 0%, #f5c4d825 50%, #fde68a20 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-elevated) 50%, var(--bg-accent) 100%);
     margin-top: 80px;
 }
 
@@ -49,8 +91,8 @@
 
 .tech-badge {
     padding: 0.5rem 1rem;
-    background: white;
-    border: 2px solid var(--border);
+    background: var(--bg-elevated);
+    border: 2px solid var(--border-light);
     border-radius: 8px;
     font-weight: 600;
     font-size: 0.875rem;
@@ -69,7 +111,7 @@
 }
 
 .bg-white {
-    background: white;
+    background: var(--bg-editor);
 }
 
 .bg-light {
@@ -117,7 +159,7 @@
 
 .feature-card {
     padding: 1.5rem;
-    background: white;
+    background: var(--bg-secondary);
     border: 2px solid var(--border);
     border-radius: 12px;
     transition: var(--transition);
@@ -176,13 +218,13 @@
 .screenshot-placeholder p {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: #1a2a3a;
     margin-bottom: 0.5rem;
 }
 
 .placeholder-note {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: #4a5a6a;
 }
 
 .screenshot-caption {
@@ -225,7 +267,7 @@
 .stat-box {
     text-align: center;
     padding: 2rem;
-    background: white;
+    background: var(--bg-secondary);
     border: 2px solid var(--border);
     border-radius: 12px;
 }
@@ -268,7 +310,7 @@
 /* Lessons */
 .lesson-box {
     padding: 1.5rem;
-    background: white;
+    background: var(--bg-secondary);
     border: 2px solid var(--border);
     border-radius: 12px;
     margin-bottom: 1.5rem;

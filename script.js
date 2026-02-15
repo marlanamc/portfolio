@@ -23,11 +23,11 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 50) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.3)';
+        navbar.style.background = 'rgba(9, 26, 43, 0.98)';
     } else {
-        navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
-        navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+        navbar.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.3)';
+        navbar.style.background = 'rgba(9, 26, 43, 0.95)';
     }
 
     lastScroll = currentScroll;
@@ -52,27 +52,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
+// Unified Scroll Animation Observer
+const scrollObserverOptions = {
+    threshold: 0.15,
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const scrollObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Run once
         }
     });
-}, observerOptions);
+}, scrollObserverOptions);
 
-// Observe all sections and cards for animation
-const animatedElements = document.querySelectorAll(
-    '.about-content, .project-card, .skill-category, .contact-content, .hero-content'
-);
+// Initialize animations on load
+document.addEventListener('DOMContentLoaded', () => {
+    // Select elements to animate
+    const sections = document.querySelectorAll('section:not(.hero)'); // Exclude hero
+    const cards = document.querySelectorAll('.project-card');
+    const skills = document.querySelectorAll('.skill-category');
+    // Hero is handled via CSS animations to prevent flash
 
-animatedElements.forEach(el => observer.observe(el));
+    // Add base class and observe
+    const addAnimation = (elements, baseClass = 'fade-in-section') => {
+        elements.forEach(el => {
+            el.classList.add(baseClass);
+            scrollObserver.observe(el);
+        });
+    };
+
+    addAnimation(sections);
+    addAnimation(cards);
+    addAnimation(skills);
+});
 
 // Active nav link highlighting on scroll
 const sections = document.querySelectorAll('section[id]');
@@ -277,17 +291,18 @@ if (scrollProgress) {
     });
 }
 
-// Section visibility detection for animations
-const sectionObserver = new IntersectionObserver((entries) => {
+// Section visibility tracking (for nav highlighting / analytics)
+const sectionVisibilityObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            // Optional: You can track analytics here
+            // console.log(`Section viewed: ${entry.target.id}`);
         }
     });
 }, { threshold: 0.1 });
 
 document.querySelectorAll('section').forEach(section => {
-    sectionObserver.observe(section);
+    sectionVisibilityObserver.observe(section);
 });
 
 
