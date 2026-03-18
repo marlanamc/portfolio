@@ -13,12 +13,10 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <meta name="description"
-        content="Implementation and product operations specialist with strong full-stack skills. Built learning platforms, internal tools, and support systems used by hundreds of users. Looking for a full-time role on a product team, Boston or remote.">
-    <meta name="keywords"
-        content="implementation specialist, product operations, full-stack developer, React, Next.js, TypeScript, learning platforms, internal tools, accessibility, EdTech">
+        content="Implementation and product operations specialist with strong full-stack skills. Built learning platforms, internal tools, and support systems used by hundreds of users.">
     <meta property="og:title" content="Marlana Creed | Operations & Implementation Specialist">
     <meta property="og:description"
-        content="Implementation and product operations specialist with strong full-stack skills. Built learning platforms, internal tools, and support systems used by hundreds of users. Looking for a full-time role on a product team, Boston or remote.">
+        content="Implementation and product operations specialist. Built learning platforms, internal tools, and support systems used by hundreds of users.">
     <meta property="og:image" content="images/social-card.png">
     <meta property="og:type" content="website">
     <link rel="icon" href="images/favicon.ico">
@@ -38,675 +36,68 @@
 </head>
 
 <body>
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scroll-progress"></div>
-
-    <nav class="navbar">
-        <div class="nav-container">
+    <div class="page">
+        <!-- Header -->
+        <header class="site-header">
             <a href="#" class="logo">MC</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#resources">Resources</a>
-                <a href="journal.html">Build Log</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+            <nav class="header-links">
+                <a href="about.html">About</a>
+            </nav>
+        </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-container hero-centered">
-                    <div class="hero-text">
-                        <span class="hero-tag">Operations & Implementation Specialist</span>
-                        <h1 class="hero-title">
-                            I launch systems, support users, and <span class="highlight">make sure things actually work</span>
-                        </h1>
-                        <p class="hero-description">
-                            I translate complex technical and operational needs into clear workflows, documentation, and day-to-day execution.
-                        </p>
-                        <p class="hero-description">
-                            Currently seeking implementation, solutions, or product operations roles on teams that ship software, Boston or remote.
-                        </p>
-                        <div class="hero-stats">
-                            <div class="hero-stat">
-                                <span class="hero-stat-number" data-target="350">350+</span>
-                                <span class="hero-stat-label">Users Supported</span>
-                            </div>
-                            <div class="hero-stat">
-                                <span class="hero-stat-number" data-target="8">8+</span>
-                                <span class="hero-stat-label">Years in Operations</span>
-                            </div>
-                        </div>
-                        <div class="hero-cta">
-                            <a href="#projects" class="btn btn-primary magic-hover">See My Work</a>
-                            <a href="Marlana Creed_Resume.pdf"
-                                class="btn btn-secondary magic-hover" target="_blank" rel="noopener">
-                                <i data-lucide="download"></i> Resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Intro -->
+        <section class="intro">
+            <h1>Marlana Creed</h1>
+            <p class="tagline">Operations & Product Builder</p>
+            <p class="stats-line">I build tools people actually use — 350+ learners and teams and counting</p>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects">
+            <div class="projects-grid">
+                <a href="projects/esol-lms.html" class="project-card">
+                    <div class="project-icon"><i data-lucide="layers"></i></div>
+                    <h3>ESOL Learning Hub</h3>
+                    <p>Full LMS with 88+ activities, gamification, and progress tracking. Next.js, TypeScript, PostgreSQL.</p>
+                    <span class="project-link-text">How it works →</span>
+                </a>
+
+                <a href="projects/school-job-board.html" class="project-card">
+                    <div class="project-icon"><i data-lucide="layout-grid"></i></div>
+                    <h3>EBHCS Advisor Bulletin Board</h3>
+                    <p>Centralized hub for 350+ students and 12 advisors. Empowered advisors to post announcements in one single place rather than managing 5 separate Google Classrooms.</p>
+                    <span class="project-link-text">What I built →</span>
+                </a>
+
+                <a href="projects/adhd-first-aid.html" class="project-card">
+                    <div class="project-icon"><i data-lucide="heart-pulse"></i></div>
+                    <h3>ADHD First Aid Kit</h3>
+                    <p>Calm-down tools, sensory-friendly interfaces, and task initiation helpers. An accessible web app to support neurodivergent users through moments of overwhelm.</p>
+                    <span class="project-link-text">Inside the system →</span>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon"><i data-lucide="anchor"></i></div>
+                    <h3>Anchor MS</h3>
+                    <p>A structured planner designed for ADHD and autistic users. Visual planning, time orientation, and daily grounding.</p>
+                    <span class="project-link-text">Coming soon →</span>
+                </a>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Me</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="about-content">
-                    <div class="about-image-container">
-                        <div class="about-image-wrapper">
-                            <div class="about-shape-1"></div>
-                            <div class="about-shape-2"></div>
-                            <img src="images/profile_pic.png" alt="Marlana Creed" class="about-profile-img"
-                                loading="lazy">
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <p class="about-lead">
-                            I started in econometrics with a focus on data optimization. Now, I use that analytical background to build tools that help people learn.
-                        </p>
-                        <p>
-                            I have an MS in Economics. While I excelled at analysis, I wanted to build solutions rather than just measure them. I taught myself to code because I wanted to build tools for my students—adult learners with busy schedules who deserved better than static worksheets.
-                        </p>
-                        <p>
-                            In the past year, I've shipped <strong>20+ learning games</strong> and a <strong>complete LMS with 88+ activities</strong>. I build what my students actually need, test it in class, and iterate based on what works.
-                        </p>
-                        <p>
-                            I am currently teaching part-time and building tools for our program, and I am now looking for a full-time role on a product or implementation team.
-                        </p>
-                        <p>
-                            I also built <strong>Navigating the Storm</strong>, a structured support system for neurodivergent adults. It uses the same approach I use in my other work: clear workflows, practical tools, and systems that work in real life.
-                        </p>
-                        <p>
-                            I’m looking for a role where I can contribute, learn, and build useful products. I’m especially motivated by work that has clear, real-world impact.
-                        </p>
-                        <div class="about-highlights">
-                            <div class="highlight-item magic-hover">
-                                <div class="highlight-icon"><i data-lucide="layers"></i></div>
-                                <div>
-                                    <h4>Full LMS with Gamification</h4>
-                                    <p>React, Next.js, PostgreSQL · 88+ activities, leaderboard, unlock progression</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item magic-hover">
-                                <div class="highlight-icon"><i data-lucide="gamepad-2"></i></div>
-                                <div>
-                                    <h4>20+ Interactive Vocab Games</h4>
-                                    <p>JavaScript, mobile-first · Drag-and-drop, timed challenges, team competition</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item magic-hover">
-                                <div class="highlight-icon"><i data-lucide="brain"></i></div>
-                                <div>
-                                    <h4>ADHD Tools & Coaching</h4>
-                                    <p>Built for neurodivergent users · Time orientation, visual planning</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-cta">
-                            <p class="about-cta-text">See what I'm building this week</p>
-                            <a href="journal.html" class="btn btn-outline">View Build Log →</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a id="email-link"><i data-lucide="mail" class="icon"></i> <span id="email-text" data-user="marlana.creed" data-domain="gmail.com"></span></a>
+                <a href="https://linkedin.com/in/marlanacreed" target="_blank" rel="noopener"><i data-lucide="linkedin" class="icon"></i> LinkedIn</a>
+                <a href="Marlana Creed_Resume.pdf" target="_blank" rel="noopener"><i data-lucide="file-text" class="icon"></i> Résumé</a>
+                <a href="https://github.com/marlanamc" target="_blank" rel="noopener"><i data-lucide="github" class="icon"></i> GitHub</a>
             </div>
-        </section>
-
-        <!-- At a Glance Section -->
-        <section id="at-a-glance" class="at-a-glance">
-            <div class="container">
-                <div class="section-header">
-                    <h2>At a Glance</h2>
-                    <div class="section-line"></div>
-                </div>
-
-                <div class="at-a-glance-content">
-                    <p><strong>Looking for:</strong> Hands-on role building real products · Boston or remote</p>
-                    <p><strong>Tech:</strong> React, Next.js, TypeScript, PostgreSQL, Prisma, Firebase, Supabase, Tailwind, Node</p>
-                    <p><strong>How I work:</strong> Mobile-first, ship fast, iterate from user feedback</p>
-                    <p><strong>Right now:</strong> Building a Superlatives Vocab Game · Next: Medical Instructions Guide</p>
-                </div>
+            <div class="copyright">
+                <span class="status-container"><span class="pulse-dot"></span> Systems Operational</span>
+                <span>&copy; 2026 Marlana Creed</span>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Projects</h2>
-                    <div class="section-line"></div>
-                    <p class="section-subtitle">Learning games, accessibility tools, and solutions I've shipped</p>
-                </div>
-                <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="education-management">Education Management</button>
-                    <button class="filter-btn" data-filter="learning-games">Learning Games</button>
-                    <button class="filter-btn" data-filter="adhd-accessibility">ADHD & Accessibility</button>
-                    <button class="filter-btn" data-filter="productivity">Productivity Tools</button>
-                </div>
-                <div class="projects-grid">
-                    <!-- Project 1 - Quiz Platform (Full-Stack Priority) -->
-                    <article class="project-card featured" data-category="education-management">
-                        <div class="project-image">
-                            <img src="screenshots/all_guides_list.png" alt="ESOL Learning Hub Dashboard" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/all_guides_list.png', 'ESOL Learning Hub Dashboard')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">Next.js 16</span>
-                                <span class="tag">TypeScript</span>
-                                <span class="tag">PostgreSQL</span>
-                                <span class="tag">Prisma</span>
-                            </div>
-                            <h3>ESOL Learning Hub (LMS)</h3>
-                            <p>
-                                A custom-built Learning Management System serving interactive grammar guides and quizzes to adult learners. Built with AI-assisted rapid prototyping to solve real pedagogical problems.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/esol-lms.html" class="project-link">View Full Case Study →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2 - School Job Board (User Management at Scale) -->
-                    <article class="project-card featured compact" data-category="education-management">
-                        <div class="project-image">
-                            <img src="screenshots/abb1.png" alt="School Advisor Job Board" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/abb1.png', 'School Advisor Job Board')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">Firebase</span>
-                                <span class="tag">Firestore</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Full-Stack</span>
-                            </div>
-                            <h3>School Advisor Job Board</h3>
-                            <p>
-                                Firebase-powered bulletin board serving 350+ students and 12 advisors. Features search,
-                                category filters, calendar view, and role-based posting. Replaced 5+ Google Classrooms
-                                with a single centralized hub, reducing communication overhead by 70%.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/school-job-board.html" class="project-link">View Full Case Study →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 0 - The Garden Fence (ADHD Productivity) -->
-                    <article class="project-card featured" data-category="adhd-accessibility productivity">
-                        <div class="project-image">
-                            <img src="screenshots/yearview.png" alt="The Garden Fence ADHD Dashboard" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/yearview.png', 'The Garden Fence ADHD Dashboard')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">TypeScript</span>
-                                <span class="tag">Supabase</span>
-                                <span class="tag">PWA</span>
-                                <span class="tag">Accessibility</span>
-                            </div>
-                            <h3>The Garden Fence</h3>
-                            <p>
-                                A visual time-orientation tool for neurodivergent users. Built with an offline-first architecture, complex state management, and strict WCAG 2.1 AA compliance.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/the-garden-fence.html" class="project-link">View Full Case Study →</a>
-                            </div>
-                        </div>
-                    </article>
-
-
-
-
-
-                    <!-- Project 2 - Verb Form Challenge -->
-                    <article class="project-card" data-category="learning-games">
-                        <div class="project-image">
-                            <img src="screenshots/form1.png" alt="Verb Form Challenge Game" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/form1.png', 'Verb Form Challenge Game')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">React</span>
-                                <span class="tag">HTML/CSS</span>
-                            </div>
-                            <h3>Verb Form Challenge Game</h3>
-                            <p>
-                                Interactive game teaching English verb conjugation across different tenses. Students
-                                practice present, past, and future forms with instant feedback and progress tracking.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/verb-form-challenge.html" class="project-link">View Full Case Study
-                                    →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3 - English Numbers Game -->
-                    <article class="project-card" data-category="learning-games">
-                        <div class="project-image">
-                            <img src="screenshots/num1.png" alt="English Numbers Game" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/num1.png', 'English Numbers Game')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">React</span>
-                                <span class="tag">HTML/CSS</span>
-                            </div>
-                            <h3>English Numbers Game</h3>
-                            <p>
-                                Interactive number practice game helping English learners master number recognition
-                                and pronunciation. Features audio support and progressive difficulty levels.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/english-numbers-game.html" class="project-link">View Full Case Study
-                                    →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 4 - Random Verb Conjugation -->
-                    <article class="project-card" data-category="learning-games">
-                        <div class="project-image">
-                            <img src="screenshots/conj1.png" alt="Random Verb Conjugation Game"
-                                class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/conj1.png', 'Random Verb Conjugation Game')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">React</span>
-                                <span class="tag">HTML/CSS</span>
-                            </div>
-                            <h3>Random Verb Conjugation Game</h3>
-                            <p>
-                                Randomized verb conjugation practice with dice mechanics for engaging grammar learning.
-                                Covers irregular verbs and multiple tenses with immediate feedback.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/random-verb-conjugation.html" class="project-link">View Full Case
-                                    Study →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 5 - Gerund or Infinitive Game -->
-                    <article class="project-card" data-category="learning-games">
-                        <div class="project-image">
-                            <img src="screenshots/gerund1.png" alt="Gerund or Infinitive Game"
-                                class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/gerund1.png', 'Gerund or Infinitive Game')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">React</span>
-                                <span class="tag">HTML/CSS</span>
-                            </div>
-                            <h3>Gerund or Infinitive Game</h3>
-                            <p>
-                                Advanced grammar game teaching proper use of gerunds vs infinitives - one of the
-                                trickiest concepts for English learners. Includes examples and explanations.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/gerund-infinitive-game.html" class="project-link">View Full Case Study
-                                    →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- ADHD Coaching Framework -->
-                    <article class="project-card" data-category="adhd-accessibility">
-                        <div class="project-image">
-                            <img src="screenshots/notion_dash.png" alt="ADHD Coaching Framework - Notion Dashboard"
-                                class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/notion_dash.png', 'ADHD Coaching Framework - Notion Dashboard')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">Notion</span>
-                                <span class="tag">Stripe</span>
-                                <span class="tag">Resend</span>
-                                <span class="tag">iCal</span>
-                                <span class="tag">Methodology</span>
-                            </div>
-                            <h3>ADHD Coaching Framework</h3>
-                            <p>
-                                Evidence-based coaching methodology with 15 interconnected levels addressing executive
-                                function challenges. Integrated payment processing, email automation, calendar
-                                scheduling, and custom Notion templates for scalable coaching delivery.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/adhd-coaching-framework.html" class="project-link">View Full Case
-                                    Study →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 6 - ADHD First Aid Kit -->
-                    <article class="project-card" data-category="adhd-accessibility">
-                        <div class="project-image">
-                            <img src="screenshots/adhdfak1.png" alt="ADHD First Aid Kit" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/adhdfak1.png', 'ADHD First Aid Kit')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Vercel</span>
-                            </div>
-                            <h3>ADHD First Aid Kit</h3>
-                            <p>
-                                Comprehensive toolkit with timers, focus tools, and sensory-friendly interfaces
-                                for ADHD management. Built with React and designed by/for neurodivergent individuals.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/adhd-first-aid.html" class="project-link">View Full Case Study →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 7 - NAV Coaching Website -->
-                    <article class="project-card" data-category="adhd-accessibility">
-                        <div class="project-image">
-                            <img src="screenshots/nav1.png" alt="NAV ADHD Coaching Website" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/nav1.png', 'NAV ADHD Coaching Website')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">HTML/CSS</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Web Design</span>
-                            </div>
-                            <h3>NAV ADHD Coaching Website</h3>
-                            <p>
-                                Full-featured ADHD coaching platform with resources, community features, and booking.
-                                Designed with neurodivergent-friendly UX principles and accessibility in mind.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/nav-coaching.html" class="project-link">View Full Case Study →</a>
-                            </div>
-                        </div>
-                    </article>
-
-
-
-
-
-                    <!-- Project 10 - ESOL Resource Hub -->
-                    <article class="project-card" data-category="education-management">
-                        <div class="project-image">
-                            <img src="screenshots/srh1.png" alt="ESOL Student Resource Hub" class="project-screenshot"
-                                style="width: 100%; height: 100%; object-fit: contain; background: #f8fafe;"
-                                onclick="openModal('screenshots/srh1.png', 'ESOL Student Resource Hub')">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span class="tag">Canva</span>
-                                <span class="tag">Web Portal</span>
-                                <span class="tag">HTML/CSS</span>
-                            </div>
-                            <h3>ESOL Student Resource Hub</h3>
-                            <p>
-                                Centralized portal for adult ESOL learners with curated links to learning games,
-                                practice sites,
-                                Google Classroom, syllabus, and community resources (housing help, legal aid, job
-                                search).
-                                Used weekly by 26 students as their primary resource hub, reducing support questions by
-                                60%.
-                            </p>
-                            <div class="project-links">
-                                <a href="projects/esol-resource-hub.html" class="project-link">View Full Case Study
-                                    →</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resources Section -->
-        <section id="resources" class="resources">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Free Resources</h2>
-                    <div class="section-line"></div>
-                    <p class="section-subtitle">Worksheets, tools, and activities I've created</p>
-                </div>
-
-                <div class="resources-grid">
-                    <!-- ADHD & Mental Health -->
-                    <div class="resource-category">
-                        <div class="resource-header">
-                            <div class="resource-icon"><i data-lucide="brain"></i></div>
-                            <h3>ADHD & Mental Health</h3>
-                        </div>
-                        <p class="resource-description">Tools and resources for neurodivergent individuals and mental
-                            wellness</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="resources/adhd.html" class="btn btn-secondary">View Resources →</a>
-                        </div>
-                    </div>
-
-                    <!-- Technical Resources -->
-                    <div class="resource-category">
-                        <div class="resource-header">
-                            <div class="resource-icon"><i data-lucide="code"></i></div>
-                            <h3>Technical Resources</h3>
-                        </div>
-                        <p class="resource-description">Code examples, technical guides, and development resources from
-                            my projects</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://github.com/marlanamc" class="btn btn-secondary" target="_blank"
-                                rel="noopener">View on GitHub →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Work With Me Section -->
-        <section id="why-hire" class="why-hire">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Why Work With Me</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="why-hire-grid">
-                    <div class="hire-reason magic-hover">
-                        <div class="hire-icon"><i data-lucide="rocket"></i></div>
-                        <div>
-                            <h3>I Ship Constantly</h3>
-                            <p>12-24 games in a year. New features weekly. I don't just plan—I build and deploy. You'll see results, not roadmaps.</p>
-                        </div>
-                    </div>
-                    <div class="hire-reason magic-hover">
-                        <div class="hire-icon"><i data-lucide="message-circle"></i></div>
-                        <div>
-                            <h3>I Talk to Users</h3>
-                            <p>I'm in the classroom. I see what works and what doesn't. No guessing what hypothetical users might want—I build for real people with real constraints.</p>
-                        </div>
-                    </div>
-                    <div class="hire-reason magic-hover">
-                        <div class="hire-icon"><i data-lucide="layers"></i></div>
-                        <div>
-                            <h3>I Build Complete Products</h3>
-                            <p>Database to UI. Full stack. I can work independently when needed and collaborate effectively within larger teams.</p>
-                        </div>
-                    </div>
-                    <div class="hire-reason magic-hover">
-                        <div class="hire-icon"><i data-lucide="heart"></i></div>
-                        <div>
-                            <h3>I Care About the Mission</h3>
-                            <p>I focus on genuine value creation rather than vanity metrics. I want what I build to actually help people and make their work or learning easier.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hire-cta">
-                    <p class="hire-cta-text">Looking for someone who ships fast and cares about impact?</p>
-                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
-                </div>
-                <div class="how-i-work" style="margin-top: 2rem;">
-                    <h3>How I Work</h3>
-                    <p>While most of these projects were built as a solo developer, I did not build them in a vacuum. I worked with advisors, school staff, and students to gather requirements, incorporate feedback, and adjust the tools based on real use.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <div class="section-header">
-                    <h2>What I've Built With</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <div class="skill-icon"><i data-lucide="layers"></i></div>
-                            <h3>React & Next.js</h3>
-                        </div>
-                        <p class="skill-built">Built the ESOL Learning Hub—full LMS with gamification, 88+ activities, user authentication, leaderboards, and mobile-responsive design.</p>
-                        <div class="skill-list">
-                            <span class="skill-item">React</span>
-                            <span class="skill-item">Next.js</span>
-                            <span class="skill-item">TypeScript</span>
-                            <span class="skill-item">Tailwind CSS</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <div class="skill-icon"><i data-lucide="gamepad-2"></i></div>
-                            <h3>JavaScript</h3>
-                        </div>
-                        <p class="skill-built">20+ interactive vocabulary games. Drag-and-drop, timed challenges, streak tracking, team competition. All mobile-responsive.</p>
-                        <div class="skill-list">
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">HTML/CSS</span>
-                            <span class="skill-item">Firebase</span>
-                            <span class="skill-item">Supabase</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <div class="skill-icon"><i data-lucide="bar-chart-2"></i></div>
-                            <h3>Python & Data</h3>
-                        </div>
-                        <p class="skill-built">MS Economics background. Econometric analysis, statistical modeling, data pipelines. Now applied to learning analytics and user behavior.</p>
-                        <div class="skill-list">
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">pandas</span>
-                            <span class="skill-item">SQL</span>
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">Tableau</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <div class="skill-icon"><i data-lucide="users"></i></div>
-                            <h3>Product Thinking</h3>
-                        </div>
-                        <p class="skill-built">User research from actual classroom observation. Build → test → iterate based on real student needs, not hypothetical personas.</p>
-                        <div class="skill-list">
-                            <span class="skill-item">User Research</span>
-                            <span class="skill-item">Accessibility (WCAG)</span>
-                            <span class="skill-item">Mobile-First Design</span>
-                            <span class="skill-item">Rapid Iteration</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Let's Connect</h2>
-                    <div class="section-line"></div>
-                    <p class="section-subtitle">
-                        <strong>Looking for a full-time role on a product team where I can help implement, support, and improve the systems people rely on every day.</strong><br>
-                        Boston area or remote
-                    </p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i data-lucide="mail"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <a id="email-link"><span id="email-text" data-user="marlana.creed"
-                                        data-domain="gmail.com"></span></a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i data-lucide="phone"></i></div>
-                            <div>
-                                <h4>Phone</h4>
-                                <span>770-378-9207</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i data-lucide="linkedin"></i></div>
-                            <div>
-                                <h4>LinkedIn</h4>
-                                <a href="https://linkedin.com/in/marlanacreed" target="_blank"
-                                    rel="noopener">linkedin.com/in/marlanacreed</a>
-                                <div><a href="Marlana Creed_Resume.pdf"
-                                        target="_blank" rel="noopener">View Résumé</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-cta">
-                        <p class="contact-message">
-                            If you think I could be a good fit for your team and the work you’re doing, I’d love to connect.
-                        </p>
-                        <a id="email-cta" class="btn btn-primary">Send Me an Email</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Marlana Creed. Built with intention and care.</p>
-        </div>
-    </footer>
-
-    <!-- Screenshot Modal -->
-    <div id="screenshot-modal" class="modal" onclick="closeModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <img id="modal-image" src="" alt="" class="modal-image">
-            <div class="modal-caption" id="modal-caption"></div>
-        </div>
+        </footer>
     </div>
 
     <script src="script.js"></script>
